@@ -12,7 +12,7 @@ begin
 end
 
 always @(posedge clk)
- if(countclk==25000000)  
+ if(countclk==2500000)  
  begin
    countclk <=0;
    clk_ls <= ~clk_ls;

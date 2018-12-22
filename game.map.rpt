@@ -1,5 +1,5 @@
 Analysis & Synthesis report for game
-Sat Dec 22 15:00:06 2018
+Sat Dec 22 18:09:51 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -16,24 +16,25 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis DSP Block Usage Summary
  10. Analysis & Synthesis IP Cores Summary
- 11. Registers Removed During Synthesis
- 12. Removed Registers Triggering Further Register Optimizations
- 13. General Register Statistics
- 14. Inverted Register Statistics
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for vga_fonts:get_fonts|altsyncram:altsyncram_component|altsyncram_egg1:auto_generated
- 17. Parameter Settings for User Entity Instance: clkgen:my_vgaclk
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for store_asc:comb_259|altsyncram:altsyncram_component|altsyncram_5ju1:auto_generated
+ 15. Source assignments for vga_fonts:get_fonts|altsyncram:altsyncram_component|altsyncram_egg1:auto_generated
+ 16. Parameter Settings for User Entity Instance: clkgen:my_vgaclk
+ 17. Parameter Settings for User Entity Instance: store_asc:comb_259|altsyncram:altsyncram_component
  18. Parameter Settings for User Entity Instance: vga_ctrl:my_ctr
  19. Parameter Settings for User Entity Instance: vga_fonts:get_fonts|altsyncram:altsyncram_component
  20. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
- 21. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1
- 22. altsyncram Parameter Settings by Entity Instance
- 23. Port Connectivity Checks: "vga_fonts:get_fonts"
- 24. Port Connectivity Checks: "clkgen:my_vgaclk"
- 25. Post-Synthesis Netlist Statistics for Top Partition
- 26. Elapsed Time Per Partition
- 27. Analysis & Synthesis Messages
- 28. Analysis & Synthesis Suppressed Messages
+ 21. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod2
+ 22. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 23. altsyncram Parameter Settings by Entity Instance
+ 24. Port Connectivity Checks: "vga_fonts:get_fonts"
+ 25. Port Connectivity Checks: "store_asc:comb_259"
+ 26. Port Connectivity Checks: "clkgen:my_vgaclk"
+ 27. Post-Synthesis Netlist Statistics for Top Partition
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
 
 
 
@@ -59,17 +60,17 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Dec 22 15:00:06 2018       ;
+; Analysis & Synthesis Status     ; Successful - Sat Dec 22 18:09:50 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; game                                        ;
 ; Top-level Entity Name           ; game                                        ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 77                                          ;
+; Total registers                 ; 149                                         ;
 ; Total pins                      ; 168                                         ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 24,576                                      ;
-; Total DSP Blocks                ; 1                                           ;
+; Total block memory bits         ; 81,920                                      ;
+; Total DSP Blocks                ; 3                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
@@ -179,8 +180,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -193,6 +193,8 @@ refer to the applicable agreement for further details.
 ; clkgen.v                         ; yes             ; User Verilog HDL File                  ; D:/final_verilog/clkgen.v                                                             ;         ;
 ; vga_fonts.v                      ; yes             ; User Wizard-Generated File             ; D:/final_verilog/vga_fonts.v                                                          ;         ;
 ; getsec.v                         ; yes             ; User Verilog HDL File                  ; D:/final_verilog/getsec.v                                                             ;         ;
+; newchar.v                        ; yes             ; User Verilog HDL File                  ; D:/final_verilog/newchar.v                                                            ;         ;
+; store_asc.v                      ; yes             ; User Wizard-Generated File             ; D:/final_verilog/store_asc.v                                                          ;         ;
 ; game.v                           ; yes             ; Auto-Found Verilog HDL File            ; D:/final_verilog/game.v                                                               ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                           ; d:/software/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                           ; d:/software/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
@@ -203,17 +205,19 @@ refer to the applicable agreement for further details.
 ; altrom.inc                       ; yes             ; Megafunction                           ; d:/software/intelfpga_lite/17.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
 ; altram.inc                       ; yes             ; Megafunction                           ; d:/software/intelfpga_lite/17.1/quartus/libraries/megafunctions/altram.inc            ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                           ; d:/software/intelfpga_lite/17.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_5ju1.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/final_verilog/db/altsyncram_5ju1.tdf                                               ;         ;
 ; db/altsyncram_egg1.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/final_verilog/db/altsyncram_egg1.tdf                                               ;         ;
 ; vga_font.hex                     ; yes             ; Auto-Found Memory Initialization File  ; D:/final_verilog/vga_font.hex                                                         ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                           ; d:/software/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_divide.tdf        ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                           ; d:/software/intelfpga_lite/17.1/quartus/libraries/megafunctions/abs_divider.inc       ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                           ; d:/software/intelfpga_lite/17.1/quartus/libraries/megafunctions/sign_div_unsign.inc   ;         ;
-; db/lpm_divide_h3m.tdf            ; yes             ; Auto-Generated Megafunction            ; D:/final_verilog/db/lpm_divide_h3m.tdf                                                ;         ;
-; db/sign_div_unsign_klh.tdf       ; yes             ; Auto-Generated Megafunction            ; D:/final_verilog/db/sign_div_unsign_klh.tdf                                           ;         ;
-; db/alt_u_div_eve.tdf             ; yes             ; Auto-Generated Megafunction            ; D:/final_verilog/db/alt_u_div_eve.tdf                                                 ;         ;
-; db/lpm_divide_u3m.tdf            ; yes             ; Auto-Generated Megafunction            ; D:/final_verilog/db/lpm_divide_u3m.tdf                                                ;         ;
-; db/sign_div_unsign_1mh.tdf       ; yes             ; Auto-Generated Megafunction            ; D:/final_verilog/db/sign_div_unsign_1mh.tdf                                           ;         ;
-; db/alt_u_div_80f.tdf             ; yes             ; Auto-Generated Megafunction            ; D:/final_verilog/db/alt_u_div_80f.tdf                                                 ;         ;
+; db/lpm_divide_l3m.tdf            ; yes             ; Auto-Generated Megafunction            ; D:/final_verilog/db/lpm_divide_l3m.tdf                                                ;         ;
+; db/sign_div_unsign_olh.tdf       ; yes             ; Auto-Generated Megafunction            ; D:/final_verilog/db/sign_div_unsign_olh.tdf                                           ;         ;
+; db/alt_u_div_mve.tdf             ; yes             ; Auto-Generated Megafunction            ; D:/final_verilog/db/alt_u_div_mve.tdf                                                 ;         ;
+; db/lpm_divide_q3m.tdf            ; yes             ; Auto-Generated Megafunction            ; D:/final_verilog/db/lpm_divide_q3m.tdf                                                ;         ;
+; db/sign_div_unsign_tlh.tdf       ; yes             ; Auto-Generated Megafunction            ; D:/final_verilog/db/sign_div_unsign_tlh.tdf                                           ;         ;
+; db/alt_u_div_00f.tdf             ; yes             ; Auto-Generated Megafunction            ; D:/final_verilog/db/alt_u_div_00f.tdf                                                 ;         ;
+; db/lpm_divide_ibm.tdf            ; yes             ; Auto-Generated Megafunction            ; D:/final_verilog/db/lpm_divide_ibm.tdf                                                ;         ;
 +----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------+---------+
 
 
@@ -222,27 +226,27 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 234            ;
+; Estimate of Logic utilization (ALMs needed) ; 447            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 435            ;
+; Combinational ALUT usage for logic          ; 861            ;
 ;     -- 7 input functions                    ; 1              ;
-;     -- 6 input functions                    ; 28             ;
-;     -- 5 input functions                    ; 34             ;
-;     -- 4 input functions                    ; 75             ;
-;     -- <=3 input functions                  ; 297            ;
+;     -- 6 input functions                    ; 29             ;
+;     -- 5 input functions                    ; 36             ;
+;     -- 4 input functions                    ; 151            ;
+;     -- <=3 input functions                  ; 644            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 77             ;
+; Dedicated logic registers                   ; 149            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 168            ;
 ; Total MLAB memory bits                      ; 0              ;
-; Total block memory bits                     ; 24576          ;
+; Total block memory bits                     ; 81920          ;
 ;                                             ;                ;
-; Total DSP Blocks                            ; 1              ;
+; Total DSP Blocks                            ; 3              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 69             ;
-; Total fan-out                               ; 1914           ;
-; Average fan-out                             ; 2.16           ;
+; Maximum fan-out                             ; 131            ;
+; Total fan-out                               ; 3507           ;
+; Average fan-out                             ; 2.52           ;
 +---------------------------------------------+----------------+
 
 
@@ -251,31 +255,41 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                   ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |game                                     ; 435 (38)            ; 77 (24)                   ; 24576             ; 1          ; 168  ; 0            ; |game                                                                                                 ; game                ; work         ;
+; |game                                     ; 861 (102)           ; 149 (42)                  ; 81920             ; 3          ; 168  ; 0            ; |game                                                                                                 ; game                ; work         ;
 ;    |clkgen:my_vgaclk|                     ; 43 (43)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |game|clkgen:my_vgaclk                                                                                ; clkgen              ; work         ;
-;    |lpm_divide:Mod0|                      ; 69 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
-;       |lpm_divide_h3m:auto_generated|     ; 69 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|lpm_divide:Mod0|lpm_divide_h3m:auto_generated                                                   ; lpm_divide_h3m      ; work         ;
-;          |sign_div_unsign_klh:divider|    ; 69 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|lpm_divide:Mod0|lpm_divide_h3m:auto_generated|sign_div_unsign_klh:divider                       ; sign_div_unsign_klh ; work         ;
-;             |alt_u_div_eve:divider|       ; 69 (69)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|lpm_divide:Mod0|lpm_divide_h3m:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider ; alt_u_div_eve       ; work         ;
-;    |lpm_divide:Mod1|                      ; 225 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
-;       |lpm_divide_u3m:auto_generated|     ; 225 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|lpm_divide:Mod1|lpm_divide_u3m:auto_generated                                                   ; lpm_divide_u3m      ; work         ;
-;          |sign_div_unsign_1mh:divider|    ; 225 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|lpm_divide:Mod1|lpm_divide_u3m:auto_generated|sign_div_unsign_1mh:divider                       ; sign_div_unsign_1mh ; work         ;
-;             |alt_u_div_80f:divider|       ; 225 (225)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|lpm_divide:Mod1|lpm_divide_u3m:auto_generated|sign_div_unsign_1mh:divider|alt_u_div_80f:divider ; alt_u_div_80f       ; work         ;
-;    |vga_ctrl:my_ctr|                      ; 60 (60)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |game|vga_ctrl:my_ctr                                                                                 ; vga_ctrl            ; work         ;
-;    |vga_fonts:get_fonts|                  ; 0 (0)               ; 0 (0)                     ; 24576             ; 0          ; 0    ; 0            ; |game|vga_fonts:get_fonts                                                                             ; vga_fonts           ; work         ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 24576             ; 0          ; 0    ; 0            ; |game|vga_fonts:get_fonts|altsyncram:altsyncram_component                                             ; altsyncram          ; work         ;
-;          |altsyncram_egg1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 24576             ; 0          ; 0    ; 0            ; |game|vga_fonts:get_fonts|altsyncram:altsyncram_component|altsyncram_egg1:auto_generated              ; altsyncram_egg1     ; work         ;
+;    |getsec:sec_timer|                     ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |game|getsec:sec_timer                                                                                ; getsec              ; work         ;
+;    |lpm_divide:Div0|                      ; 97 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;       |lpm_divide_ibm:auto_generated|     ; 97 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|lpm_divide:Div0|lpm_divide_ibm:auto_generated                                                   ; lpm_divide_ibm      ; work         ;
+;          |sign_div_unsign_olh:divider|    ; 97 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|lpm_divide:Div0|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider                       ; sign_div_unsign_olh ; work         ;
+;             |alt_u_div_mve:divider|       ; 97 (97)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|lpm_divide:Div0|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_mve:divider ; alt_u_div_mve       ; work         ;
+;    |lpm_divide:Mod0|                      ; 100 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;       |lpm_divide_l3m:auto_generated|     ; 100 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|lpm_divide:Mod0|lpm_divide_l3m:auto_generated                                                   ; lpm_divide_l3m      ; work         ;
+;          |sign_div_unsign_olh:divider|    ; 100 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|lpm_divide:Mod0|lpm_divide_l3m:auto_generated|sign_div_unsign_olh:divider                       ; sign_div_unsign_olh ; work         ;
+;             |alt_u_div_mve:divider|       ; 100 (100)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|lpm_divide:Mod0|lpm_divide_l3m:auto_generated|sign_div_unsign_olh:divider|alt_u_div_mve:divider ; alt_u_div_mve       ; work         ;
+;    |lpm_divide:Mod2|                      ; 389 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|lpm_divide:Mod2                                                                                 ; lpm_divide          ; work         ;
+;       |lpm_divide_q3m:auto_generated|     ; 389 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|lpm_divide:Mod2|lpm_divide_q3m:auto_generated                                                   ; lpm_divide_q3m      ; work         ;
+;          |sign_div_unsign_tlh:divider|    ; 389 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|lpm_divide:Mod2|lpm_divide_q3m:auto_generated|sign_div_unsign_tlh:divider                       ; sign_div_unsign_tlh ; work         ;
+;             |alt_u_div_00f:divider|       ; 389 (389)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|lpm_divide:Mod2|lpm_divide_q3m:auto_generated|sign_div_unsign_tlh:divider|alt_u_div_00f:divider ; alt_u_div_00f       ; work         ;
+;    |newchar:have_newchar|                 ; 34 (34)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |game|newchar:have_newchar                                                                            ; newchar             ; work         ;
+;    |store_asc:comb_259|                   ; 0 (0)               ; 0 (0)                     ; 32768             ; 0          ; 0    ; 0            ; |game|store_asc:comb_259                                                                              ; store_asc           ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 32768             ; 0          ; 0    ; 0            ; |game|store_asc:comb_259|altsyncram:altsyncram_component                                              ; altsyncram          ; work         ;
+;          |altsyncram_5ju1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 32768             ; 0          ; 0    ; 0            ; |game|store_asc:comb_259|altsyncram:altsyncram_component|altsyncram_5ju1:auto_generated               ; altsyncram_5ju1     ; work         ;
+;    |vga_ctrl:my_ctr|                      ; 65 (65)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |game|vga_ctrl:my_ctr                                                                                 ; vga_ctrl            ; work         ;
+;    |vga_fonts:get_fonts|                  ; 0 (0)               ; 0 (0)                     ; 49152             ; 0          ; 0    ; 0            ; |game|vga_fonts:get_fonts                                                                             ; vga_fonts           ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 49152             ; 0          ; 0    ; 0            ; |game|vga_fonts:get_fonts|altsyncram:altsyncram_component                                             ; altsyncram          ; work         ;
+;          |altsyncram_egg1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 49152             ; 0          ; 0    ; 0            ; |game|vga_fonts:get_fonts|altsyncram:altsyncram_component|altsyncram_egg1:auto_generated              ; altsyncram_egg1     ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                               ;
-+-----------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+--------------+
-; Name                                                                                          ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF          ;
-+-----------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+--------------+
-; vga_fonts:get_fonts|altsyncram:altsyncram_component|altsyncram_egg1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 4096         ; 12           ; --           ; --           ; 49152 ; vga_font.hex ;
-+-----------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                           ;
++-----------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+--------------+
+; Name                                                                                          ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF          ;
++-----------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+--------------+
+; store_asc:comb_259|altsyncram:altsyncram_component|altsyncram_5ju1:auto_generated|ALTSYNCRAM  ; AUTO ; Simple Dual Port ; 4096         ; 8            ; 4096         ; 8            ; 32768 ; None         ;
+; vga_fonts:get_fonts|altsyncram:altsyncram_component|altsyncram_egg1:auto_generated|ALTSYNCRAM ; AUTO ; ROM              ; 4096         ; 12           ; --           ; --           ; 49152 ; vga_font.hex ;
++-----------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+--------------+
 
 
 +-----------------------------------------------+
@@ -283,10 +297,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+-------------+
 ; Statistic                       ; Number Used ;
 +---------------------------------+-------------+
-; Independent 9x9                 ; 1           ;
-; Total number of DSP blocks      ; 1           ;
+; Two Independent 18x18           ; 1           ;
+; Independent 18x18 plus 36       ; 2           ;
+; Total number of DSP blocks      ; 3           ;
 ;                                 ;             ;
-; Fixed Point Unsigned Multiplier ; 1           ;
+; Fixed Point Unsigned Multiplier ; 3           ;
 +---------------------------------+-------------+
 
 
@@ -295,31 +310,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+---------------------------+-----------------+
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance           ; IP Include File ;
 +--------+--------------+---------+--------------+--------------+---------------------------+-----------------+
+; Altera ; RAM: 2-PORT  ; 17.1    ; N/A          ; N/A          ; |game|store_asc:comb_259  ; store_asc.v     ;
 ; Altera ; ROM: 1-PORT  ; 17.1    ; N/A          ; N/A          ; |game|vga_fonts:get_fonts ; vga_fonts.v     ;
 +--------+--------------+---------+--------------+--------------+---------------------------+-----------------+
-
-
-+-------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                            ;
-+----------------------------------------+--------------------------------------+
-; Register name                          ; Reason for Removal                   ;
-+----------------------------------------+--------------------------------------+
-; getsec:sec_timer|countclk[0..7]        ; Stuck at GND due to stuck port clock ;
-; getsec:sec_timer|clk_ls                ; Stuck at GND due to stuck port clock ;
-; getsec:sec_timer|countclk[8..24]       ; Stuck at GND due to stuck port clock ;
-; dis_cnt[0..9]                          ; Stuck at GND due to stuck port clock ;
-; Total Number of Removed Registers = 36 ;                                      ;
-+----------------------------------------+--------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                         ;
-+-------------------------+-------------------------+-------------------------------------------------------------------------------------------------+
-; Register name           ; Reason for Removal      ; Registers Removed due to This Register                                                          ;
-+-------------------------+-------------------------+-------------------------------------------------------------------------------------------------+
-; getsec:sec_timer|clk_ls ; Stuck at GND            ; dis_cnt[9], dis_cnt[8], dis_cnt[7], dis_cnt[6], dis_cnt[5], dis_cnt[4], dis_cnt[3], dis_cnt[2], ;
-;                         ; due to stuck port clock ; dis_cnt[1], dis_cnt[0]                                                                          ;
-+-------------------------+-------------------------+-------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -327,12 +320,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 77    ;
-; Number of registers using Synchronous Clear  ; 50    ;
+; Total registers                              ; 149   ;
+; Number of registers using Synchronous Clear  ; 112   ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 10    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 9     ;
+; Number of registers using Clock Enable       ; 16    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -342,7 +335,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; vga_ctrl:my_ctr|x_cnt[0]               ; 8       ;
+; vga_ctrl:my_ctr|x_cnt[0]               ; 5       ;
 ; Total number of inverted registers = 1 ;         ;
 +----------------------------------------+---------+
 
@@ -352,9 +345,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |game|clkgen:my_vgaclk|clkcount[28] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |game|clkgen:my_vgaclk|clkcount[17] ;
 ; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |game|vga_ctrl:my_ctr|y_cnt[8]      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Source assignments for store_asc:comb_259|altsyncram:altsyncram_component|altsyncram_5ju1:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                         ;
++---------------------------------+--------------------+------+--------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                          ;
++---------------------------------+--------------------+------+--------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------+
@@ -374,6 +376,67 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; clk_freq       ; 25000000 ; Signed Integer                    ;
 ; countlimit     ; 1        ; Signed Integer                    ;
 +----------------+----------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: store_asc:comb_259|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-------------------------------------+
+; Parameter Name                     ; Value                ; Type                                ;
++------------------------------------+----------------------+-------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                             ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                          ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                        ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                        ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                      ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                             ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                             ;
+; WIDTH_A                            ; 8                    ; Signed Integer                      ;
+; WIDTHAD_A                          ; 12                   ; Signed Integer                      ;
+; NUMWORDS_A                         ; 4096                 ; Signed Integer                      ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                             ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                             ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                             ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                             ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                             ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                             ;
+; WIDTH_B                            ; 8                    ; Signed Integer                      ;
+; WIDTHAD_B                          ; 12                   ; Signed Integer                      ;
+; NUMWORDS_B                         ; 4096                 ; Signed Integer                      ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                             ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                             ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                             ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                             ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                             ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                             ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                             ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                             ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                             ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                             ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                             ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                             ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                      ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                             ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                             ;
+; BYTE_SIZE                          ; 8                    ; Untyped                             ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                             ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                             ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                             ;
+; INIT_FILE                          ; UNUSED               ; Untyped                             ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                             ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                             ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                             ;
+; CLOCK_ENABLE_INPUT_B               ; BYPASS               ; Untyped                             ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                             ;
+; CLOCK_ENABLE_OUTPUT_B              ; BYPASS               ; Untyped                             ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                             ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                             ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                             ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                             ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                             ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                             ;
+; CBXI_PARAMETER                     ; altsyncram_5ju1      ; Untyped                             ;
++------------------------------------+----------------------+-------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -460,14 +523,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------+----------------+------------------------+
 ; Parameter Name         ; Value          ; Type                   ;
 +------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                ;
+; LPM_WIDTHN             ; 32             ; Untyped                ;
 ; LPM_WIDTHD             ; 4              ; Untyped                ;
 ; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
 ; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
 ; LPM_PIPELINE           ; 0              ; Untyped                ;
 ; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_h3m ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_l3m ; Untyped                ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
@@ -479,18 +542,41 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1 ;
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod2 ;
 +------------------------+----------------+------------------------+
 ; Parameter Name         ; Value          ; Type                   ;
 +------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 18             ; Untyped                ;
+; LPM_WIDTHN             ; 32             ; Untyped                ;
 ; LPM_WIDTHD             ; 9              ; Untyped                ;
 ; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
 ; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
 ; LPM_PIPELINE           ; 0              ; Untyped                ;
 ; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_u3m ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_q3m ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_ibm ; Untyped                ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
@@ -506,7 +592,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+-----------------------------------------------------+
 ; Name                                      ; Value                                               ;
 +-------------------------------------------+-----------------------------------------------------+
-; Number of entity instances                ; 1                                                   ;
+; Number of entity instances                ; 2                                                   ;
+; Entity Instance                           ; store_asc:comb_259|altsyncram:altsyncram_component  ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                           ;
+;     -- WIDTH_A                            ; 8                                                   ;
+;     -- NUMWORDS_A                         ; 4096                                                ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                        ;
+;     -- WIDTH_B                            ; 8                                                   ;
+;     -- NUMWORDS_B                         ; 4096                                                ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                              ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                        ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                           ;
 ; Entity Instance                           ; vga_fonts:get_fonts|altsyncram:altsyncram_component ;
 ;     -- OPERATION_MODE                     ; ROM                                                 ;
 ;     -- WIDTH_A                            ; 12                                                  ;
@@ -530,6 +627,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
++------------------------------------------------+
+; Port Connectivity Checks: "store_asc:comb_259" ;
++------------+-------+----------+----------------+
+; Port       ; Type  ; Severity ; Details        ;
++------------+-------+----------+----------------+
+; data[6..5] ; Input ; Info     ; Stuck at VCC   ;
+; data[4..1] ; Input ; Info     ; Stuck at GND   ;
+; data[7]    ; Input ; Info     ; Stuck at GND   ;
+; data[0]    ; Input ; Info     ; Stuck at VCC   ;
++------------+-------+----------+----------------+
+
+
 +----------------------------------------------+
 ; Port Connectivity Checks: "clkgen:my_vgaclk" ;
 +-------+-------+----------+-------------------+
@@ -544,40 +653,41 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 77                          ;
+; arriav_ff             ; 149                         ;
 ;     CLR               ; 1                           ;
 ;     CLR SCLR          ; 9                           ;
+;     ENA               ; 7                           ;
 ;     ENA SCLR          ; 9                           ;
-;     SCLR              ; 32                          ;
-;     plain             ; 26                          ;
+;     SCLR              ; 94                          ;
+;     plain             ; 29                          ;
 ; arriav_io_obuf        ; 24                          ;
-; arriav_lcell_comb     ; 437                         ;
-;     arith             ; 239                         ;
-;         0 data inputs ; 27                          ;
-;         1 data inputs ; 92                          ;
-;         2 data inputs ; 6                           ;
-;         3 data inputs ; 49                          ;
-;         4 data inputs ; 55                          ;
-;         5 data inputs ; 10                          ;
+; arriav_lcell_comb     ; 862                         ;
+;     arith             ; 500                         ;
+;         0 data inputs ; 59                          ;
+;         1 data inputs ; 223                         ;
+;         2 data inputs ; 12                          ;
+;         3 data inputs ; 104                         ;
+;         4 data inputs ; 102                         ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 187                         ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 78                          ;
-;         3 data inputs ; 33                          ;
-;         4 data inputs ; 20                          ;
-;         5 data inputs ; 24                          ;
-;         6 data inputs ; 28                          ;
-;     shared            ; 10                          ;
+;     normal            ; 339                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 9                           ;
-; arriav_mac            ; 1                           ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 162                         ;
+;         3 data inputs ; 57                          ;
+;         4 data inputs ; 49                          ;
+;         5 data inputs ; 36                          ;
+;         6 data inputs ; 29                          ;
+;     shared            ; 22                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 12                          ;
+; arriav_mac            ; 3                           ;
 ; boundary_port         ; 168                         ;
-; stratixv_ram_block    ; 12                          ;
+; stratixv_ram_block    ; 20                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 28.20                       ;
-; Average LUT depth     ; 18.32                       ;
+; Max LUT depth         ; 37.20                       ;
+; Average LUT depth     ; 20.02                       ;
 +-----------------------+-----------------------------+
 
 
@@ -586,7 +696,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -596,7 +706,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Dec 22 14:59:26 2018
+    Info: Processing started: Sat Dec 22 18:09:08 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off game -c game
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -610,20 +720,28 @@ Info (12021): Found 1 design units, including 1 entities, in source file vga_fon
     Info (12023): Found entity 1: vga_fonts File: D:/final_verilog/vga_fonts.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file getsec.v
     Info (12023): Found entity 1: getsec File: D:/final_verilog/getsec.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file newchar.v
+    Info (12023): Found entity 1: newchar File: D:/final_verilog/newchar.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file store_asc.v
+    Info (12023): Found entity 1: store_asc File: D:/final_verilog/store_asc.v Line: 39
 Warning (12125): Using design file game.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: game File: D:/final_verilog/game.v Line: 6
-Warning (10236): Verilog HDL Implicit Net warning at game.v(129): created implicit net for "CLK_50" File: D:/final_verilog/game.v Line: 129
+Critical Warning (10846): Verilog HDL Instantiation warning at game.v(160): instance has no name File: D:/final_verilog/game.v Line: 160
 Info (12127): Elaborating entity "game" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at game.v(103): object "vd16" assigned a value but never read File: D:/final_verilog/game.v Line: 103
-Warning (10036): Verilog HDL or VHDL warning at game.v(104): object "hd9" assigned a value but never read File: D:/final_verilog/game.v Line: 104
-Warning (10230): Verilog HDL assignment warning at game.v(111): truncated value with size 32 to match size of target (10) File: D:/final_verilog/game.v Line: 111
-Warning (10230): Verilog HDL assignment warning at game.v(112): truncated value with size 32 to match size of target (10) File: D:/final_verilog/game.v Line: 112
-Warning (10230): Verilog HDL assignment warning at game.v(113): truncated value with size 32 to match size of target (10) File: D:/final_verilog/game.v Line: 113
-Warning (10230): Verilog HDL assignment warning at game.v(114): truncated value with size 32 to match size of target (10) File: D:/final_verilog/game.v Line: 114
-Warning (10230): Verilog HDL assignment warning at game.v(115): truncated value with size 32 to match size of target (10) File: D:/final_verilog/game.v Line: 115
-Warning (10230): Verilog HDL assignment warning at game.v(159): truncated value with size 32 to match size of target (10) File: D:/final_verilog/game.v Line: 159
-Warning (10235): Verilog HDL Always Construct warning at game.v(165): variable "av_addr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/final_verilog/game.v Line: 165
-Warning (10034): Output port "LEDR" at game.v(21) has no driver File: D:/final_verilog/game.v Line: 21
+Warning (10036): Verilog HDL or VHDL warning at game.v(114): object "rec" assigned a value but never read File: D:/final_verilog/game.v Line: 114
+Warning (10230): Verilog HDL assignment warning at game.v(121): truncated value with size 32 to match size of target (10) File: D:/final_verilog/game.v Line: 121
+Warning (10230): Verilog HDL assignment warning at game.v(122): truncated value with size 32 to match size of target (10) File: D:/final_verilog/game.v Line: 122
+Warning (10230): Verilog HDL assignment warning at game.v(123): truncated value with size 32 to match size of target (10) File: D:/final_verilog/game.v Line: 123
+Warning (10230): Verilog HDL assignment warning at game.v(124): truncated value with size 32 to match size of target (10) File: D:/final_verilog/game.v Line: 124
+Warning (10230): Verilog HDL assignment warning at game.v(125): truncated value with size 32 to match size of target (10) File: D:/final_verilog/game.v Line: 125
+Warning (10230): Verilog HDL assignment warning at game.v(126): truncated value with size 32 to match size of target (12) File: D:/final_verilog/game.v Line: 126
+Warning (10230): Verilog HDL assignment warning at game.v(127): truncated value with size 32 to match size of target (12) File: D:/final_verilog/game.v Line: 127
+Warning (10230): Verilog HDL assignment warning at game.v(188): truncated value with size 32 to match size of target (10) File: D:/final_verilog/game.v Line: 188
+Warning (10230): Verilog HDL assignment warning at game.v(219): truncated value with size 32 to match size of target (7) File: D:/final_verilog/game.v Line: 219
+Warning (10034): Output port "LEDR[9..2]" at game.v(21) has no driver File: D:/final_verilog/game.v Line: 21
+Warning (10034): Output port "LEDR[0]" at game.v(21) has no driver File: D:/final_verilog/game.v Line: 21
+Warning (10034): Output port "HEX0" at game.v(24) has no driver File: D:/final_verilog/game.v Line: 24
+Warning (10034): Output port "HEX1" at game.v(25) has no driver File: D:/final_verilog/game.v Line: 25
 Warning (10034): Output port "HEX2" at game.v(26) has no driver File: D:/final_verilog/game.v Line: 26
 Warning (10034): Output port "HEX3" at game.v(27) has no driver File: D:/final_verilog/game.v Line: 27
 Warning (10034): Output port "HEX4" at game.v(28) has no driver File: D:/final_verilog/game.v Line: 28
@@ -646,11 +764,39 @@ Warning (10034): Output port "ADC_DIN" at game.v(77) has no driver File: D:/fina
 Warning (10034): Output port "ADC_SCLK" at game.v(79) has no driver File: D:/final_verilog/game.v Line: 79
 Warning (10034): Output port "FPGA_I2C_SCLK" at game.v(82) has no driver File: D:/final_verilog/game.v Line: 82
 Warning (10034): Output port "IRDA_TXD" at game.v(88) has no driver File: D:/final_verilog/game.v Line: 88
-Info (12128): Elaborating entity "clkgen" for hierarchy "clkgen:my_vgaclk" File: D:/final_verilog/game.v Line: 125
-Info (12128): Elaborating entity "getsec" for hierarchy "getsec:sec_timer" File: D:/final_verilog/game.v Line: 131
+Info (12128): Elaborating entity "clkgen" for hierarchy "clkgen:my_vgaclk" File: D:/final_verilog/game.v Line: 140
+Info (12128): Elaborating entity "getsec" for hierarchy "getsec:sec_timer" File: D:/final_verilog/game.v Line: 146
 Warning (10230): Verilog HDL assignment warning at getsec.v(21): truncated value with size 32 to match size of target (25) File: D:/final_verilog/getsec.v Line: 21
-Info (12128): Elaborating entity "vga_ctrl" for hierarchy "vga_ctrl:my_ctr" File: D:/final_verilog/game.v Line: 146
-Info (12128): Elaborating entity "vga_fonts" for hierarchy "vga_fonts:get_fonts" File: D:/final_verilog/game.v Line: 152
+Info (12128): Elaborating entity "newchar" for hierarchy "newchar:have_newchar" File: D:/final_verilog/game.v Line: 151
+Warning (10230): Verilog HDL assignment warning at newchar.v(21): truncated value with size 32 to match size of target (27) File: D:/final_verilog/newchar.v Line: 21
+Info (12128): Elaborating entity "store_asc" for hierarchy "store_asc:comb_259" File: D:/final_verilog/game.v Line: 160
+Info (12128): Elaborating entity "altsyncram" for hierarchy "store_asc:comb_259|altsyncram:altsyncram_component" File: D:/final_verilog/store_asc.v Line: 88
+Info (12130): Elaborated megafunction instantiation "store_asc:comb_259|altsyncram:altsyncram_component" File: D:/final_verilog/store_asc.v Line: 88
+Info (12133): Instantiated megafunction "store_asc:comb_259|altsyncram:altsyncram_component" with the following parameter: File: D:/final_verilog/store_asc.v Line: 88
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK0"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "BYPASS"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "4096"
+    Info (12134): Parameter "numwords_b" = "4096"
+    Info (12134): Parameter "operation_mode" = "DUAL_PORT"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "widthad_a" = "12"
+    Info (12134): Parameter "widthad_b" = "12"
+    Info (12134): Parameter "width_a" = "8"
+    Info (12134): Parameter "width_b" = "8"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_5ju1.tdf
+    Info (12023): Found entity 1: altsyncram_5ju1 File: D:/final_verilog/db/altsyncram_5ju1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_5ju1" for hierarchy "store_asc:comb_259|altsyncram:altsyncram_component|altsyncram_5ju1:auto_generated" File: d:/software/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "vga_ctrl" for hierarchy "vga_ctrl:my_ctr" File: D:/final_verilog/game.v Line: 174
+Info (12128): Elaborating entity "vga_fonts" for hierarchy "vga_fonts:get_fonts" File: D:/final_verilog/game.v Line: 180
 Info (12128): Elaborating entity "altsyncram" for hierarchy "vga_fonts:get_fonts|altsyncram:altsyncram_component" File: D:/final_verilog/vga_fonts.v Line: 81
 Info (12130): Elaborated megafunction instantiation "vga_fonts:get_fonts|altsyncram:altsyncram_component" File: D:/final_verilog/vga_fonts.v Line: 81
 Info (12133): Instantiated megafunction "vga_fonts:get_fonts|altsyncram:altsyncram_component" with the following parameter: File: D:/final_verilog/vga_fonts.v Line: 81
@@ -671,33 +817,42 @@ Info (12133): Instantiated megafunction "vga_fonts:get_fonts|altsyncram:altsyncr
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_egg1.tdf
     Info (12023): Found entity 1: altsyncram_egg1 File: D:/final_verilog/db/altsyncram_egg1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_egg1" for hierarchy "vga_fonts:get_fonts|altsyncram:altsyncram_component|altsyncram_egg1:auto_generated" File: d:/software/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: D:/final_verilog/game.v Line: 114
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1" File: D:/final_verilog/game.v Line: 115
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: D:/final_verilog/game.v Line: 114
-Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: D:/final_verilog/game.v Line: 114
-    Info (12134): Parameter "LPM_WIDTHN" = "10"
+Info (278001): Inferred 3 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: D:/final_verilog/game.v Line: 124
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod2" File: D:/final_verilog/game.v Line: 125
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: D:/final_verilog/game.v Line: 123
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: D:/final_verilog/game.v Line: 124
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: D:/final_verilog/game.v Line: 124
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_h3m.tdf
-    Info (12023): Found entity 1: lpm_divide_h3m File: D:/final_verilog/db/lpm_divide_h3m.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_klh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_klh File: D:/final_verilog/db/sign_div_unsign_klh.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_eve.tdf
-    Info (12023): Found entity 1: alt_u_div_eve File: D:/final_verilog/db/alt_u_div_eve.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod1" File: D:/final_verilog/game.v Line: 115
-Info (12133): Instantiated megafunction "lpm_divide:Mod1" with the following parameter: File: D:/final_verilog/game.v Line: 115
-    Info (12134): Parameter "LPM_WIDTHN" = "18"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_l3m.tdf
+    Info (12023): Found entity 1: lpm_divide_l3m File: D:/final_verilog/db/lpm_divide_l3m.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_olh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_olh File: D:/final_verilog/db/sign_div_unsign_olh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_mve.tdf
+    Info (12023): Found entity 1: alt_u_div_mve File: D:/final_verilog/db/alt_u_div_mve.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod2" File: D:/final_verilog/game.v Line: 125
+Info (12133): Instantiated megafunction "lpm_divide:Mod2" with the following parameter: File: D:/final_verilog/game.v Line: 125
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "9"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_u3m.tdf
-    Info (12023): Found entity 1: lpm_divide_u3m File: D:/final_verilog/db/lpm_divide_u3m.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_1mh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_1mh File: D:/final_verilog/db/sign_div_unsign_1mh.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_80f.tdf
-    Info (12023): Found entity 1: alt_u_div_80f File: D:/final_verilog/db/alt_u_div_80f.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_q3m.tdf
+    Info (12023): Found entity 1: lpm_divide_q3m File: D:/final_verilog/db/lpm_divide_q3m.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_tlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_tlh File: D:/final_verilog/db/sign_div_unsign_tlh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_00f.tdf
+    Info (12023): Found entity 1: alt_u_div_00f File: D:/final_verilog/db/alt_u_div_00f.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: D:/final_verilog/game.v Line: 123
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: D:/final_verilog/game.v Line: 123
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ibm.tdf
+    Info (12023): Found entity 1: lpm_divide_ibm File: D:/final_verilog/db/lpm_divide_ibm.tdf Line: 24
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "DRAM_DQ[0]" has no driver File: D:/final_verilog/game.v Line: 38
@@ -726,7 +881,6 @@ Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "FPGA_I2C_SDAT" has no driver File: D:/final_verilog/game.v Line: 83
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[0]" is stuck at GND File: D:/final_verilog/game.v Line: 21
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: D:/final_verilog/game.v Line: 21
     Warning (13410): Pin "LEDR[2]" is stuck at GND File: D:/final_verilog/game.v Line: 21
     Warning (13410): Pin "LEDR[3]" is stuck at GND File: D:/final_verilog/game.v Line: 21
     Warning (13410): Pin "LEDR[4]" is stuck at GND File: D:/final_verilog/game.v Line: 21
@@ -741,14 +895,14 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX0[3]" is stuck at GND File: D:/final_verilog/game.v Line: 24
     Warning (13410): Pin "HEX0[4]" is stuck at GND File: D:/final_verilog/game.v Line: 24
     Warning (13410): Pin "HEX0[5]" is stuck at GND File: D:/final_verilog/game.v Line: 24
-    Warning (13410): Pin "HEX0[6]" is stuck at VCC File: D:/final_verilog/game.v Line: 24
+    Warning (13410): Pin "HEX0[6]" is stuck at GND File: D:/final_verilog/game.v Line: 24
     Warning (13410): Pin "HEX1[0]" is stuck at GND File: D:/final_verilog/game.v Line: 25
     Warning (13410): Pin "HEX1[1]" is stuck at GND File: D:/final_verilog/game.v Line: 25
     Warning (13410): Pin "HEX1[2]" is stuck at GND File: D:/final_verilog/game.v Line: 25
     Warning (13410): Pin "HEX1[3]" is stuck at GND File: D:/final_verilog/game.v Line: 25
     Warning (13410): Pin "HEX1[4]" is stuck at GND File: D:/final_verilog/game.v Line: 25
     Warning (13410): Pin "HEX1[5]" is stuck at GND File: D:/final_verilog/game.v Line: 25
-    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: D:/final_verilog/game.v Line: 25
+    Warning (13410): Pin "HEX1[6]" is stuck at GND File: D:/final_verilog/game.v Line: 25
     Warning (13410): Pin "HEX2[0]" is stuck at GND File: D:/final_verilog/game.v Line: 26
     Warning (13410): Pin "HEX2[1]" is stuck at GND File: D:/final_verilog/game.v Line: 26
     Warning (13410): Pin "HEX2[2]" is stuck at GND File: D:/final_verilog/game.v Line: 26
@@ -810,8 +964,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "FPGA_I2C_SCLK" is stuck at GND File: D:/final_verilog/game.v Line: 82
     Warning (13410): Pin "IRDA_TXD" is stuck at GND File: D:/final_verilog/game.v Line: 88
 Info (286030): Timing-Driven Synthesis is running
-Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "vga_fonts:get_fonts|altsyncram:altsyncram_component|altsyncram_egg1:auto_generated|ALTSYNCRAM" File: D:/final_verilog/db/altsyncram_egg1.tdf Line: 31
-Info (144001): Generated suppressed messages file D:/final_verilog/game.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 29 input pin(s) that do not drive logic
@@ -844,23 +996,17 @@ Warning (21074): Design contains 29 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "AUD_ADCDAT" File: D:/final_verilog/game.v Line: 62
     Warning (15610): No output dependent on input pin "ADC_DOUT" File: D:/final_verilog/game.v Line: 78
     Warning (15610): No output dependent on input pin "IRDA_RXD" File: D:/final_verilog/game.v Line: 86
-Info (21057): Implemented 672 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1108 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 32 input pins
     Info (21059): Implemented 112 output pins
     Info (21060): Implemented 24 bidirectional pins
-    Info (21061): Implemented 491 logic cells
-    Info (21064): Implemented 12 RAM segments
-    Info (21062): Implemented 1 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 177 warnings
-    Info: Peak virtual memory: 4881 megabytes
-    Info: Processing ended: Sat Dec 22 15:00:06 2018
-    Info: Elapsed time: 00:00:40
+    Info (21061): Implemented 917 logic cells
+    Info (21064): Implemented 20 RAM segments
+    Info (21062): Implemented 3 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 181 warnings
+    Info: Peak virtual memory: 4889 megabytes
+    Info: Processing ended: Sat Dec 22 18:09:51 2018
+    Info: Elapsed time: 00:00:43
     Info: Total CPU time (on all processors): 00:01:17
-
-
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in D:/final_verilog/game.map.smsg.
 
 

@@ -99,26 +99,41 @@ wire [9:0] v_addr;
 wire [9:0] av_addr;
 wire sec_clk;
 wire[11:0]black_or_not;
-reg [7:0] getascii;
+wire [7:0] getascii;
 wire [9:0] vd16;
 wire [9:0] hd9;
 wire [9:0] vy16;
 wire [9:0] hy9;
+wire newchar_time;
 reg [9:0]dis_cnt;
 reg [23:0] vga_date;
+reg [7:0] newasc;
+reg neww;
+wire [11:0] raddr;
+wire [11:0] waddr;
+reg rec [7:0];
+reg [6:0] col;
+
+
+
 assign VGA_SYNC_N=0;
 assign dis=1;
 assign vd16=(av_addr-1)/16;
 assign vy16=(av_addr-1)%16;
-assign hd9=(h_addr)/9;
-assign hy9=(h_addr)%9;
-assign av_addr=(dis_cnt*dis+v_addr)%480+1;
+assign hd9=(h_addr-1)/9;
+assign hy9=(h_addr-1)%9;
+assign av_addr=(v_addr-dis_cnt*dis<0)?(v_addr+dis_cnt*dis)%480+1:(v_addr-dis_cnt*dis)%480+1;
+assign raddr=vd16*70+hd9+1;
+assign waddr=(dis_cnt-1)/16*70+(col-1)*9+1;
+assign LEDR[1]=neww;
 //=======================================================
 //  Structural coding
 //=======================================================
 initial 
 begin
    dis_cnt=0;
+	neww=0;
+	col=0;
 end
 
 
@@ -126,10 +141,23 @@ clkgen #(25000000) my_vgaclk(CLOCK_50,SW[2],1'b1,VGA_CLK);
 
 
 getsec sec_timer(
-        .clk(CLK_50),
+        .clk(CLOCK_50),
 		  .clk_ls(sec_clk)
 );
 
+newchar have_newchar(
+       .clk(CLOCK_50),
+		 .clk_ls(newchar_time)
+);
+
+store_asc(
+      .clock(CLOCK_50),
+		.data(8'h61),
+	   .rdaddress(raddr),
+	   .wraddress(waddr),
+	   .wren(neww),
+	   .q(getascii)
+);
  
 vga_ctrl my_ctr(
 		     .pclk(VGA_CLK),
@@ -155,18 +183,19 @@ vga_fonts get_fonts(
 
 always @(posedge sec_clk)
 begin
-	if(dis_cnt<480)
+   //LEDR[0]=1;
+	if(dis_cnt<10'd480)
 	   dis_cnt<=dis_cnt+1;
 	else 
 	   dis_cnt<=0;
 end
 		
-always@(h_addr)
+/*always@(h_addr)
     if(h_addr<10&av_addr<17)
         getascii=8'h61;
 	  else 
 	     getascii=0;  
-
+*/
 always @(posedge CLOCK_50)
   begin
    if(black_or_not[hy9]==1)
@@ -179,50 +208,19 @@ always @(posedge CLOCK_50)
 		end
 end		
 
-always @(dis_cnt)
-begin
-case(dis_cnt[3:0])
-	    4'h0:  HEX0 = 7'b1000000;
-        4'h1:  HEX0 = 7'b1111001;   
-	     4'h2: HEX0 =  7'b0100100;   
-	     4'h3: HEX0=  7'b0110000;    
-	     4'h4: HEX0 = 7'b0011001;    
-	     4'h5:  HEX0= 7'b0010010;    
-	     4'h6:  HEX0 = 7'b0000010;    
-	     4'h7: HEX0=  7'b1111000;    
-	     4'h8:  HEX0= 7'b0000000;    
-	     4'h9: HEX0 = 7'b0010000;
-	     4'ha:  HEX0=  7'b0001000;
-	     4'hb:  HEX0 = 7'b0000011;
-	     4'hc:  HEX0 = 7'b1000110;
-	     4'hd:  HEX0 = 7'b0100001;
-	     4'he:  HEX0=  7'b0000110;
-	     4'hf: HEX0 = 7'b0001110;
-	 default:HEX0=7'bx;
-	endcase
-	 case(dis_cnt[7:4])
-	    4'h0:  HEX1 = 7'b1000000;
-        4'h1:  HEX1 = 7'b1111001;   
-	     4'h2: HEX1=  7'b0100100;   
-	     4'h3: HEX1=  7'b0110000;    
-	     4'h4:  HEX1 = 7'b0011001;    
-	     4'h5:  HEX1 = 7'b0010010;    
-	     4'h6: HEX1= 7'b0000010;    
-	     4'h7: HEX1=  7'b1111000;    
-	     4'h8:  HEX1 = 7'b0000000;    
-	     4'h9: HEX1 = 7'b0010000;
-	     4'ha:  HEX1=  7'b0001000;
-	     4'hb:  HEX1 = 7'b0000011;
-	     4'hc:  HEX1 = 7'b1000110;
-	     4'hd:  HEX1 = 7'b0100001;
-	     4'he:  HEX1=  7'b0000110;
-	     4'hf:  HEX1 = 7'b0001110;
-	 default: HEX1=7'bx;
-	endcase
 
-end
-
-
-
+always @(posedge newchar_time)
+  begin
+  neww<= ~neww;
+  if(neww==1)
+   begin
+     if(col<70)
+	     begin
+       col<=col+1;
+		 rec[col]<=1;
+		 end		 
+  end
+  end
+  
 
 endmodule
