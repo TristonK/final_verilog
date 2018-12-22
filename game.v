@@ -113,6 +113,10 @@ wire [11:0] raddr;
 wire [11:0] waddr;
 reg rec [7:0];
 reg [6:0] col;
+reg have_empty;
+reg [7:0] charcnt;
+wire [7:0] alpha;
+
 
 
 
@@ -122,9 +126,9 @@ assign vd16=(av_addr-1)/16;
 assign vy16=(av_addr-1)%16;
 assign hd9=(h_addr-1)/9;
 assign hy9=(h_addr-1)%9;
-assign av_addr=(v_addr-dis_cnt*dis<0)?(v_addr+dis_cnt*dis)%480+1:(v_addr-dis_cnt*dis)%480+1;
+assign av_addr=({1'b0,v_addr}-{1'b0,dis_cnt*dis}<0)?({1'b0,v_addr}+{1'b0,dis_cnt*dis})%480+1:({1'b0,v_addr}-{1'b0,dis_cnt*dis})%480+1;
 assign raddr=vd16*70+hd9+1;
-assign waddr=(dis_cnt-1)/16*70+(col-1)*9+1;
+assign waddr=((dis_cnt-1)/16)*16*70+col*16+1;
 assign LEDR[1]=neww;
 //=======================================================
 //  Structural coding
@@ -134,6 +138,7 @@ begin
    dis_cnt=0;
 	neww=0;
 	col=0;
+	charcnt=0;
 end
 
 
@@ -152,12 +157,19 @@ newchar have_newchar(
 
 store_asc(
       .clock(CLOCK_50),
-		.data(8'h61),
+		.data(alpha+8'h61),
 	   .rdaddress(raddr),
 	   .wraddress(waddr),
 	   .wren(neww),
 	   .q(getascii)
 );
+
+ramdom26 getword(
+      .address(charcnt),
+		.clock(CLOCK_50),
+		.q(alpha)
+);
+
  
 vga_ctrl my_ctr(
 		     .pclk(VGA_CLK),
@@ -180,31 +192,24 @@ vga_fonts get_fonts(
 );
 
 
-
 always @(posedge sec_clk)
 begin
-   //LEDR[0]=1;
 	if(dis_cnt<10'd480)
 	   dis_cnt<=dis_cnt+1;
 	else 
 	   dis_cnt<=0;
 end
 		
-/*always@(h_addr)
-    if(h_addr<10&av_addr<17)
-        getascii=8'h61;
-	  else 
-	     getascii=0;  
-*/
+
 always @(posedge CLOCK_50)
   begin
-   if(black_or_not[hy9]==1)
+   if(black_or_not[hy9]==1&&hd9<70)
 	   begin
-	   vga_date=24'hffffff;
+	   vga_date<=24'hffffff;
 		end
 	else
 	   begin
-	   vga_date=24'h0;
+	   vga_date<=24'h0;
 		end
 end		
 
@@ -212,15 +217,22 @@ end
 always @(posedge newchar_time)
   begin
   neww<= ~neww;
-  if(neww==1)
+  end
+
+always @(posedge sec_clk)
    begin
-     if(col<70)
-	     begin
+     if(col<69)
+	    begin
        col<=col+1;
-		 rec[col]<=1;
-		 end		 
+		 end
+		else
+		 col<=0;
+     if(charcnt<8'd26)
+       charcnt<=charcnt+1;
+     else
+       charcnt<=0;	  
   end
-  end
+
   
 
 endmodule
