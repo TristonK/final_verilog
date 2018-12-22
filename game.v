@@ -110,15 +110,15 @@ reg [23:0] vga_date;
 reg [7:0] newasc;
 reg neww;
 wire [11:0] raddr;
-wire [11:0] waddr;
+reg [11:0] waddr;
 reg rec [7:0];
 reg [6:0] col;
 reg have_empty;
 reg [7:0] charcnt;
 wire [7:0] alpha;
-
-
-
+wire [7:0] onein70;
+reg [7:0] inputasc;
+reg have_in;
 
 assign VGA_SYNC_N=0;
 assign dis=1;
@@ -126,15 +126,16 @@ assign vd16=(av_addr-1)/16;
 assign vy16=(av_addr-1)%16;
 assign hd9=(h_addr-1)/9;
 assign hy9=(h_addr-1)%9;
-assign av_addr=({1'b0,v_addr}-{1'b0,dis_cnt*dis}<0)?({1'b0,v_addr}+{1'b0,dis_cnt*dis})%480+1:({1'b0,v_addr}-{1'b0,dis_cnt*dis})%480+1;
+assign av_addr=({1'b0,v_addr}-{1'b0,dis_cnt*dis}<0)?({1'b0,v_addr}+10'd480-{1'b0,dis_cnt*dis})%480+1:({1'b0,v_addr}-{1'b0,dis_cnt*dis})%480+1;
 assign raddr=vd16*70+hd9+1;
-assign waddr=((dis_cnt-1)/16)*16*70+col*16+1;
+//assign waddr=(hy9==0)?((dis_cnt-1)/16)*16*70+hd9*16+1:waddr;
 assign LEDR[1]=neww;
 //=======================================================
 //  Structural coding
 //=======================================================
 initial 
 begin
+   have_in=0;
    dis_cnt=0;
 	neww=0;
 	col=0;
@@ -157,10 +158,10 @@ newchar have_newchar(
 
 store_asc(
       .clock(CLOCK_50),
-		.data(alpha+8'h61),
+		.data(inputasc),
 	   .rdaddress(raddr),
 	   .wraddress(waddr),
-	   .wren(neww),
+	   .wren(1'b1),
 	   .q(getascii)
 );
 
@@ -169,6 +170,13 @@ ramdom26 getword(
 		.clock(CLOCK_50),
 		.q(alpha)
 );
+
+
+ramdomchar get70(
+   .clk(CLOCK_50),
+	.rdchar(onein70)
+);
+
 
  
 vga_ctrl my_ctr(
@@ -221,18 +229,27 @@ always @(posedge newchar_time)
 
 always @(posedge sec_clk)
    begin
-     if(col<69)
-	    begin
-       col<=col+1;
-		 end
-		else
-		 col<=0;
      if(charcnt<8'd26)
        charcnt<=charcnt+1;
      else
        charcnt<=0;	  
   end
 
-  
+
+always @(posedge VGA_CLK)//(posedge CLOCK_50)
+begin
+  if(onein70==8'd43&&dis_cnt%16==1)
+     begin
+	   //have_in<=1;
+      inputasc<=alpha+8'h61;
+		waddr<=((dis_cnt-1)/16)*16*70+hd9*16+1;
+	  end
+	else
+	  begin
+	   inputasc<=0;
+		// have_in<=0;
+		waddr<=((dis_cnt-1)/16-1)*16*70+hd9*16+1;
+	end
+end  
 
 endmodule

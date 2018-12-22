@@ -2,7 +2,7 @@
 CLOCK2_50 => ~NO_FANOUT~
 CLOCK3_50 => ~NO_FANOUT~
 CLOCK4_50 => ~NO_FANOUT~
-CLOCK_50 => CLOCK_50.IN6
+CLOCK_50 => CLOCK_50.IN7
 KEY[0] => ~NO_FANOUT~
 KEY[1] => ~NO_FANOUT~
 KEY[2] => ~NO_FANOUT~
@@ -334,7 +334,7 @@ clk => countclk[26].CLK
 clk_ls <= clk_ls~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|game|store_asc:comb_232
+|game|store_asc:comb_238
 clock => clock.IN1
 data[0] => data[0].IN1
 data[1] => data[1].IN1
@@ -379,7 +379,7 @@ q[6] <= altsyncram:altsyncram_component.q_b
 q[7] <= altsyncram:altsyncram_component.q_b
 
 
-|game|store_asc:comb_232|altsyncram:altsyncram_component
+|game|store_asc:comb_238|altsyncram:altsyncram_component
 wren_a => altsyncram_5ju1:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -457,7 +457,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|game|store_asc:comb_232|altsyncram:altsyncram_component|altsyncram_5ju1:auto_generated
+|game|store_asc:comb_238|altsyncram:altsyncram_component|altsyncram_5ju1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -850,6 +850,26 @@ q_a[4] <= ram_block1a4.PORTADATAOUT
 q_a[5] <= ram_block1a5.PORTADATAOUT
 q_a[6] <= ram_block1a6.PORTADATAOUT
 q_a[7] <= ram_block1a7.PORTADATAOUT
+
+
+|game|ramdomchar:get70
+clk => q[0].CLK
+clk => q[1].CLK
+clk => q[2].CLK
+clk => q[3].CLK
+clk => q[4].CLK
+clk => q[5].CLK
+clk => q[6].CLK
+clk => q[7].CLK
+clk => q[8].CLK
+rdchar[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+rdchar[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+rdchar[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+rdchar[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+rdchar[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+rdchar[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+rdchar[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+rdchar[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |game|vga_ctrl:my_ctr
