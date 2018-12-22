@@ -21,10 +21,10 @@ module game(
 	output		     [9:0]		LEDR,
 
 	//////////// Seg7 //////////
-	output		     [6:0]		HEX0,
-	output		     [6:0]		HEX1,
-	output		     [6:0]		HEX2,
-	output		     [6:0]		HEX3,
+	output		reg     [6:0]		HEX0,
+	output		reg     [6:0]		HEX1,
+	output		reg     [6:0]		HEX2,
+	output		reg     [6:0]		HEX3,
 	output		     [6:0]		HEX4,
 	output		     [6:0]		HEX5,
 
@@ -93,12 +93,135 @@ module game(
 //  REG/WIRE declarations
 //=======================================================
 
-
-
-
+wire [6:0] dis;
+wire [9:0] h_addr;
+wire [9:0] v_addr;
+wire [9:0] av_addr;
+wire sec_clk;
+wire[11:0]black_or_not;
+reg [7:0] getascii;
+wire [9:0] vd16;
+wire [9:0] hd9;
+wire [9:0] vy16;
+wire [9:0] hy9;
+reg [9:0]dis_cnt;
+reg [23:0] vga_date;
+assign VGA_SYNC_N=0;
+assign dis=1;
+assign vd16=(av_addr-1)/16;
+assign vy16=(av_addr-1)%16;
+assign hd9=(h_addr)/9;
+assign hy9=(h_addr)%9;
+assign av_addr=(dis_cnt*dis+v_addr)%480+1;
 //=======================================================
 //  Structural coding
 //=======================================================
+initial 
+begin
+   dis_cnt=0;
+end
+
+
+clkgen #(25000000) my_vgaclk(CLOCK_50,SW[2],1'b1,VGA_CLK);
+
+
+getsec sec_timer(
+        .clk(CLK_50),
+		  .clk_ls(sec_clk)
+);
+
+ 
+vga_ctrl my_ctr(
+		     .pclk(VGA_CLK),
+			  .reset(SW[0]),
+			  .vga_data(vga_date),
+			  .h_addr(h_addr),
+			  .v_addr(v_addr),
+			  .hsync(VGA_HS),
+			  .vsync(VGA_VS),
+			  .valid(VGA_BLANK_N),
+			  .vga_r(VGA_R),
+			  .vga_g(VGA_G),
+			  .vga_b(VGA_B)
+			  );
+			  
+vga_fonts get_fonts(
+           .address(getascii*16+vy16),
+		     .clock(CLOCK_50),
+			  .q(black_or_not)
+);
+
+
+
+always @(posedge sec_clk)
+begin
+	if(dis_cnt<480)
+	   dis_cnt<=dis_cnt+1;
+	else 
+	   dis_cnt<=0;
+end
+		
+always@(h_addr)
+    if(h_addr<10&av_addr<17)
+        getascii=8'h61;
+	  else 
+	     getascii=0;  
+
+always @(posedge CLOCK_50)
+  begin
+   if(black_or_not[hy9]==1)
+	   begin
+	   vga_date=24'hffffff;
+		end
+	else
+	   begin
+	   vga_date=24'h0;
+		end
+end		
+
+always @(dis_cnt)
+begin
+case(dis_cnt[3:0])
+	    4'h0:  HEX0 = 7'b1000000;
+        4'h1:  HEX0 = 7'b1111001;   
+	     4'h2: HEX0 =  7'b0100100;   
+	     4'h3: HEX0=  7'b0110000;    
+	     4'h4: HEX0 = 7'b0011001;    
+	     4'h5:  HEX0= 7'b0010010;    
+	     4'h6:  HEX0 = 7'b0000010;    
+	     4'h7: HEX0=  7'b1111000;    
+	     4'h8:  HEX0= 7'b0000000;    
+	     4'h9: HEX0 = 7'b0010000;
+	     4'ha:  HEX0=  7'b0001000;
+	     4'hb:  HEX0 = 7'b0000011;
+	     4'hc:  HEX0 = 7'b1000110;
+	     4'hd:  HEX0 = 7'b0100001;
+	     4'he:  HEX0=  7'b0000110;
+	     4'hf: HEX0 = 7'b0001110;
+	 default:HEX0=7'bx;
+	endcase
+	 case(dis_cnt[7:4])
+	    4'h0:  HEX1 = 7'b1000000;
+        4'h1:  HEX1 = 7'b1111001;   
+	     4'h2: HEX1=  7'b0100100;   
+	     4'h3: HEX1=  7'b0110000;    
+	     4'h4:  HEX1 = 7'b0011001;    
+	     4'h5:  HEX1 = 7'b0010010;    
+	     4'h6: HEX1= 7'b0000010;    
+	     4'h7: HEX1=  7'b1111000;    
+	     4'h8:  HEX1 = 7'b0000000;    
+	     4'h9: HEX1 = 7'b0010000;
+	     4'ha:  HEX1=  7'b0001000;
+	     4'hb:  HEX1 = 7'b0000011;
+	     4'hc:  HEX1 = 7'b1000110;
+	     4'hd:  HEX1 = 7'b0100001;
+	     4'he:  HEX1=  7'b0000110;
+	     4'hf:  HEX1 = 7'b0001110;
+	 default: HEX1=7'bx;
+	endcase
+
+end
+
 
 
 
