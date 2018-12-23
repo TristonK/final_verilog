@@ -1,5 +1,5 @@
 Analysis & Synthesis report for typing_game
-Sat Dec 22 22:27:56 2018
+Sun Dec 23 10:49:53 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Dec 22 22:27:56 2018       ;
+; Analysis & Synthesis Status     ; Successful - Sun Dec 23 10:49:52 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; typing_game                                 ;
 ; Top-level Entity Name           ; typing_game                                 ;
@@ -178,7 +178,7 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -192,37 +192,37 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                           ;
-+----------------------------------+-----------------+----------------------------------+--------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                   ; Library ;
-+----------------------------------+-----------------+----------------------------------+--------------------------------------------------------------------------------+---------+
-; typing_game.v                    ; yes             ; User Verilog HDL File            ; D:/Program Files/Quartus/exp/typing_game/typing_game.v                         ;         ;
-; vga_ctrl.v                       ; yes             ; User Verilog HDL File            ; D:/Program Files/Quartus/exp/typing_game/vga_ctrl.v                            ;         ;
-; clkgen.v                         ; yes             ; User Verilog HDL File            ; D:/Program Files/Quartus/exp/typing_game/clkgen.v                              ;         ;
-; keyboard.v                       ; yes             ; User Verilog HDL File            ; D:/Program Files/Quartus/exp/typing_game/keyboard.v                            ;         ;
-; ascii.v                          ; yes             ; User Verilog HDL File            ; D:/Program Files/Quartus/exp/typing_game/ascii.v                               ;         ;
-; ps2_keyboard.v                   ; yes             ; User Verilog HDL File            ; D:/Program Files/Quartus/exp/typing_game/ps2_keyboard.v                        ;         ;
-; char1.mif                        ; yes             ; User Memory Initialization File  ; D:/Program Files/Quartus/exp/typing_game/char1.mif                             ;         ;
-; canvas.v                         ; yes             ; User Wizard-Generated File       ; D:/Program Files/Quartus/exp/typing_game/canvas.v                              ;         ;
-; mem.v                            ; yes             ; User Wizard-Generated File       ; D:/Program Files/Quartus/exp/typing_game/mem.v                                 ;         ;
-; char.v                           ; yes             ; User Wizard-Generated File       ; D:/Program Files/Quartus/exp/typing_game/char.v                                ;         ;
-; seg_h.v                          ; yes             ; User Verilog HDL File            ; D:/Program Files/Quartus/exp/typing_game/seg_h.v                               ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                     ; d:/program files/quartus/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                     ; d:/program files/quartus/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                     ; d:/program files/quartus/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                     ; d:/program files/quartus/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; aglobal171.inc                   ; yes             ; Megafunction                     ; d:/program files/quartus/quartus/libraries/megafunctions/aglobal171.inc        ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                     ; d:/program files/quartus/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                       ; yes             ; Megafunction                     ; d:/program files/quartus/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                       ; yes             ; Megafunction                     ; d:/program files/quartus/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                     ; d:/program files/quartus/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_but1.tdf           ; yes             ; Auto-Generated Megafunction      ; D:/Program Files/Quartus/exp/typing_game/db/altsyncram_but1.tdf                ;         ;
-; db/decode_tma.tdf                ; yes             ; Auto-Generated Megafunction      ; D:/Program Files/Quartus/exp/typing_game/db/decode_tma.tdf                     ;         ;
-; db/mux_6hb.tdf                   ; yes             ; Auto-Generated Megafunction      ; D:/Program Files/Quartus/exp/typing_game/db/mux_6hb.tdf                        ;         ;
-; db/altsyncram_ibf1.tdf           ; yes             ; Auto-Generated Megafunction      ; D:/Program Files/Quartus/exp/typing_game/db/altsyncram_ibf1.tdf                ;         ;
-; db/altsyncram_edi1.tdf           ; yes             ; Auto-Generated Megafunction      ; D:/Program Files/Quartus/exp/typing_game/db/altsyncram_edi1.tdf                ;         ;
-+----------------------------------+-----------------+----------------------------------+--------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                  ;
++----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                          ; Library ;
++----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------+---------+
+; typing_game.v                    ; yes             ; User Verilog HDL File            ; D:/my_design/final_verilog/typing_game.v                                              ;         ;
+; vga_ctrl.v                       ; yes             ; User Verilog HDL File            ; D:/my_design/final_verilog/vga_ctrl.v                                                 ;         ;
+; clkgen.v                         ; yes             ; User Verilog HDL File            ; D:/my_design/final_verilog/clkgen.v                                                   ;         ;
+; keyboard.v                       ; yes             ; User Verilog HDL File            ; D:/my_design/final_verilog/keyboard.v                                                 ;         ;
+; ascii.v                          ; yes             ; User Verilog HDL File            ; D:/my_design/final_verilog/ascii.v                                                    ;         ;
+; ps2_keyboard.v                   ; yes             ; User Verilog HDL File            ; D:/my_design/final_verilog/ps2_keyboard.v                                             ;         ;
+; char1.mif                        ; yes             ; User Memory Initialization File  ; D:/my_design/final_verilog/char1.mif                                                  ;         ;
+; canvas.v                         ; yes             ; User Wizard-Generated File       ; D:/my_design/final_verilog/canvas.v                                                   ;         ;
+; mem.v                            ; yes             ; User Wizard-Generated File       ; D:/my_design/final_verilog/mem.v                                                      ;         ;
+; char.v                           ; yes             ; User Wizard-Generated File       ; D:/my_design/final_verilog/char.v                                                     ;         ;
+; seg_h.v                          ; yes             ; User Verilog HDL File            ; D:/my_design/final_verilog/seg_h.v                                                    ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                     ; d:/software/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                     ; d:/software/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                     ; d:/software/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                     ; d:/software/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal171.inc                   ; yes             ; Megafunction                     ; d:/software/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                     ; d:/software/intelfpga_lite/17.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                     ; d:/software/intelfpga_lite/17.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                     ; d:/software/intelfpga_lite/17.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                     ; d:/software/intelfpga_lite/17.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_but1.tdf           ; yes             ; Auto-Generated Megafunction      ; D:/my_design/final_verilog/db/altsyncram_but1.tdf                                     ;         ;
+; db/decode_tma.tdf                ; yes             ; Auto-Generated Megafunction      ; D:/my_design/final_verilog/db/decode_tma.tdf                                          ;         ;
+; db/mux_6hb.tdf                   ; yes             ; Auto-Generated Megafunction      ; D:/my_design/final_verilog/db/mux_6hb.tdf                                             ;         ;
+; db/altsyncram_ibf1.tdf           ; yes             ; Auto-Generated Megafunction      ; D:/my_design/final_verilog/db/altsyncram_ibf1.tdf                                     ;         ;
+; db/altsyncram_edi1.tdf           ; yes             ; Auto-Generated Megafunction      ; D:/my_design/final_verilog/db/altsyncram_edi1.tdf                                     ;         ;
++----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -230,14 +230,14 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 1790           ;
+; Estimate of Logic utilization (ALMs needed) ; 1774           ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 2620           ;
+; Combinational ALUT usage for logic          ; 2616           ;
 ;     -- 7 input functions                    ; 14             ;
-;     -- 6 input functions                    ; 938            ;
-;     -- 5 input functions                    ; 205            ;
-;     -- 4 input functions                    ; 627            ;
-;     -- <=3 input functions                  ; 836            ;
+;     -- 6 input functions                    ; 910            ;
+;     -- 5 input functions                    ; 195            ;
+;     -- 4 input functions                    ; 670            ;
+;     -- <=3 input functions                  ; 827            ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 1054           ;
 ;                                             ;                ;
@@ -249,8 +249,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 1082           ;
-; Total fan-out                               ; 15728          ;
-; Average fan-out                             ; 3.85           ;
+; Total fan-out                               ; 15660          ;
+; Average fan-out                             ; 3.84           ;
 +---------------------------------------------+----------------+
 
 
@@ -259,7 +259,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                           ; Entity Name     ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |typing_game                                 ; 2620 (2370)         ; 1054 (926)                ; 270400            ; 0          ; 168  ; 0            ; |typing_game                                                                                                  ; typing_game     ; work         ;
+; |typing_game                                 ; 2616 (2366)         ; 1054 (926)                ; 270400            ; 0          ; 168  ; 0            ; |typing_game                                                                                                  ; typing_game     ; work         ;
 ;    |canvas:canvas1|                          ; 21 (0)              ; 8 (0)                     ; 131072            ; 0          ; 0    ; 0            ; |typing_game|canvas:canvas1                                                                                   ; canvas          ; work         ;
 ;       |altsyncram:altsyncram_component|      ; 21 (0)              ; 8 (0)                     ; 131072            ; 0          ; 0    ; 0            ; |typing_game|canvas:canvas1|altsyncram:altsyncram_component                                                   ; altsyncram      ; work         ;
 ;          |altsyncram_but1:auto_generated|    ; 21 (0)              ; 8 (8)                     ; 131072            ; 0          ; 0    ; 0            ; |typing_game|canvas:canvas1|altsyncram:altsyncram_component|altsyncram_but1:auto_generated                    ; altsyncram_but1 ; work         ;
@@ -1117,8 +1117,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; endlink[0]                             ; 33      ;
-; endlink[2]                             ; 28      ;
+; endlink[0]                             ; 28      ;
+; endlink[2]                             ; 19      ;
 ; vga_ctrl:vga_ctrlor|x_cnt[0]           ; 6       ;
 ; keyboard:keyboard1|status[1]           ; 4       ;
 ; Total number of inverted registers = 4 ;         ;
@@ -1249,41 +1249,41 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[31][0]                                          ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[32][0]                                          ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[33][0]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[34][4]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[34][0]                                          ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[35][0]                                          ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[36][0]                                          ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[37][0]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[38][3]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[39][3]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[40][6]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[41][5]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[42][7]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[43][7]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[44][3]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[38][0]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[39][0]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[40][0]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[41][7]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[42][5]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[43][3]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[44][7]                                          ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[45][6]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[46][5]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[47][0]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[48][7]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[49][2]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[50][0]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[46][6]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[47][7]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[48][6]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[49][1]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[50][3]                                          ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |typing_game|y_fst[2]                                            ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |typing_game|draw_sec_cnt[28]                                    ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|keyboard:keyboard1|data[2]                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |typing_game|canvas_y[2]                                         ;
-; 5:1                ; 9 bits    ; 27 LEs        ; 9 LEs                ; 18 LEs                 ; Yes        ; |typing_game|canvas_x[3]                                         ;
-; 51:1               ; 7 bits    ; 238 LEs       ; 238 LEs              ; 0 LEs                  ; Yes        ; |typing_game|char_pos[3]                                         ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |typing_game|draw_sec_cnt[21]                                    ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|keyboard:keyboard1|data[0]                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |typing_game|canvas_y[5]                                         ;
+; 5:1                ; 9 bits    ; 27 LEs        ; 9 LEs                ; 18 LEs                 ; Yes        ; |typing_game|canvas_x[5]                                         ;
+; 51:1               ; 7 bits    ; 238 LEs       ; 238 LEs              ; 0 LEs                  ; Yes        ; |typing_game|char_pos[9]                                         ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |typing_game|cnt_newchar[28]                                     ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |typing_game|endlink[0]                                          ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |typing_game|cnt_newchar[4]                                      ;
 ; 24:1               ; 4 bits    ; 64 LEs        ; 24 LEs               ; 40 LEs                 ; Yes        ; |typing_game|old_status[0]                                       ;
-; 27:1               ; 4 bits    ; 72 LEs        ; 32 LEs               ; 40 LEs                 ; Yes        ; |typing_game|status[0]                                           ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |typing_game|mem_rpos[1]                                         ;
+; 27:1               ; 4 bits    ; 72 LEs        ; 32 LEs               ; 40 LEs                 ; Yes        ; |typing_game|status[3]                                           ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |typing_game|mem_rpos[0]                                         ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |typing_game|keyboard:keyboard1|ps2_keyboard:keyboard_1|r_ptr    ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |typing_game|status                                              ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |typing_game|cnt_newchar                                         ;
-; 51:1               ; 8 bits    ; 272 LEs       ; 272 LEs              ; 0 LEs                  ; No         ; |typing_game|Mux23                                               ;
-; 51:1               ; 26 bits   ; 884 LEs       ; 884 LEs              ; 0 LEs                  ; No         ; |typing_game|Mux38                                               ;
-; 51:1               ; 9 bits    ; 306 LEs       ; 306 LEs              ; 0 LEs                  ; No         ; |typing_game|Mux9                                                ;
-; 51:1               ; 17 bits   ; 578 LEs       ; 578 LEs              ; 0 LEs                  ; No         ; |typing_game|Mux59                                               ;
+; 3:1                ; 36 bits   ; 72 LEs        ; 72 LEs               ; 0 LEs                  ; No         ; |typing_game|cnt_newchar                                         ;
+; 51:1               ; 8 bits    ; 272 LEs       ; 272 LEs              ; 0 LEs                  ; No         ; |typing_game|Mux20                                               ;
+; 51:1               ; 26 bits   ; 884 LEs       ; 884 LEs              ; 0 LEs                  ; No         ; |typing_game|Mux46                                               ;
+; 51:1               ; 9 bits    ; 306 LEs       ; 306 LEs              ; 0 LEs                  ; No         ; |typing_game|Mux13                                               ;
+; 51:1               ; 17 bits   ; 578 LEs       ; 578 LEs              ; 0 LEs                  ; No         ; |typing_game|Mux55                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
 
 
@@ -1329,7 +1329,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Parameter Name ; Value                            ; Type                    ;
 +----------------+----------------------------------+-------------------------+
 ; TIME           ; 00000000100110001001011010000000 ; Unsigned Binary         ;
-; TIME_NEW_CHAR  ; 00000010111110101111000010000000 ; Unsigned Binary         ;
+; TIME_NEW_CHAR  ; 00001110111001101011001010000000 ; Unsigned Binary         ;
 ; MAX_CHAR       ; 00000000000000000000000000110010 ; Unsigned Binary         ;
 ; none           ; 0                                ; Signed Integer          ;
 ; upt_pos        ; 1                                ; Signed Integer          ;
@@ -1720,7 +1720,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SLD               ; 1                           ;
 ;     plain             ; 145                         ;
 ; arriav_io_obuf        ; 24                          ;
-; arriav_lcell_comb     ; 2624                        ;
+; arriav_lcell_comb     ; 2620                        ;
 ;     arith             ; 407                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 372                         ;
@@ -1728,14 +1728,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         4 data inputs ; 6                           ;
 ;     extend            ; 14                          ;
 ;         7 data inputs ; 14                          ;
-;     normal            ; 2193                        ;
+;     normal            ; 2189                        ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 12                          ;
-;         2 data inputs ; 248                         ;
-;         3 data inputs ; 168                         ;
-;         4 data inputs ; 621                         ;
-;         5 data inputs ; 205                         ;
-;         6 data inputs ; 938                         ;
+;         2 data inputs ; 243                         ;
+;         3 data inputs ; 164                         ;
+;         4 data inputs ; 664                         ;
+;         5 data inputs ; 195                         ;
+;         6 data inputs ; 910                         ;
 ;     shared            ; 10                          ;
 ;         2 data inputs ; 10                          ;
 ; boundary_port         ; 168                         ;
@@ -1751,7 +1751,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:11     ;
+; Top            ; 00:00:34     ;
 +----------------+--------------+
 
 
@@ -1761,89 +1761,88 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Dec 22 22:27:28 2018
+    Info: Processing started: Sun Dec 23 10:48:40 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off typing_game -c typing_game
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file typing_game.v
-    Info (12023): Found entity 1: typing_game File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 6
+    Info (12023): Found entity 1: typing_game File: D:/my_design/final_verilog/typing_game.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file vga_ctrl.v
-    Info (12023): Found entity 1: vga_ctrl File: D:/Program Files/Quartus/exp/typing_game/vga_ctrl.v Line: 1
+    Info (12023): Found entity 1: vga_ctrl File: D:/my_design/final_verilog/vga_ctrl.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file clkgen.v
-    Info (12023): Found entity 1: clkgen File: D:/Program Files/Quartus/exp/typing_game/clkgen.v Line: 1
+    Info (12023): Found entity 1: clkgen File: D:/my_design/final_verilog/clkgen.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file keyboard.v
-    Info (12023): Found entity 1: keyboard File: D:/Program Files/Quartus/exp/typing_game/keyboard.v Line: 1
+    Info (12023): Found entity 1: keyboard File: D:/my_design/final_verilog/keyboard.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ascii.v
-    Info (12023): Found entity 1: ascii File: D:/Program Files/Quartus/exp/typing_game/ascii.v Line: 1
+    Info (12023): Found entity 1: ascii File: D:/my_design/final_verilog/ascii.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ps2_keyboard.v
-    Info (12023): Found entity 1: ps2_keyboard File: D:/Program Files/Quartus/exp/typing_game/ps2_keyboard.v Line: 1
+    Info (12023): Found entity 1: ps2_keyboard File: D:/my_design/final_verilog/ps2_keyboard.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file canvas.v
-    Info (12023): Found entity 1: canvas File: D:/Program Files/Quartus/exp/typing_game/canvas.v Line: 39
+    Info (12023): Found entity 1: canvas File: D:/my_design/final_verilog/canvas.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file mem.v
-    Info (12023): Found entity 1: mem File: D:/Program Files/Quartus/exp/typing_game/mem.v Line: 39
+    Info (12023): Found entity 1: mem File: D:/my_design/final_verilog/mem.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file char.v
-    Info (12023): Found entity 1: char File: D:/Program Files/Quartus/exp/typing_game/char.v Line: 39
+    Info (12023): Found entity 1: char File: D:/my_design/final_verilog/char.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file seg_h.v
-    Info (12023): Found entity 1: seg_h File: D:/Program Files/Quartus/exp/typing_game/seg_h.v Line: 1
+    Info (12023): Found entity 1: seg_h File: D:/my_design/final_verilog/seg_h.v Line: 1
 Info (12127): Elaborating entity "typing_game" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at typing_game.v(118): object "key_info" assigned a value but never read File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 118
-Warning (10230): Verilog HDL assignment warning at typing_game.v(139): truncated value with size 32 to match size of target (9) File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 139
-Warning (10230): Verilog HDL assignment warning at typing_game.v(141): truncated value with size 32 to match size of target (8) File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 141
-Warning (10855): Verilog HDL warning at typing_game.v(196): initial value for variable k_x should be constant File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 196
-Warning (10855): Verilog HDL warning at typing_game.v(196): initial value for variable k_y should be constant File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 196
-Warning (10855): Verilog HDL warning at typing_game.v(196): initial value for variable k_v should be constant File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 196
-Warning (10855): Verilog HDL warning at typing_game.v(196): initial value for variable k_text should be constant File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 196
-Warning (10230): Verilog HDL assignment warning at typing_game.v(210): truncated value with size 32 to match size of target (4) File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 210
-Warning (10230): Verilog HDL assignment warning at typing_game.v(211): truncated value with size 32 to match size of target (4) File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 211
-Warning (10230): Verilog HDL assignment warning at typing_game.v(213): truncated value with size 32 to match size of target (4) File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-Warning (10230): Verilog HDL assignment warning at typing_game.v(218): truncated value with size 32 to match size of target (4) File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 218
-Warning (10230): Verilog HDL assignment warning at typing_game.v(221): truncated value with size 32 to match size of target (4) File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 221
-Warning (10230): Verilog HDL assignment warning at typing_game.v(222): truncated value with size 32 to match size of target (4) File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 222
-Warning (10230): Verilog HDL assignment warning at typing_game.v(223): truncated value with size 32 to match size of target (4) File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 223
-Warning (10230): Verilog HDL assignment warning at typing_game.v(224): truncated value with size 32 to match size of target (4) File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 224
-Warning (10230): Verilog HDL assignment warning at typing_game.v(225): truncated value with size 32 to match size of target (4) File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 225
-Warning (10230): Verilog HDL assignment warning at typing_game.v(226): truncated value with size 32 to match size of target (4) File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 226
-Warning (10230): Verilog HDL assignment warning at typing_game.v(227): truncated value with size 32 to match size of target (4) File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 227
-Warning (10230): Verilog HDL assignment warning at typing_game.v(230): truncated value with size 32 to match size of target (4) File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 230
-Warning (10230): Verilog HDL assignment warning at typing_game.v(266): truncated value with size 32 to match size of target (10) File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 266
-Warning (10230): Verilog HDL assignment warning at typing_game.v(285): truncated value with size 32 to match size of target (8) File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 285
-Warning (10230): Verilog HDL assignment warning at typing_game.v(287): truncated value with size 32 to match size of target (8) File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 287
-Warning (10230): Verilog HDL assignment warning at typing_game.v(295): truncated value with size 32 to match size of target (10) File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 295
-Warning (10230): Verilog HDL assignment warning at typing_game.v(328): truncated value with size 32 to match size of target (3) File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 328
-Warning (10230): Verilog HDL assignment warning at typing_game.v(331): truncated value with size 32 to match size of target (3) File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 331
-Warning (10230): Verilog HDL assignment warning at typing_game.v(335): truncated value with size 11 to match size of target (10) File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 335
-Warning (10230): Verilog HDL assignment warning at typing_game.v(368): truncated value with size 32 to match size of target (8) File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 368
-Warning (10230): Verilog HDL assignment warning at typing_game.v(369): truncated value with size 32 to match size of target (9) File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 369
-Warning (10230): Verilog HDL assignment warning at typing_game.v(383): truncated value with size 32 to match size of target (8) File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 383
-Warning (10230): Verilog HDL assignment warning at typing_game.v(384): truncated value with size 32 to match size of target (9) File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 384
-Warning (10034): Output port "LEDR" at typing_game.v(21) has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 21
-Warning (10034): Output port "HEX2" at typing_game.v(26) has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 26
-Warning (10034): Output port "HEX3" at typing_game.v(27) has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 27
-Warning (10034): Output port "HEX4" at typing_game.v(28) has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 28
-Warning (10034): Output port "HEX5" at typing_game.v(29) has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 29
-Warning (10034): Output port "DRAM_ADDR" at typing_game.v(32) has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 32
-Warning (10034): Output port "DRAM_BA" at typing_game.v(33) has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 33
-Warning (10034): Output port "DRAM_CAS_N" at typing_game.v(34) has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 34
-Warning (10034): Output port "DRAM_CKE" at typing_game.v(35) has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 35
-Warning (10034): Output port "DRAM_CLK" at typing_game.v(36) has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 36
-Warning (10034): Output port "DRAM_CS_N" at typing_game.v(37) has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 37
-Warning (10034): Output port "DRAM_LDQM" at typing_game.v(39) has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 39
-Warning (10034): Output port "DRAM_RAS_N" at typing_game.v(40) has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 40
-Warning (10034): Output port "DRAM_UDQM" at typing_game.v(41) has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 41
-Warning (10034): Output port "DRAM_WE_N" at typing_game.v(42) has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 42
-Warning (10034): Output port "TD_RESET_N" at typing_game.v(48) has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 48
-Warning (10034): Output port "VGA_SYNC_N" at typing_game.v(58) has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 58
-Warning (10034): Output port "AUD_DACDAT" at typing_game.v(65) has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 65
-Warning (10034): Output port "AUD_XCK" at typing_game.v(67) has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 67
-Warning (10034): Output port "ADC_CONVST" at typing_game.v(76) has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 76
-Warning (10034): Output port "ADC_DIN" at typing_game.v(77) has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 77
-Warning (10034): Output port "ADC_SCLK" at typing_game.v(79) has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 79
-Warning (10034): Output port "FPGA_I2C_SCLK" at typing_game.v(82) has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 82
-Warning (10034): Output port "IRDA_TXD" at typing_game.v(88) has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 88
-Info (12128): Elaborating entity "mem" for hierarchy "mem:mem1" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 152
-Info (12128): Elaborating entity "altsyncram" for hierarchy "mem:mem1|altsyncram:altsyncram_component" File: D:/Program Files/Quartus/exp/typing_game/mem.v Line: 88
-Info (12130): Elaborated megafunction instantiation "mem:mem1|altsyncram:altsyncram_component" File: D:/Program Files/Quartus/exp/typing_game/mem.v Line: 88
-Info (12133): Instantiated megafunction "mem:mem1|altsyncram:altsyncram_component" with the following parameter: File: D:/Program Files/Quartus/exp/typing_game/mem.v Line: 88
+Warning (10230): Verilog HDL assignment warning at typing_game.v(137): truncated value with size 32 to match size of target (9) File: D:/my_design/final_verilog/typing_game.v Line: 137
+Warning (10230): Verilog HDL assignment warning at typing_game.v(139): truncated value with size 32 to match size of target (8) File: D:/my_design/final_verilog/typing_game.v Line: 139
+Warning (10855): Verilog HDL warning at typing_game.v(194): initial value for variable k_x should be constant File: D:/my_design/final_verilog/typing_game.v Line: 194
+Warning (10855): Verilog HDL warning at typing_game.v(194): initial value for variable k_y should be constant File: D:/my_design/final_verilog/typing_game.v Line: 194
+Warning (10855): Verilog HDL warning at typing_game.v(194): initial value for variable k_v should be constant File: D:/my_design/final_verilog/typing_game.v Line: 194
+Warning (10855): Verilog HDL warning at typing_game.v(194): initial value for variable k_text should be constant File: D:/my_design/final_verilog/typing_game.v Line: 194
+Warning (10230): Verilog HDL assignment warning at typing_game.v(207): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 207
+Warning (10230): Verilog HDL assignment warning at typing_game.v(208): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 208
+Warning (10230): Verilog HDL assignment warning at typing_game.v(210): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 210
+Warning (10230): Verilog HDL assignment warning at typing_game.v(215): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 215
+Warning (10230): Verilog HDL assignment warning at typing_game.v(219): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 219
+Warning (10230): Verilog HDL assignment warning at typing_game.v(220): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 220
+Warning (10230): Verilog HDL assignment warning at typing_game.v(221): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 221
+Warning (10230): Verilog HDL assignment warning at typing_game.v(222): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 222
+Warning (10230): Verilog HDL assignment warning at typing_game.v(223): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 223
+Warning (10230): Verilog HDL assignment warning at typing_game.v(224): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 224
+Warning (10230): Verilog HDL assignment warning at typing_game.v(225): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 225
+Warning (10230): Verilog HDL assignment warning at typing_game.v(228): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 228
+Warning (10230): Verilog HDL assignment warning at typing_game.v(261): truncated value with size 32 to match size of target (10) File: D:/my_design/final_verilog/typing_game.v Line: 261
+Warning (10230): Verilog HDL assignment warning at typing_game.v(280): truncated value with size 32 to match size of target (8) File: D:/my_design/final_verilog/typing_game.v Line: 280
+Warning (10230): Verilog HDL assignment warning at typing_game.v(282): truncated value with size 32 to match size of target (8) File: D:/my_design/final_verilog/typing_game.v Line: 282
+Warning (10230): Verilog HDL assignment warning at typing_game.v(290): truncated value with size 32 to match size of target (10) File: D:/my_design/final_verilog/typing_game.v Line: 290
+Warning (10230): Verilog HDL assignment warning at typing_game.v(322): truncated value with size 32 to match size of target (3) File: D:/my_design/final_verilog/typing_game.v Line: 322
+Warning (10230): Verilog HDL assignment warning at typing_game.v(325): truncated value with size 32 to match size of target (3) File: D:/my_design/final_verilog/typing_game.v Line: 325
+Warning (10230): Verilog HDL assignment warning at typing_game.v(329): truncated value with size 11 to match size of target (10) File: D:/my_design/final_verilog/typing_game.v Line: 329
+Warning (10230): Verilog HDL assignment warning at typing_game.v(362): truncated value with size 32 to match size of target (8) File: D:/my_design/final_verilog/typing_game.v Line: 362
+Warning (10230): Verilog HDL assignment warning at typing_game.v(363): truncated value with size 32 to match size of target (9) File: D:/my_design/final_verilog/typing_game.v Line: 363
+Warning (10230): Verilog HDL assignment warning at typing_game.v(377): truncated value with size 32 to match size of target (8) File: D:/my_design/final_verilog/typing_game.v Line: 377
+Warning (10230): Verilog HDL assignment warning at typing_game.v(378): truncated value with size 32 to match size of target (9) File: D:/my_design/final_verilog/typing_game.v Line: 378
+Warning (10034): Output port "LEDR" at typing_game.v(21) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 21
+Warning (10034): Output port "HEX2" at typing_game.v(26) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 26
+Warning (10034): Output port "HEX3" at typing_game.v(27) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 27
+Warning (10034): Output port "HEX4" at typing_game.v(28) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 28
+Warning (10034): Output port "HEX5" at typing_game.v(29) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 29
+Warning (10034): Output port "DRAM_ADDR" at typing_game.v(32) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 32
+Warning (10034): Output port "DRAM_BA" at typing_game.v(33) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 33
+Warning (10034): Output port "DRAM_CAS_N" at typing_game.v(34) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 34
+Warning (10034): Output port "DRAM_CKE" at typing_game.v(35) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 35
+Warning (10034): Output port "DRAM_CLK" at typing_game.v(36) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 36
+Warning (10034): Output port "DRAM_CS_N" at typing_game.v(37) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 37
+Warning (10034): Output port "DRAM_LDQM" at typing_game.v(39) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 39
+Warning (10034): Output port "DRAM_RAS_N" at typing_game.v(40) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 40
+Warning (10034): Output port "DRAM_UDQM" at typing_game.v(41) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 41
+Warning (10034): Output port "DRAM_WE_N" at typing_game.v(42) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 42
+Warning (10034): Output port "TD_RESET_N" at typing_game.v(48) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 48
+Warning (10034): Output port "VGA_SYNC_N" at typing_game.v(58) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 58
+Warning (10034): Output port "AUD_DACDAT" at typing_game.v(65) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 65
+Warning (10034): Output port "AUD_XCK" at typing_game.v(67) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 67
+Warning (10034): Output port "ADC_CONVST" at typing_game.v(76) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 76
+Warning (10034): Output port "ADC_DIN" at typing_game.v(77) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 77
+Warning (10034): Output port "ADC_SCLK" at typing_game.v(79) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 79
+Warning (10034): Output port "FPGA_I2C_SCLK" at typing_game.v(82) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 82
+Warning (10034): Output port "IRDA_TXD" at typing_game.v(88) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 88
+Info (12128): Elaborating entity "mem" for hierarchy "mem:mem1" File: D:/my_design/final_verilog/typing_game.v Line: 150
+Info (12128): Elaborating entity "altsyncram" for hierarchy "mem:mem1|altsyncram:altsyncram_component" File: D:/my_design/final_verilog/mem.v Line: 88
+Info (12130): Elaborated megafunction instantiation "mem:mem1|altsyncram:altsyncram_component" File: D:/my_design/final_verilog/mem.v Line: 88
+Info (12133): Instantiated megafunction "mem:mem1|altsyncram:altsyncram_component" with the following parameter: File: D:/my_design/final_verilog/mem.v Line: 88
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK0"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
@@ -1864,19 +1863,19 @@ Info (12133): Instantiated megafunction "mem:mem1|altsyncram:altsyncram_componen
     Info (12134): Parameter "width_b" = "1"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_but1.tdf
-    Info (12023): Found entity 1: altsyncram_but1 File: D:/Program Files/Quartus/exp/typing_game/db/altsyncram_but1.tdf Line: 31
-Info (12128): Elaborating entity "altsyncram_but1" for hierarchy "mem:mem1|altsyncram:altsyncram_component|altsyncram_but1:auto_generated" File: d:/program files/quartus/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+    Info (12023): Found entity 1: altsyncram_but1 File: D:/my_design/final_verilog/db/altsyncram_but1.tdf Line: 31
+Info (12128): Elaborating entity "altsyncram_but1" for hierarchy "mem:mem1|altsyncram:altsyncram_component|altsyncram_but1:auto_generated" File: d:/software/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_tma.tdf
-    Info (12023): Found entity 1: decode_tma File: D:/Program Files/Quartus/exp/typing_game/db/decode_tma.tdf Line: 22
-Info (12128): Elaborating entity "decode_tma" for hierarchy "mem:mem1|altsyncram:altsyncram_component|altsyncram_but1:auto_generated|decode_tma:decode2" File: D:/Program Files/Quartus/exp/typing_game/db/altsyncram_but1.tdf Line: 43
+    Info (12023): Found entity 1: decode_tma File: D:/my_design/final_verilog/db/decode_tma.tdf Line: 22
+Info (12128): Elaborating entity "decode_tma" for hierarchy "mem:mem1|altsyncram:altsyncram_component|altsyncram_but1:auto_generated|decode_tma:decode2" File: D:/my_design/final_verilog/db/altsyncram_but1.tdf Line: 43
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_6hb.tdf
-    Info (12023): Found entity 1: mux_6hb File: D:/Program Files/Quartus/exp/typing_game/db/mux_6hb.tdf Line: 22
-Info (12128): Elaborating entity "mux_6hb" for hierarchy "mem:mem1|altsyncram:altsyncram_component|altsyncram_but1:auto_generated|mux_6hb:mux3" File: D:/Program Files/Quartus/exp/typing_game/db/altsyncram_but1.tdf Line: 44
-Info (12128): Elaborating entity "canvas" for hierarchy "canvas:canvas1" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 161
-Info (12128): Elaborating entity "char" for hierarchy "char:char1" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 171
-Info (12128): Elaborating entity "altsyncram" for hierarchy "char:char1|altsyncram:altsyncram_component" File: D:/Program Files/Quartus/exp/typing_game/char.v Line: 81
-Info (12130): Elaborated megafunction instantiation "char:char1|altsyncram:altsyncram_component" File: D:/Program Files/Quartus/exp/typing_game/char.v Line: 81
-Info (12133): Instantiated megafunction "char:char1|altsyncram:altsyncram_component" with the following parameter: File: D:/Program Files/Quartus/exp/typing_game/char.v Line: 81
+    Info (12023): Found entity 1: mux_6hb File: D:/my_design/final_verilog/db/mux_6hb.tdf Line: 22
+Info (12128): Elaborating entity "mux_6hb" for hierarchy "mem:mem1|altsyncram:altsyncram_component|altsyncram_but1:auto_generated|mux_6hb:mux3" File: D:/my_design/final_verilog/db/altsyncram_but1.tdf Line: 44
+Info (12128): Elaborating entity "canvas" for hierarchy "canvas:canvas1" File: D:/my_design/final_verilog/typing_game.v Line: 159
+Info (12128): Elaborating entity "char" for hierarchy "char:char1" File: D:/my_design/final_verilog/typing_game.v Line: 169
+Info (12128): Elaborating entity "altsyncram" for hierarchy "char:char1|altsyncram:altsyncram_component" File: D:/my_design/final_verilog/char.v Line: 81
+Info (12130): Elaborated megafunction instantiation "char:char1|altsyncram:altsyncram_component" File: D:/my_design/final_verilog/char.v Line: 81
+Info (12133): Instantiated megafunction "char:char1|altsyncram:altsyncram_component" with the following parameter: File: D:/my_design/final_verilog/char.v Line: 81
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -1892,14 +1891,14 @@ Info (12133): Instantiated megafunction "char:char1|altsyncram:altsyncram_compon
     Info (12134): Parameter "width_a" = "8"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ibf1.tdf
-    Info (12023): Found entity 1: altsyncram_ibf1 File: D:/Program Files/Quartus/exp/typing_game/db/altsyncram_ibf1.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_ibf1" for hierarchy "char:char1|altsyncram:altsyncram_component|altsyncram_ibf1:auto_generated" File: d:/program files/quartus/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "seg_h" for hierarchy "seg_h:seg1" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 175
-Info (12128): Elaborating entity "keyboard" for hierarchy "keyboard:keyboard1" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 178
-Info (12128): Elaborating entity "ps2_keyboard" for hierarchy "keyboard:keyboard1|ps2_keyboard:keyboard_1" File: D:/Program Files/Quartus/exp/typing_game/keyboard.v Line: 32
-Info (12128): Elaborating entity "ascii" for hierarchy "keyboard:keyboard1|ascii:kcode2_asc" File: D:/Program Files/Quartus/exp/typing_game/keyboard.v Line: 64
-Info (12128): Elaborating entity "clkgen" for hierarchy "clkgen:clk25" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 180
-Info (12128): Elaborating entity "vga_ctrl" for hierarchy "vga_ctrl:vga_ctrlor" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 194
+    Info (12023): Found entity 1: altsyncram_ibf1 File: D:/my_design/final_verilog/db/altsyncram_ibf1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_ibf1" for hierarchy "char:char1|altsyncram:altsyncram_component|altsyncram_ibf1:auto_generated" File: d:/software/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "seg_h" for hierarchy "seg_h:seg1" File: D:/my_design/final_verilog/typing_game.v Line: 173
+Info (12128): Elaborating entity "keyboard" for hierarchy "keyboard:keyboard1" File: D:/my_design/final_verilog/typing_game.v Line: 176
+Info (12128): Elaborating entity "ps2_keyboard" for hierarchy "keyboard:keyboard1|ps2_keyboard:keyboard_1" File: D:/my_design/final_verilog/keyboard.v Line: 32
+Info (12128): Elaborating entity "ascii" for hierarchy "keyboard:keyboard1|ascii:kcode2_asc" File: D:/my_design/final_verilog/keyboard.v Line: 64
+Info (12128): Elaborating entity "clkgen" for hierarchy "clkgen:clk25" File: D:/my_design/final_verilog/typing_game.v Line: 178
+Info (12128): Elaborating entity "vga_ctrl" for hierarchy "vga_ctrl:vga_ctrlor" File: D:/my_design/final_verilog/typing_game.v Line: 192
 Warning (276020): Inferred RAM node "keyboard:keyboard1|ps2_keyboard:keyboard_1|fifo_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "keyboard:keyboard1|ps2_keyboard:keyboard_1|fifo_rtl_0" 
@@ -1934,197 +1933,197 @@ Info (12133): Instantiated megafunction "keyboard:keyboard1|ps2_keyboard:keyboar
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_edi1.tdf
-    Info (12023): Found entity 1: altsyncram_edi1 File: D:/Program Files/Quartus/exp/typing_game/db/altsyncram_edi1.tdf Line: 27
+    Info (12023): Found entity 1: altsyncram_edi1 File: D:/my_design/final_verilog/db/altsyncram_edi1.tdf Line: 27
 Warning (13039): The following bidirectional pins have no drivers
-    Warning (13040): bidirectional pin "PS2_CLK" has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 70
-    Warning (13040): bidirectional pin "PS2_DAT" has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 72
-    Warning (13040): bidirectional pin "DRAM_DQ[0]" has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[1]" has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[2]" has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[3]" has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[4]" has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[5]" has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[6]" has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[7]" has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[8]" has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[9]" has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[10]" has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[11]" has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[12]" has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[13]" has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[14]" has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[15]" has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 38
-    Warning (13040): bidirectional pin "AUD_ADCLRCK" has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 63
-    Warning (13040): bidirectional pin "AUD_BCLK" has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 64
-    Warning (13040): bidirectional pin "AUD_DACLRCK" has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 66
-    Warning (13040): bidirectional pin "PS2_CLK2" has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 71
-    Warning (13040): bidirectional pin "PS2_DAT2" has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 73
-    Warning (13040): bidirectional pin "FPGA_I2C_SDAT" has no driver File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 83
+    Warning (13040): bidirectional pin "PS2_CLK" has no driver File: D:/my_design/final_verilog/typing_game.v Line: 70
+    Warning (13040): bidirectional pin "PS2_DAT" has no driver File: D:/my_design/final_verilog/typing_game.v Line: 72
+    Warning (13040): bidirectional pin "DRAM_DQ[0]" has no driver File: D:/my_design/final_verilog/typing_game.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[1]" has no driver File: D:/my_design/final_verilog/typing_game.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[2]" has no driver File: D:/my_design/final_verilog/typing_game.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[3]" has no driver File: D:/my_design/final_verilog/typing_game.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[4]" has no driver File: D:/my_design/final_verilog/typing_game.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[5]" has no driver File: D:/my_design/final_verilog/typing_game.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[6]" has no driver File: D:/my_design/final_verilog/typing_game.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[7]" has no driver File: D:/my_design/final_verilog/typing_game.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[8]" has no driver File: D:/my_design/final_verilog/typing_game.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[9]" has no driver File: D:/my_design/final_verilog/typing_game.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[10]" has no driver File: D:/my_design/final_verilog/typing_game.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[11]" has no driver File: D:/my_design/final_verilog/typing_game.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[12]" has no driver File: D:/my_design/final_verilog/typing_game.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[13]" has no driver File: D:/my_design/final_verilog/typing_game.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[14]" has no driver File: D:/my_design/final_verilog/typing_game.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[15]" has no driver File: D:/my_design/final_verilog/typing_game.v Line: 38
+    Warning (13040): bidirectional pin "AUD_ADCLRCK" has no driver File: D:/my_design/final_verilog/typing_game.v Line: 63
+    Warning (13040): bidirectional pin "AUD_BCLK" has no driver File: D:/my_design/final_verilog/typing_game.v Line: 64
+    Warning (13040): bidirectional pin "AUD_DACLRCK" has no driver File: D:/my_design/final_verilog/typing_game.v Line: 66
+    Warning (13040): bidirectional pin "PS2_CLK2" has no driver File: D:/my_design/final_verilog/typing_game.v Line: 71
+    Warning (13040): bidirectional pin "PS2_DAT2" has no driver File: D:/my_design/final_verilog/typing_game.v Line: 73
+    Warning (13040): bidirectional pin "FPGA_I2C_SDAT" has no driver File: D:/my_design/final_verilog/typing_game.v Line: 83
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "status[0]" is converted into an equivalent circuit using register "status[0]~_emulated" and latch "status[0]~1" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "status[1]" is converted into an equivalent circuit using register "status[1]~_emulated" and latch "status[1]~5" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "status[2]" is converted into an equivalent circuit using register "status[2]~_emulated" and latch "status[2]~9" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "status[3]" is converted into an equivalent circuit using register "status[3]~_emulated" and latch "status[3]~13" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[31]" is converted into an equivalent circuit using register "cnt_newchar[31]~_emulated" and latch "cnt_newchar[31]~1" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[30]" is converted into an equivalent circuit using register "cnt_newchar[30]~_emulated" and latch "cnt_newchar[30]~5" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[29]" is converted into an equivalent circuit using register "cnt_newchar[29]~_emulated" and latch "cnt_newchar[29]~9" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[28]" is converted into an equivalent circuit using register "cnt_newchar[28]~_emulated" and latch "cnt_newchar[28]~13" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[27]" is converted into an equivalent circuit using register "cnt_newchar[27]~_emulated" and latch "cnt_newchar[27]~17" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[26]" is converted into an equivalent circuit using register "cnt_newchar[26]~_emulated" and latch "cnt_newchar[26]~21" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[25]" is converted into an equivalent circuit using register "cnt_newchar[25]~_emulated" and latch "cnt_newchar[25]~25" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[24]" is converted into an equivalent circuit using register "cnt_newchar[24]~_emulated" and latch "cnt_newchar[24]~29" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[23]" is converted into an equivalent circuit using register "cnt_newchar[23]~_emulated" and latch "cnt_newchar[23]~33" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[22]" is converted into an equivalent circuit using register "cnt_newchar[22]~_emulated" and latch "cnt_newchar[22]~37" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[21]" is converted into an equivalent circuit using register "cnt_newchar[21]~_emulated" and latch "cnt_newchar[21]~41" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[20]" is converted into an equivalent circuit using register "cnt_newchar[20]~_emulated" and latch "cnt_newchar[20]~45" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[19]" is converted into an equivalent circuit using register "cnt_newchar[19]~_emulated" and latch "cnt_newchar[19]~49" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[18]" is converted into an equivalent circuit using register "cnt_newchar[18]~_emulated" and latch "cnt_newchar[18]~53" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[17]" is converted into an equivalent circuit using register "cnt_newchar[17]~_emulated" and latch "cnt_newchar[17]~57" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[16]" is converted into an equivalent circuit using register "cnt_newchar[16]~_emulated" and latch "cnt_newchar[16]~61" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[15]" is converted into an equivalent circuit using register "cnt_newchar[15]~_emulated" and latch "cnt_newchar[15]~65" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[14]" is converted into an equivalent circuit using register "cnt_newchar[14]~_emulated" and latch "cnt_newchar[14]~69" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[13]" is converted into an equivalent circuit using register "cnt_newchar[13]~_emulated" and latch "cnt_newchar[13]~73" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[12]" is converted into an equivalent circuit using register "cnt_newchar[12]~_emulated" and latch "cnt_newchar[12]~77" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[11]" is converted into an equivalent circuit using register "cnt_newchar[11]~_emulated" and latch "cnt_newchar[11]~81" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[10]" is converted into an equivalent circuit using register "cnt_newchar[10]~_emulated" and latch "cnt_newchar[10]~85" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[9]" is converted into an equivalent circuit using register "cnt_newchar[9]~_emulated" and latch "cnt_newchar[9]~89" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[8]" is converted into an equivalent circuit using register "cnt_newchar[8]~_emulated" and latch "cnt_newchar[8]~93" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[7]" is converted into an equivalent circuit using register "cnt_newchar[7]~_emulated" and latch "cnt_newchar[7]~97" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[6]" is converted into an equivalent circuit using register "cnt_newchar[6]~_emulated" and latch "cnt_newchar[6]~101" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[5]" is converted into an equivalent circuit using register "cnt_newchar[5]~_emulated" and latch "cnt_newchar[5]~105" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[4]" is converted into an equivalent circuit using register "cnt_newchar[4]~_emulated" and latch "cnt_newchar[4]~109" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[3]" is converted into an equivalent circuit using register "cnt_newchar[3]~_emulated" and latch "cnt_newchar[3]~113" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[2]" is converted into an equivalent circuit using register "cnt_newchar[2]~_emulated" and latch "cnt_newchar[2]~117" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[1]" is converted into an equivalent circuit using register "cnt_newchar[1]~_emulated" and latch "cnt_newchar[1]~121" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "cnt_newchar[0]" is converted into an equivalent circuit using register "cnt_newchar[0]~_emulated" and latch "cnt_newchar[0]~125" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "old_status[0]" is converted into an equivalent circuit using register "old_status[0]~_emulated" and latch "old_status[0]~1" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "flag" is converted into an equivalent circuit using register "flag~_emulated" and latch "flag~1" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 145
-    Warning (13310): Register "old_status[1]" is converted into an equivalent circuit using register "old_status[1]~_emulated" and latch "old_status[1]~5" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "old_status[2]" is converted into an equivalent circuit using register "old_status[2]~_emulated" and latch "old_status[2]~9" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
-    Warning (13310): Register "old_status[3]" is converted into an equivalent circuit using register "old_status[3]~_emulated" and latch "old_status[3]~13" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 213
+    Warning (13310): Register "status[0]" is converted into an equivalent circuit using register "status[0]~_emulated" and latch "status[0]~1" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "status[1]" is converted into an equivalent circuit using register "status[1]~_emulated" and latch "status[1]~5" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "status[2]" is converted into an equivalent circuit using register "status[2]~_emulated" and latch "status[2]~9" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "status[3]" is converted into an equivalent circuit using register "status[3]~_emulated" and latch "status[3]~13" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[31]" is converted into an equivalent circuit using register "cnt_newchar[31]~_emulated" and latch "cnt_newchar[31]~1" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[30]" is converted into an equivalent circuit using register "cnt_newchar[30]~_emulated" and latch "cnt_newchar[30]~5" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[29]" is converted into an equivalent circuit using register "cnt_newchar[29]~_emulated" and latch "cnt_newchar[29]~9" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[28]" is converted into an equivalent circuit using register "cnt_newchar[28]~_emulated" and latch "cnt_newchar[28]~13" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[27]" is converted into an equivalent circuit using register "cnt_newchar[27]~_emulated" and latch "cnt_newchar[27]~17" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[26]" is converted into an equivalent circuit using register "cnt_newchar[26]~_emulated" and latch "cnt_newchar[26]~21" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[25]" is converted into an equivalent circuit using register "cnt_newchar[25]~_emulated" and latch "cnt_newchar[25]~25" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[24]" is converted into an equivalent circuit using register "cnt_newchar[24]~_emulated" and latch "cnt_newchar[24]~29" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[23]" is converted into an equivalent circuit using register "cnt_newchar[23]~_emulated" and latch "cnt_newchar[23]~33" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[22]" is converted into an equivalent circuit using register "cnt_newchar[22]~_emulated" and latch "cnt_newchar[22]~37" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[21]" is converted into an equivalent circuit using register "cnt_newchar[21]~_emulated" and latch "cnt_newchar[21]~41" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[20]" is converted into an equivalent circuit using register "cnt_newchar[20]~_emulated" and latch "cnt_newchar[20]~45" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[19]" is converted into an equivalent circuit using register "cnt_newchar[19]~_emulated" and latch "cnt_newchar[19]~49" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[18]" is converted into an equivalent circuit using register "cnt_newchar[18]~_emulated" and latch "cnt_newchar[18]~53" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[17]" is converted into an equivalent circuit using register "cnt_newchar[17]~_emulated" and latch "cnt_newchar[17]~57" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[16]" is converted into an equivalent circuit using register "cnt_newchar[16]~_emulated" and latch "cnt_newchar[16]~61" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[15]" is converted into an equivalent circuit using register "cnt_newchar[15]~_emulated" and latch "cnt_newchar[15]~65" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[14]" is converted into an equivalent circuit using register "cnt_newchar[14]~_emulated" and latch "cnt_newchar[14]~69" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[13]" is converted into an equivalent circuit using register "cnt_newchar[13]~_emulated" and latch "cnt_newchar[13]~73" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[12]" is converted into an equivalent circuit using register "cnt_newchar[12]~_emulated" and latch "cnt_newchar[12]~77" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[11]" is converted into an equivalent circuit using register "cnt_newchar[11]~_emulated" and latch "cnt_newchar[11]~81" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[10]" is converted into an equivalent circuit using register "cnt_newchar[10]~_emulated" and latch "cnt_newchar[10]~85" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[9]" is converted into an equivalent circuit using register "cnt_newchar[9]~_emulated" and latch "cnt_newchar[9]~89" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[8]" is converted into an equivalent circuit using register "cnt_newchar[8]~_emulated" and latch "cnt_newchar[8]~93" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[7]" is converted into an equivalent circuit using register "cnt_newchar[7]~_emulated" and latch "cnt_newchar[7]~97" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[6]" is converted into an equivalent circuit using register "cnt_newchar[6]~_emulated" and latch "cnt_newchar[6]~101" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[5]" is converted into an equivalent circuit using register "cnt_newchar[5]~_emulated" and latch "cnt_newchar[5]~105" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[4]" is converted into an equivalent circuit using register "cnt_newchar[4]~_emulated" and latch "cnt_newchar[4]~109" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[3]" is converted into an equivalent circuit using register "cnt_newchar[3]~_emulated" and latch "cnt_newchar[3]~113" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[2]" is converted into an equivalent circuit using register "cnt_newchar[2]~_emulated" and latch "cnt_newchar[2]~117" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[1]" is converted into an equivalent circuit using register "cnt_newchar[1]~_emulated" and latch "cnt_newchar[1]~121" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "cnt_newchar[0]" is converted into an equivalent circuit using register "cnt_newchar[0]~_emulated" and latch "cnt_newchar[0]~125" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "old_status[0]" is converted into an equivalent circuit using register "old_status[0]~_emulated" and latch "old_status[0]~1" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "flag" is converted into an equivalent circuit using register "flag~_emulated" and latch "flag~1" File: D:/my_design/final_verilog/typing_game.v Line: 143
+    Warning (13310): Register "old_status[1]" is converted into an equivalent circuit using register "old_status[1]~_emulated" and latch "old_status[1]~5" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "old_status[2]" is converted into an equivalent circuit using register "old_status[2]~_emulated" and latch "old_status[2]~9" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "old_status[3]" is converted into an equivalent circuit using register "old_status[3]~_emulated" and latch "old_status[3]~13" File: D:/my_design/final_verilog/typing_game.v Line: 210
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 21
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 21
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 21
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 21
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 21
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 21
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 21
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 21
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 21
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 21
-    Warning (13410): Pin "HEX2[0]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 26
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 26
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 26
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 26
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 26
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 26
-    Warning (13410): Pin "HEX2[6]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 26
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 27
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 27
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 27
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 27
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 27
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 27
-    Warning (13410): Pin "HEX3[6]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 27
-    Warning (13410): Pin "HEX4[0]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 28
-    Warning (13410): Pin "HEX4[1]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 28
-    Warning (13410): Pin "HEX4[2]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 28
-    Warning (13410): Pin "HEX4[3]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 28
-    Warning (13410): Pin "HEX4[4]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 28
-    Warning (13410): Pin "HEX4[5]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 28
-    Warning (13410): Pin "HEX4[6]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 28
-    Warning (13410): Pin "HEX5[0]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 29
-    Warning (13410): Pin "HEX5[1]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 29
-    Warning (13410): Pin "HEX5[2]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 29
-    Warning (13410): Pin "HEX5[3]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 29
-    Warning (13410): Pin "HEX5[4]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 29
-    Warning (13410): Pin "HEX5[5]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 29
-    Warning (13410): Pin "HEX5[6]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 29
-    Warning (13410): Pin "DRAM_ADDR[0]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 32
-    Warning (13410): Pin "DRAM_ADDR[1]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 32
-    Warning (13410): Pin "DRAM_ADDR[2]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 32
-    Warning (13410): Pin "DRAM_ADDR[3]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 32
-    Warning (13410): Pin "DRAM_ADDR[4]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 32
-    Warning (13410): Pin "DRAM_ADDR[5]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 32
-    Warning (13410): Pin "DRAM_ADDR[6]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 32
-    Warning (13410): Pin "DRAM_ADDR[7]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 32
-    Warning (13410): Pin "DRAM_ADDR[8]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 32
-    Warning (13410): Pin "DRAM_ADDR[9]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 32
-    Warning (13410): Pin "DRAM_ADDR[10]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 32
-    Warning (13410): Pin "DRAM_ADDR[11]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 32
-    Warning (13410): Pin "DRAM_ADDR[12]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 32
-    Warning (13410): Pin "DRAM_BA[0]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 33
-    Warning (13410): Pin "DRAM_BA[1]" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 33
-    Warning (13410): Pin "DRAM_CAS_N" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 34
-    Warning (13410): Pin "DRAM_CKE" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 35
-    Warning (13410): Pin "DRAM_CLK" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 36
-    Warning (13410): Pin "DRAM_CS_N" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 37
-    Warning (13410): Pin "DRAM_LDQM" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 39
-    Warning (13410): Pin "DRAM_RAS_N" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 40
-    Warning (13410): Pin "DRAM_UDQM" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 41
-    Warning (13410): Pin "DRAM_WE_N" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 42
-    Warning (13410): Pin "TD_RESET_N" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 48
-    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 58
-    Warning (13410): Pin "AUD_DACDAT" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 65
-    Warning (13410): Pin "AUD_XCK" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 67
-    Warning (13410): Pin "ADC_CONVST" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 76
-    Warning (13410): Pin "ADC_DIN" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 77
-    Warning (13410): Pin "ADC_SCLK" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 79
-    Warning (13410): Pin "FPGA_I2C_SCLK" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 82
-    Warning (13410): Pin "IRDA_TXD" is stuck at GND File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 88
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 21
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 21
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 21
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 21
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 21
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 21
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 21
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 21
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 21
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 21
+    Warning (13410): Pin "HEX2[0]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 26
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 26
+    Warning (13410): Pin "HEX2[2]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 26
+    Warning (13410): Pin "HEX2[3]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 26
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 26
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 26
+    Warning (13410): Pin "HEX2[6]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 26
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 27
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 27
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 27
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 27
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 27
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 27
+    Warning (13410): Pin "HEX3[6]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 27
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 28
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 28
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 28
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 28
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 28
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 28
+    Warning (13410): Pin "HEX4[6]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 28
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 29
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 29
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 29
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 29
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 29
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 29
+    Warning (13410): Pin "HEX5[6]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 29
+    Warning (13410): Pin "DRAM_ADDR[0]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[1]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[2]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[3]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[4]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[5]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[6]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[7]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[8]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[9]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[10]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[11]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[12]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 32
+    Warning (13410): Pin "DRAM_BA[0]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 33
+    Warning (13410): Pin "DRAM_BA[1]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 33
+    Warning (13410): Pin "DRAM_CAS_N" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 34
+    Warning (13410): Pin "DRAM_CKE" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 35
+    Warning (13410): Pin "DRAM_CLK" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 36
+    Warning (13410): Pin "DRAM_CS_N" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 37
+    Warning (13410): Pin "DRAM_LDQM" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 39
+    Warning (13410): Pin "DRAM_RAS_N" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 40
+    Warning (13410): Pin "DRAM_UDQM" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 41
+    Warning (13410): Pin "DRAM_WE_N" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 42
+    Warning (13410): Pin "TD_RESET_N" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 48
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 58
+    Warning (13410): Pin "AUD_DACDAT" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 65
+    Warning (13410): Pin "AUD_XCK" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 67
+    Warning (13410): Pin "ADC_CONVST" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 76
+    Warning (13410): Pin "ADC_DIN" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 77
+    Warning (13410): Pin "ADC_SCLK" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 79
+    Warning (13410): Pin "FPGA_I2C_SCLK" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 82
+    Warning (13410): Pin "IRDA_TXD" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 88
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 22 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file D:/Program Files/Quartus/exp/typing_game/typing_game.map.smsg
+Info (144001): Generated suppressed messages file D:/my_design/final_verilog/typing_game.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 30 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CLOCK2_50" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 9
-    Warning (15610): No output dependent on input pin "CLOCK3_50" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 10
-    Warning (15610): No output dependent on input pin "CLOCK4_50" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 11
-    Warning (15610): No output dependent on input pin "KEY[0]" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 15
-    Warning (15610): No output dependent on input pin "KEY[1]" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 15
-    Warning (15610): No output dependent on input pin "KEY[2]" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 15
-    Warning (15610): No output dependent on input pin "KEY[3]" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 15
-    Warning (15610): No output dependent on input pin "SW[1]" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 18
-    Warning (15610): No output dependent on input pin "SW[2]" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 18
-    Warning (15610): No output dependent on input pin "SW[3]" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 18
-    Warning (15610): No output dependent on input pin "SW[4]" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 18
-    Warning (15610): No output dependent on input pin "SW[5]" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 18
-    Warning (15610): No output dependent on input pin "SW[6]" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 18
-    Warning (15610): No output dependent on input pin "SW[7]" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 18
-    Warning (15610): No output dependent on input pin "SW[8]" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 18
-    Warning (15610): No output dependent on input pin "SW[9]" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 18
-    Warning (15610): No output dependent on input pin "TD_CLK27" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 45
-    Warning (15610): No output dependent on input pin "TD_DATA[0]" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 46
-    Warning (15610): No output dependent on input pin "TD_DATA[1]" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 46
-    Warning (15610): No output dependent on input pin "TD_DATA[2]" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 46
-    Warning (15610): No output dependent on input pin "TD_DATA[3]" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 46
-    Warning (15610): No output dependent on input pin "TD_DATA[4]" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 46
-    Warning (15610): No output dependent on input pin "TD_DATA[5]" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 46
-    Warning (15610): No output dependent on input pin "TD_DATA[6]" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 46
-    Warning (15610): No output dependent on input pin "TD_DATA[7]" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 46
-    Warning (15610): No output dependent on input pin "TD_HS" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 47
-    Warning (15610): No output dependent on input pin "TD_VS" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 49
-    Warning (15610): No output dependent on input pin "AUD_ADCDAT" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 62
-    Warning (15610): No output dependent on input pin "ADC_DOUT" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 78
-    Warning (15610): No output dependent on input pin "IRDA_RXD" File: D:/Program Files/Quartus/exp/typing_game/typing_game.v Line: 86
-Info (21057): Implemented 2939 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "CLOCK2_50" File: D:/my_design/final_verilog/typing_game.v Line: 9
+    Warning (15610): No output dependent on input pin "CLOCK3_50" File: D:/my_design/final_verilog/typing_game.v Line: 10
+    Warning (15610): No output dependent on input pin "CLOCK4_50" File: D:/my_design/final_verilog/typing_game.v Line: 11
+    Warning (15610): No output dependent on input pin "KEY[0]" File: D:/my_design/final_verilog/typing_game.v Line: 15
+    Warning (15610): No output dependent on input pin "KEY[1]" File: D:/my_design/final_verilog/typing_game.v Line: 15
+    Warning (15610): No output dependent on input pin "KEY[2]" File: D:/my_design/final_verilog/typing_game.v Line: 15
+    Warning (15610): No output dependent on input pin "KEY[3]" File: D:/my_design/final_verilog/typing_game.v Line: 15
+    Warning (15610): No output dependent on input pin "SW[1]" File: D:/my_design/final_verilog/typing_game.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[2]" File: D:/my_design/final_verilog/typing_game.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[3]" File: D:/my_design/final_verilog/typing_game.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[4]" File: D:/my_design/final_verilog/typing_game.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[5]" File: D:/my_design/final_verilog/typing_game.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[6]" File: D:/my_design/final_verilog/typing_game.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[7]" File: D:/my_design/final_verilog/typing_game.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[8]" File: D:/my_design/final_verilog/typing_game.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[9]" File: D:/my_design/final_verilog/typing_game.v Line: 18
+    Warning (15610): No output dependent on input pin "TD_CLK27" File: D:/my_design/final_verilog/typing_game.v Line: 45
+    Warning (15610): No output dependent on input pin "TD_DATA[0]" File: D:/my_design/final_verilog/typing_game.v Line: 46
+    Warning (15610): No output dependent on input pin "TD_DATA[1]" File: D:/my_design/final_verilog/typing_game.v Line: 46
+    Warning (15610): No output dependent on input pin "TD_DATA[2]" File: D:/my_design/final_verilog/typing_game.v Line: 46
+    Warning (15610): No output dependent on input pin "TD_DATA[3]" File: D:/my_design/final_verilog/typing_game.v Line: 46
+    Warning (15610): No output dependent on input pin "TD_DATA[4]" File: D:/my_design/final_verilog/typing_game.v Line: 46
+    Warning (15610): No output dependent on input pin "TD_DATA[5]" File: D:/my_design/final_verilog/typing_game.v Line: 46
+    Warning (15610): No output dependent on input pin "TD_DATA[6]" File: D:/my_design/final_verilog/typing_game.v Line: 46
+    Warning (15610): No output dependent on input pin "TD_DATA[7]" File: D:/my_design/final_verilog/typing_game.v Line: 46
+    Warning (15610): No output dependent on input pin "TD_HS" File: D:/my_design/final_verilog/typing_game.v Line: 47
+    Warning (15610): No output dependent on input pin "TD_VS" File: D:/my_design/final_verilog/typing_game.v Line: 49
+    Warning (15610): No output dependent on input pin "AUD_ADCDAT" File: D:/my_design/final_verilog/typing_game.v Line: 62
+    Warning (15610): No output dependent on input pin "ADC_DOUT" File: D:/my_design/final_verilog/typing_game.v Line: 78
+    Warning (15610): No output dependent on input pin "IRDA_RXD" File: D:/my_design/final_verilog/typing_game.v Line: 86
+Info (21057): Implemented 2935 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 32 input pins
     Info (21059): Implemented 112 output pins
     Info (21060): Implemented 24 bidirectional pins
-    Info (21061): Implemented 2723 logic cells
+    Info (21061): Implemented 2719 logic cells
     Info (21064): Implemented 48 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 225 warnings
-    Info: Peak virtual memory: 4895 megabytes
-    Info: Processing ended: Sat Dec 22 22:27:56 2018
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:44
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 224 warnings
+    Info: Peak virtual memory: 4902 megabytes
+    Info: Processing ended: Sun Dec 23 10:49:53 2018
+    Info: Elapsed time: 00:01:13
+    Info: Total CPU time (on all processors): 00:01:44
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in D:/Program Files/Quartus/exp/typing_game/typing_game.map.smsg.
+The suppressed messages can be found in D:/my_design/final_verilog/typing_game.map.smsg.
 
 

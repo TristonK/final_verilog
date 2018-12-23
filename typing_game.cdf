@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSXFC6D6F31) Path("D:/Program Files/Quartus/exp/typing_game/") File("typing_game.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSXFC6D6F31) Path("D:/my_design/final_verilog/") File("typing_game.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

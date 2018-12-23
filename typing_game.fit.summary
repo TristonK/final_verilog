@@ -1,12 +1,12 @@
-Fitter Status : Successful - Sat Dec 22 22:29:17 2018
+Fitter Status : Successful - Sun Dec 23 10:53:16 2018
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : typing_game
 Top-level Entity Name : typing_game
 Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 1,641 / 41,910 ( 4 % )
-Total registers : 1057
+Logic utilization (in ALMs) : 1,644 / 41,910 ( 4 % )
+Total registers : 1056
 Total pins : 168 / 499 ( 34 % )
 Total virtual pins : 0
 Total block memory bits : 270,400 / 5,662,720 ( 5 % )

@@ -110,9 +110,9 @@ wire [7:0]code_in;
 
 reg [9:0]endlink=0;	//最多40*24=960
 
-reg	[8:0]k_x[MAX_CHAR:0];
-reg [7:0]k_y[MAX_CHAR:0];
-reg [7:0]k_text[MAX_CHAR:0];
+reg	[8:0] k_x [MAX_CHAR:0];
+reg [7:0] k_y [MAX_CHAR:0];
+reg [7:0] k_text [MAX_CHAR:0];
 reg [MAX_CHAR:0]k_v;
 
 reg [2:0] x_fst=0;
@@ -193,18 +193,17 @@ vga_ctrl vga_ctrlor(
 
 initial begin
 	endlink=5;
-	k_x[0]=80;k_y[0]=9;k_v[0]=0;k_text[0]=8'd65;
-	k_x[1]=90;k_y[1]=9;k_v[1]=0;k_text[1]=8'd65;
-	k_x[2]=100;k_y[2]=9;k_v[2]=0;k_text[2]=8'd65;
-	k_x[3]=110;k_y[3]=9;k_v[3]=0;k_text[3]=8'd65;
-	k_x[4]=120;k_y[4]=9;k_v[4]=0;k_text[4]=8'd65;
+	k_x[0]=80;k_y[0]=9;k_v[0]=0;k_text[0]=8'd70;
+	k_x[1]=90;k_y[1]=9;k_v[1]=0;k_text[1]=8'd66;
+	k_x[2]=100;k_y[2]=9;k_v[2]=0;k_text[2]=8'd67;
+	k_x[3]=110;k_y[3]=9;k_v[3]=0;k_text[3]=8'd68;
+	k_x[4]=120;k_y[4]=9;k_v[4]=0;k_text[4]=8'd69;
 end
 //newin
 
 //status
 always @(posedge CLOCK_50 or posedge new_in)begin
-
-	 if(new_in )begin
+	 if(new_in)begin
 		 if(reset)begin status<=RESET; old_status<=none;cnt_newchar<=0;end
 		 else if(flag==0) begin  cnt_newchar<=cnt_newchar+1; status<=key_event; old_status<=status;flag<=1; end
 	 end else begin
@@ -213,18 +212,18 @@ always @(posedge CLOCK_50 or posedge new_in)begin
 				flag<=0;
 				cnt_newchar<=cnt_newchar+1;
 				if(cnt_newchar==TIME_NEW_CHAR)begin
-					status<=create_new;
+					//status<=create_new;
 					cnt_newchar<=0;
 				end else begin
 					case (status)
-						none 		: if(f_none) 		begin status<=upt_pos;	old_status<=status;	 	end
-						upt_pos		: if(f_upt_pos)		begin status<=delete;	old_status<=status;		end
-						delete 		: if(f_delete) 		begin status<=draw_fst;	old_status<=status;		end
-						draw_fst 	: if(f_draw_fst)	begin status<=chg_mem;	old_status<=status;		end
-						chg_mem  	: if(f_chg_mem) 	begin status<=draw_sec;	old_status<=status;		end
-						draw_sec 	: if(f_draw_sec)	begin status<=none;		old_status<=status;		end
+						none 		: if(f_none) 		begin old_status<=status; status<=upt_pos;		end
+						upt_pos		: if(f_upt_pos)		begin old_status<=status; status<=delete;		end //update pos
+						delete 		: if(f_delete) 		begin old_status<=status; status<=draw_fst;		end
+						draw_fst 	: if(f_draw_fst)	begin old_status<=status; status<=chg_mem;		end //first draw
+						chg_mem  	: if(f_chg_mem) 	begin old_status<=status; status<=draw_sec;		end //change memory
+						draw_sec 	: if(f_draw_sec)	begin old_status<=status; status<=none;			end //second draw
 						RESET   	: if(!reset)		begin status<=none;								end
-						key_event 	: if(f_key_event)	begin status<=old_status;						end
+						key_event 	: if(f_key_event)	begin status<=old_status;						end //keyboard input
 						create_new	: if(f_create_new)	begin status<=old_status;						end
 						9,10,11,12,13,14,15 :           begin status<=none;	old_status<=none;			end
 					endcase
@@ -233,15 +232,12 @@ always @(posedge CLOCK_50 or posedge new_in)begin
 	 end
 end
 
-//color
+//for our needed square, let it be what it should be, else let it be purple
 always @(posedge CLOCK_50)begin
 		if(h_addr<160 || h_addr>=480 || v_addr<140 ||v_addr>=340)begin
 			vga_data<=24'h2a0a29;
 		end else begin
-			vga_data<={	mem_dout,mem_dout,mem_dout,mem_dout,mem_dout,mem_dout,
-						mem_dout,mem_dout,mem_dout,mem_dout,mem_dout,mem_dout,
-						mem_dout,mem_dout,mem_dout,mem_dout,mem_dout,mem_dout,
-						mem_dout,mem_dout,mem_dout,mem_dout,mem_dout,mem_dout};
+			vga_data<=mem_dout==1?24'hffffff:24'h0;
 		end
 	end
 
@@ -317,7 +313,6 @@ always @(posedge CLOCK_50)begin
 			x_fst<=0;
 			y_fst<=0;
 		end	else begin
-
 			if(x_fst>=7)begin
 				x_fst<=0;
 				if(y_fst>=7)begin
@@ -332,7 +327,7 @@ always @(posedge CLOCK_50)begin
 			canvas_y<=k_y[draw_fst_cnt]+y_fst;
 			canvas_x<=k_x[draw_fst_cnt]+x_fst;
 			char_pos<={k_text[draw_fst_cnt],y_fst};
-			can_din<=char_row[x_fst];
+			can_din<=char_row[7-x_fst];
 		end
 	end else begin f_draw_fst<=0; end
 
@@ -381,9 +376,8 @@ always @(posedge CLOCK_50)begin
 				canvas_x<=0;
 				canvas_y<=canvas_y+1;
 			end else begin canvas_x<=canvas_x+1; end
-			can_din<=1'b0;
 		end
-
+		can_din<=1'b0;
 	end else begin draw_sec_cnt<=0; end
 
 	if(status==key_event) begin
@@ -406,5 +400,12 @@ always @(posedge CLOCK_50)begin
  	end else begin f_key_event<=0; end
 
 end
+
+always@(endlink)
+begin
+	seg_h seg2()
+end
+
+
 
 endmodule
