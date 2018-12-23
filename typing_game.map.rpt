@@ -1,5 +1,5 @@
 Analysis & Synthesis report for typing_game
-Sun Dec 23 11:49:48 2018
+Sun Dec 23 16:22:57 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -16,32 +16,35 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
  10. Registers Removed During Synthesis
- 11. Removed Registers Triggering Further Register Optimizations
- 12. General Register Statistics
- 13. Inverted Register Statistics
- 14. Registers Added for RAM Pass-Through Logic
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for mem:mem1|altsyncram:altsyncram_component|altsyncram_but1:auto_generated
- 17. Source assignments for canvas:canvas1|altsyncram:altsyncram_component|altsyncram_but1:auto_generated
- 18. Source assignments for char:char1|altsyncram:altsyncram_component|altsyncram_ibf1:auto_generated
- 19. Source assignments for keyboard:keyboard1|ps2_keyboard:keyboard_1|altsyncram:fifo_rtl_0|altsyncram_edi1:auto_generated
- 20. Parameter Settings for User Entity Instance: Top-level Entity: |typing_game
- 21. Parameter Settings for User Entity Instance: mem:mem1|altsyncram:altsyncram_component
- 22. Parameter Settings for User Entity Instance: canvas:canvas1|altsyncram:altsyncram_component
- 23. Parameter Settings for User Entity Instance: char:char1|altsyncram:altsyncram_component
- 24. Parameter Settings for User Entity Instance: clkgen:clk25
- 25. Parameter Settings for User Entity Instance: vga_ctrl:vga_ctrlor
- 26. Parameter Settings for Inferred Entity Instance: keyboard:keyboard1|ps2_keyboard:keyboard_1|altsyncram:fifo_rtl_0
- 27. altsyncram Parameter Settings by Entity Instance
- 28. Port Connectivity Checks: "clkgen:clk25"
- 29. Port Connectivity Checks: "keyboard:keyboard1|ps2_keyboard:keyboard_1"
- 30. Port Connectivity Checks: "seg_h:seg2"
- 31. Port Connectivity Checks: "seg_h:seg1"
- 32. Port Connectivity Checks: "canvas:canvas1"
- 33. Post-Synthesis Netlist Statistics for Top Partition
- 34. Elapsed Time Per Partition
- 35. Analysis & Synthesis Messages
- 36. Analysis & Synthesis Suppressed Messages
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Registers Added for RAM Pass-Through Logic
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for mem:mem1|altsyncram:altsyncram_component|altsyncram_but1:auto_generated
+ 16. Source assignments for canvas:canvas1|altsyncram:altsyncram_component|altsyncram_but1:auto_generated
+ 17. Source assignments for char:char1|altsyncram:altsyncram_component|altsyncram_ibf1:auto_generated
+ 18. Source assignments for keyboard:keyboard1|ps2_keyboard:keyboard_1|altsyncram:fifo_rtl_0|altsyncram_edi1:auto_generated
+ 19. Parameter Settings for User Entity Instance: Top-level Entity: |typing_game
+ 20. Parameter Settings for User Entity Instance: mem:mem1|altsyncram:altsyncram_component
+ 21. Parameter Settings for User Entity Instance: canvas:canvas1|altsyncram:altsyncram_component
+ 22. Parameter Settings for User Entity Instance: char:char1|altsyncram:altsyncram_component
+ 23. Parameter Settings for User Entity Instance: clkgen:clk25
+ 24. Parameter Settings for User Entity Instance: vga_ctrl:vga_ctrlor
+ 25. Parameter Settings for Inferred Entity Instance: keyboard:keyboard1|ps2_keyboard:keyboard_1|altsyncram:fifo_rtl_0
+ 26. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 27. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1
+ 28. altsyncram Parameter Settings by Entity Instance
+ 29. Port Connectivity Checks: "clkgen:clk25"
+ 30. Port Connectivity Checks: "keyboard:keyboard1|ps2_keyboard:keyboard_1"
+ 31. Port Connectivity Checks: "seg_h:seg3"
+ 32. Port Connectivity Checks: "seg_h:seg2"
+ 33. Port Connectivity Checks: "seg_h:seg1"
+ 34. Port Connectivity Checks: "canvas:canvas1"
+ 35. Port Connectivity Checks: "mem:mem1"
+ 36. Post-Synthesis Netlist Statistics for Top Partition
+ 37. Elapsed Time Per Partition
+ 38. Analysis & Synthesis Messages
+ 39. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -67,13 +70,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Dec 23 11:49:47 2018       ;
+; Analysis & Synthesis Status     ; Successful - Sun Dec 23 16:22:56 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; typing_game                                 ;
 ; Top-level Entity Name           ; typing_game                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 1053                                        ;
+; Total registers                 ; 1861                                        ;
 ; Total pins                      ; 168                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 270,400                                     ;
@@ -187,9 +190,9 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -209,6 +212,8 @@ refer to the applicable agreement for further details.
 ; mem.v                            ; yes             ; User Wizard-Generated File       ; D:/my_design/final_verilog/mem.v                                                      ;         ;
 ; char.v                           ; yes             ; User Wizard-Generated File       ; D:/my_design/final_verilog/char.v                                                     ;         ;
 ; seg_h.v                          ; yes             ; User Verilog HDL File            ; D:/my_design/final_verilog/seg_h.v                                                    ;         ;
+; ramdomnum.v                      ; yes             ; User Verilog HDL File            ; D:/my_design/final_verilog/ramdomnum.v                                                ;         ;
+; ramdomx.v                        ; yes             ; User Verilog HDL File            ; D:/my_design/final_verilog/ramdomx.v                                                  ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                     ; d:/software/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                     ; d:/software/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                     ; d:/software/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
@@ -223,6 +228,15 @@ refer to the applicable agreement for further details.
 ; db/mux_6hb.tdf                   ; yes             ; Auto-Generated Megafunction      ; D:/my_design/final_verilog/db/mux_6hb.tdf                                             ;         ;
 ; db/altsyncram_ibf1.tdf           ; yes             ; Auto-Generated Megafunction      ; D:/my_design/final_verilog/db/altsyncram_ibf1.tdf                                     ;         ;
 ; db/altsyncram_edi1.tdf           ; yes             ; Auto-Generated Megafunction      ; D:/my_design/final_verilog/db/altsyncram_edi1.tdf                                     ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                     ; d:/software/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_divide.tdf        ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                     ; d:/software/intelfpga_lite/17.1/quartus/libraries/megafunctions/abs_divider.inc       ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                     ; d:/software/intelfpga_lite/17.1/quartus/libraries/megafunctions/sign_div_unsign.inc   ;         ;
+; db/lpm_divide_a2m.tdf            ; yes             ; Auto-Generated Megafunction      ; D:/my_design/final_verilog/db/lpm_divide_a2m.tdf                                      ;         ;
+; db/sign_div_unsign_dkh.tdf       ; yes             ; Auto-Generated Megafunction      ; D:/my_design/final_verilog/db/sign_div_unsign_dkh.tdf                                 ;         ;
+; db/alt_u_div_0te.tdf             ; yes             ; Auto-Generated Megafunction      ; D:/my_design/final_verilog/db/alt_u_div_0te.tdf                                       ;         ;
+; db/lpm_divide_e2m.tdf            ; yes             ; Auto-Generated Megafunction      ; D:/my_design/final_verilog/db/lpm_divide_e2m.tdf                                      ;         ;
+; db/sign_div_unsign_hkh.tdf       ; yes             ; Auto-Generated Megafunction      ; D:/my_design/final_verilog/db/sign_div_unsign_hkh.tdf                                 ;         ;
+; db/alt_u_div_8te.tdf             ; yes             ; Auto-Generated Megafunction      ; D:/my_design/final_verilog/db/alt_u_div_8te.tdf                                       ;         ;
 +----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------+---------+
 
 
@@ -231,16 +245,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 1770           ;
+; Estimate of Logic utilization (ALMs needed) ; 2642           ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 2607           ;
-;     -- 7 input functions                    ; 14             ;
-;     -- 6 input functions                    ; 911            ;
-;     -- 5 input functions                    ; 173            ;
-;     -- 4 input functions                    ; 682            ;
-;     -- <=3 input functions                  ; 827            ;
+; Combinational ALUT usage for logic          ; 3096           ;
+;     -- 7 input functions                    ; 11             ;
+;     -- 6 input functions                    ; 1369           ;
+;     -- 5 input functions                    ; 270            ;
+;     -- 4 input functions                    ; 598            ;
+;     -- <=3 input functions                  ; 848            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 1053           ;
+; Dedicated logic registers                   ; 1861           ;
 ;                                             ;                ;
 ; I/O pins                                    ; 168            ;
 ; Total MLAB memory bits                      ; 0              ;
@@ -249,41 +263,52 @@ refer to the applicable agreement for further details.
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 1081           ;
-; Total fan-out                               ; 15602          ;
-; Average fan-out                             ; 3.84           ;
+; Maximum fan-out                             ; 1889           ;
+; Total fan-out                               ; 22612          ;
+; Average fan-out                             ; 4.21           ;
 +---------------------------------------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                    ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                           ; Entity Name     ; Library Name ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |typing_game                                 ; 2607 (2357)         ; 1053 (925)                ; 270400            ; 0          ; 168  ; 0            ; |typing_game                                                                                                  ; typing_game     ; work         ;
-;    |canvas:canvas1|                          ; 21 (0)              ; 8 (0)                     ; 131072            ; 0          ; 0    ; 0            ; |typing_game|canvas:canvas1                                                                                   ; canvas          ; work         ;
-;       |altsyncram:altsyncram_component|      ; 21 (0)              ; 8 (0)                     ; 131072            ; 0          ; 0    ; 0            ; |typing_game|canvas:canvas1|altsyncram:altsyncram_component                                                   ; altsyncram      ; work         ;
-;          |altsyncram_but1:auto_generated|    ; 21 (0)              ; 8 (8)                     ; 131072            ; 0          ; 0    ; 0            ; |typing_game|canvas:canvas1|altsyncram:altsyncram_component|altsyncram_but1:auto_generated                    ; altsyncram_but1 ; work         ;
-;             |decode_tma:decode2|             ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |typing_game|canvas:canvas1|altsyncram:altsyncram_component|altsyncram_but1:auto_generated|decode_tma:decode2 ; decode_tma      ; work         ;
-;             |mux_6hb:mux3|                   ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |typing_game|canvas:canvas1|altsyncram:altsyncram_component|altsyncram_but1:auto_generated|mux_6hb:mux3       ; mux_6hb         ; work         ;
-;    |char:char1|                              ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |typing_game|char:char1                                                                                       ; char            ; work         ;
-;       |altsyncram:altsyncram_component|      ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |typing_game|char:char1|altsyncram:altsyncram_component                                                       ; altsyncram      ; work         ;
-;          |altsyncram_ibf1:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |typing_game|char:char1|altsyncram:altsyncram_component|altsyncram_ibf1:auto_generated                        ; altsyncram_ibf1 ; work         ;
-;    |clkgen:clk25|                            ; 40 (40)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |typing_game|clkgen:clk25                                                                                     ; clkgen          ; work         ;
-;    |keyboard:keyboard1|                      ; 97 (7)              ; 59 (12)                   ; 64                ; 0          ; 0    ; 0            ; |typing_game|keyboard:keyboard1                                                                               ; keyboard        ; work         ;
-;       |ascii:kcode2_asc|                     ; 47 (47)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |typing_game|keyboard:keyboard1|ascii:kcode2_asc                                                              ; ascii           ; work         ;
-;       |ps2_keyboard:keyboard_1|              ; 43 (43)             ; 39 (39)                   ; 64                ; 0          ; 0    ; 0            ; |typing_game|keyboard:keyboard1|ps2_keyboard:keyboard_1                                                       ; ps2_keyboard    ; work         ;
-;          |altsyncram:fifo_rtl_0|             ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |typing_game|keyboard:keyboard1|ps2_keyboard:keyboard_1|altsyncram:fifo_rtl_0                                 ; altsyncram      ; work         ;
-;             |altsyncram_edi1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |typing_game|keyboard:keyboard1|ps2_keyboard:keyboard_1|altsyncram:fifo_rtl_0|altsyncram_edi1:auto_generated  ; altsyncram_edi1 ; work         ;
-;    |mem:mem1|                                ; 21 (0)              ; 8 (0)                     ; 131072            ; 0          ; 0    ; 0            ; |typing_game|mem:mem1                                                                                         ; mem             ; work         ;
-;       |altsyncram:altsyncram_component|      ; 21 (0)              ; 8 (0)                     ; 131072            ; 0          ; 0    ; 0            ; |typing_game|mem:mem1|altsyncram:altsyncram_component                                                         ; altsyncram      ; work         ;
-;          |altsyncram_but1:auto_generated|    ; 21 (0)              ; 8 (8)                     ; 131072            ; 0          ; 0    ; 0            ; |typing_game|mem:mem1|altsyncram:altsyncram_component|altsyncram_but1:auto_generated                          ; altsyncram_but1 ; work         ;
-;             |decode_tma:decode2|             ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |typing_game|mem:mem1|altsyncram:altsyncram_component|altsyncram_but1:auto_generated|decode_tma:decode2       ; decode_tma      ; work         ;
-;             |mux_6hb:mux3|                   ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |typing_game|mem:mem1|altsyncram:altsyncram_component|altsyncram_but1:auto_generated|mux_6hb:mux3             ; mux_6hb         ; work         ;
-;    |seg_h:seg1|                              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |typing_game|seg_h:seg1                                                                                       ; seg_h           ; work         ;
-;    |seg_h:seg2|                              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |typing_game|seg_h:seg2                                                                                       ; seg_h           ; work         ;
-;    |vga_ctrl:vga_ctrlor|                     ; 57 (57)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |typing_game|vga_ctrl:vga_ctrlor                                                                              ; vga_ctrl        ; work         ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------+-----------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                        ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                           ; Entity Name         ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |typing_game                                 ; 3096 (2739)         ; 1861 (1717)               ; 270400            ; 0          ; 168  ; 0            ; |typing_game                                                                                                  ; typing_game         ; work         ;
+;    |canvas:canvas1|                          ; 21 (0)              ; 8 (0)                     ; 131072            ; 0          ; 0    ; 0            ; |typing_game|canvas:canvas1                                                                                   ; canvas              ; work         ;
+;       |altsyncram:altsyncram_component|      ; 21 (0)              ; 8 (0)                     ; 131072            ; 0          ; 0    ; 0            ; |typing_game|canvas:canvas1|altsyncram:altsyncram_component                                                   ; altsyncram          ; work         ;
+;          |altsyncram_but1:auto_generated|    ; 21 (0)              ; 8 (8)                     ; 131072            ; 0          ; 0    ; 0            ; |typing_game|canvas:canvas1|altsyncram:altsyncram_component|altsyncram_but1:auto_generated                    ; altsyncram_but1     ; work         ;
+;             |decode_tma:decode2|             ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |typing_game|canvas:canvas1|altsyncram:altsyncram_component|altsyncram_but1:auto_generated|decode_tma:decode2 ; decode_tma          ; work         ;
+;             |mux_6hb:mux3|                   ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |typing_game|canvas:canvas1|altsyncram:altsyncram_component|altsyncram_but1:auto_generated|mux_6hb:mux3       ; mux_6hb             ; work         ;
+;    |char:char1|                              ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |typing_game|char:char1                                                                                       ; char                ; work         ;
+;       |altsyncram:altsyncram_component|      ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |typing_game|char:char1|altsyncram:altsyncram_component                                                       ; altsyncram          ; work         ;
+;          |altsyncram_ibf1:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |typing_game|char:char1|altsyncram:altsyncram_component|altsyncram_ibf1:auto_generated                        ; altsyncram_ibf1     ; work         ;
+;    |clkgen:clk25|                            ; 40 (40)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |typing_game|clkgen:clk25                                                                                     ; clkgen              ; work         ;
+;    |keyboard:keyboard1|                      ; 102 (7)             ; 59 (12)                   ; 64                ; 0          ; 0    ; 0            ; |typing_game|keyboard:keyboard1                                                                               ; keyboard            ; work         ;
+;       |ascii:kcode2_asc|                     ; 47 (47)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |typing_game|keyboard:keyboard1|ascii:kcode2_asc                                                              ; ascii               ; work         ;
+;       |ps2_keyboard:keyboard_1|              ; 48 (48)             ; 39 (39)                   ; 64                ; 0          ; 0    ; 0            ; |typing_game|keyboard:keyboard1|ps2_keyboard:keyboard_1                                                       ; ps2_keyboard        ; work         ;
+;          |altsyncram:fifo_rtl_0|             ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |typing_game|keyboard:keyboard1|ps2_keyboard:keyboard_1|altsyncram:fifo_rtl_0                                 ; altsyncram          ; work         ;
+;             |altsyncram_edi1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |typing_game|keyboard:keyboard1|ps2_keyboard:keyboard_1|altsyncram:fifo_rtl_0|altsyncram_edi1:auto_generated  ; altsyncram_edi1     ; work         ;
+;    |lpm_divide:Mod0|                         ; 64 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |typing_game|lpm_divide:Mod0                                                                                  ; lpm_divide          ; work         ;
+;       |lpm_divide_a2m:auto_generated|        ; 64 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |typing_game|lpm_divide:Mod0|lpm_divide_a2m:auto_generated                                                    ; lpm_divide_a2m      ; work         ;
+;          |sign_div_unsign_dkh:divider|       ; 64 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |typing_game|lpm_divide:Mod0|lpm_divide_a2m:auto_generated|sign_div_unsign_dkh:divider                        ; sign_div_unsign_dkh ; work         ;
+;             |alt_u_div_0te:divider|          ; 64 (64)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |typing_game|lpm_divide:Mod0|lpm_divide_a2m:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_0te:divider  ; alt_u_div_0te       ; work         ;
+;    |lpm_divide:Mod1|                         ; 19 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |typing_game|lpm_divide:Mod1                                                                                  ; lpm_divide          ; work         ;
+;       |lpm_divide_e2m:auto_generated|        ; 19 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |typing_game|lpm_divide:Mod1|lpm_divide_e2m:auto_generated                                                    ; lpm_divide_e2m      ; work         ;
+;          |sign_div_unsign_hkh:divider|       ; 19 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |typing_game|lpm_divide:Mod1|lpm_divide_e2m:auto_generated|sign_div_unsign_hkh:divider                        ; sign_div_unsign_hkh ; work         ;
+;             |alt_u_div_8te:divider|          ; 19 (19)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |typing_game|lpm_divide:Mod1|lpm_divide_e2m:auto_generated|sign_div_unsign_hkh:divider|alt_u_div_8te:divider  ; alt_u_div_8te       ; work         ;
+;    |mem:mem1|                                ; 21 (0)              ; 8 (0)                     ; 131072            ; 0          ; 0    ; 0            ; |typing_game|mem:mem1                                                                                         ; mem                 ; work         ;
+;       |altsyncram:altsyncram_component|      ; 21 (0)              ; 8 (0)                     ; 131072            ; 0          ; 0    ; 0            ; |typing_game|mem:mem1|altsyncram:altsyncram_component                                                         ; altsyncram          ; work         ;
+;          |altsyncram_but1:auto_generated|    ; 21 (0)              ; 8 (8)                     ; 131072            ; 0          ; 0    ; 0            ; |typing_game|mem:mem1|altsyncram:altsyncram_component|altsyncram_but1:auto_generated                          ; altsyncram_but1     ; work         ;
+;             |decode_tma:decode2|             ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |typing_game|mem:mem1|altsyncram:altsyncram_component|altsyncram_but1:auto_generated|decode_tma:decode2       ; decode_tma          ; work         ;
+;             |mux_6hb:mux3|                   ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |typing_game|mem:mem1|altsyncram:altsyncram_component|altsyncram_but1:auto_generated|mux_6hb:mux3             ; mux_6hb             ; work         ;
+;    |ramdomnum:getramdomnum|                  ; 5 (5)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |typing_game|ramdomnum:getramdomnum                                                                           ; ramdomnum           ; work         ;
+;    |ramdomx:getx|                            ; 7 (7)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |typing_game|ramdomx:getx                                                                                     ; ramdomx             ; work         ;
+;    |seg_h:seg1|                              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |typing_game|seg_h:seg1                                                                                       ; seg_h               ; work         ;
+;    |seg_h:seg2|                              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |typing_game|seg_h:seg2                                                                                       ; seg_h               ; work         ;
+;    |seg_h:seg3|                              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |typing_game|seg_h:seg3                                                                                       ; seg_h               ; work         ;
+;    |vga_ctrl:vga_ctrlor|                     ; 57 (57)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |typing_game|vga_ctrl:vga_ctrlor                                                                              ; vga_ctrl            ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -310,792 +335,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+-----------------------------+-----------------+
 
 
-+---------------------------------------------------------------------+
-; Registers Removed During Synthesis                                  ;
-+-----------------------------------------+---------------------------+
-; Register name                           ; Reason for Removal        ;
-+-----------------------------------------+---------------------------+
-; k_text[7][2]                            ; Merged with k_text[7][1]  ;
-; k_text[7][3]                            ; Merged with k_text[7][1]  ;
-; k_text[7][4]                            ; Merged with k_text[7][1]  ;
-; k_text[7][5]                            ; Merged with k_text[7][1]  ;
-; k_text[7][7]                            ; Merged with k_text[7][1]  ;
-; k_x[7][2]                               ; Merged with k_text[7][1]  ;
-; k_x[7][7]                               ; Merged with k_text[7][1]  ;
-; k_x[7][8]                               ; Merged with k_text[7][1]  ;
-; k_text[7][6]                            ; Merged with k_text[7][0]  ;
-; k_x[7][0]                               ; Merged with k_text[7][0]  ;
-; k_x[7][1]                               ; Merged with k_text[7][0]  ;
-; k_x[7][3]                               ; Merged with k_text[7][0]  ;
-; k_x[7][4]                               ; Merged with k_text[7][0]  ;
-; k_x[7][5]                               ; Merged with k_text[7][0]  ;
-; k_x[7][6]                               ; Merged with k_text[7][0]  ;
-; k_text[0][2]                            ; Merged with k_text[0][1]  ;
-; k_text[0][3]                            ; Merged with k_text[0][1]  ;
-; k_text[0][4]                            ; Merged with k_text[0][1]  ;
-; k_text[0][5]                            ; Merged with k_text[0][1]  ;
-; k_text[0][7]                            ; Merged with k_text[0][1]  ;
-; k_x[0][2]                               ; Merged with k_text[0][1]  ;
-; k_x[0][7]                               ; Merged with k_text[0][1]  ;
-; k_x[0][8]                               ; Merged with k_text[0][1]  ;
-; k_text[1][2]                            ; Merged with k_text[1][1]  ;
-; k_text[1][3]                            ; Merged with k_text[1][1]  ;
-; k_text[1][4]                            ; Merged with k_text[1][1]  ;
-; k_text[1][5]                            ; Merged with k_text[1][1]  ;
-; k_text[1][7]                            ; Merged with k_text[1][1]  ;
-; k_x[1][2]                               ; Merged with k_text[1][1]  ;
-; k_x[1][7]                               ; Merged with k_text[1][1]  ;
-; k_x[1][8]                               ; Merged with k_text[1][1]  ;
-; k_text[2][2]                            ; Merged with k_text[2][1]  ;
-; k_text[2][3]                            ; Merged with k_text[2][1]  ;
-; k_text[2][4]                            ; Merged with k_text[2][1]  ;
-; k_text[2][5]                            ; Merged with k_text[2][1]  ;
-; k_text[2][7]                            ; Merged with k_text[2][1]  ;
-; k_x[2][2]                               ; Merged with k_text[2][1]  ;
-; k_x[2][7]                               ; Merged with k_text[2][1]  ;
-; k_x[2][8]                               ; Merged with k_text[2][1]  ;
-; k_text[3][2]                            ; Merged with k_text[3][1]  ;
-; k_text[3][3]                            ; Merged with k_text[3][1]  ;
-; k_text[3][4]                            ; Merged with k_text[3][1]  ;
-; k_text[3][5]                            ; Merged with k_text[3][1]  ;
-; k_text[3][7]                            ; Merged with k_text[3][1]  ;
-; k_x[3][2]                               ; Merged with k_text[3][1]  ;
-; k_x[3][7]                               ; Merged with k_text[3][1]  ;
-; k_x[3][8]                               ; Merged with k_text[3][1]  ;
-; k_text[4][2]                            ; Merged with k_text[4][1]  ;
-; k_text[4][3]                            ; Merged with k_text[4][1]  ;
-; k_text[4][4]                            ; Merged with k_text[4][1]  ;
-; k_text[4][5]                            ; Merged with k_text[4][1]  ;
-; k_text[4][7]                            ; Merged with k_text[4][1]  ;
-; k_x[4][2]                               ; Merged with k_text[4][1]  ;
-; k_x[4][7]                               ; Merged with k_text[4][1]  ;
-; k_x[4][8]                               ; Merged with k_text[4][1]  ;
-; k_text[5][2]                            ; Merged with k_text[5][1]  ;
-; k_text[5][3]                            ; Merged with k_text[5][1]  ;
-; k_text[5][4]                            ; Merged with k_text[5][1]  ;
-; k_text[5][5]                            ; Merged with k_text[5][1]  ;
-; k_text[5][7]                            ; Merged with k_text[5][1]  ;
-; k_x[5][2]                               ; Merged with k_text[5][1]  ;
-; k_x[5][7]                               ; Merged with k_text[5][1]  ;
-; k_x[5][8]                               ; Merged with k_text[5][1]  ;
-; k_text[6][2]                            ; Merged with k_text[6][1]  ;
-; k_text[6][3]                            ; Merged with k_text[6][1]  ;
-; k_text[6][4]                            ; Merged with k_text[6][1]  ;
-; k_text[6][5]                            ; Merged with k_text[6][1]  ;
-; k_text[6][7]                            ; Merged with k_text[6][1]  ;
-; k_x[6][2]                               ; Merged with k_text[6][1]  ;
-; k_x[6][7]                               ; Merged with k_text[6][1]  ;
-; k_x[6][8]                               ; Merged with k_text[6][1]  ;
-; k_text[8][2]                            ; Merged with k_text[8][1]  ;
-; k_text[8][3]                            ; Merged with k_text[8][1]  ;
-; k_text[8][4]                            ; Merged with k_text[8][1]  ;
-; k_text[8][5]                            ; Merged with k_text[8][1]  ;
-; k_text[8][7]                            ; Merged with k_text[8][1]  ;
-; k_x[8][2]                               ; Merged with k_text[8][1]  ;
-; k_x[8][7]                               ; Merged with k_text[8][1]  ;
-; k_x[8][8]                               ; Merged with k_text[8][1]  ;
-; k_text[9][2]                            ; Merged with k_text[9][1]  ;
-; k_text[9][3]                            ; Merged with k_text[9][1]  ;
-; k_text[9][4]                            ; Merged with k_text[9][1]  ;
-; k_text[9][5]                            ; Merged with k_text[9][1]  ;
-; k_text[9][7]                            ; Merged with k_text[9][1]  ;
-; k_x[9][2]                               ; Merged with k_text[9][1]  ;
-; k_x[9][7]                               ; Merged with k_text[9][1]  ;
-; k_x[9][8]                               ; Merged with k_text[9][1]  ;
-; k_text[10][2]                           ; Merged with k_text[10][1] ;
-; k_text[10][3]                           ; Merged with k_text[10][1] ;
-; k_text[10][4]                           ; Merged with k_text[10][1] ;
-; k_text[10][5]                           ; Merged with k_text[10][1] ;
-; k_text[10][7]                           ; Merged with k_text[10][1] ;
-; k_x[10][2]                              ; Merged with k_text[10][1] ;
-; k_x[10][7]                              ; Merged with k_text[10][1] ;
-; k_x[10][8]                              ; Merged with k_text[10][1] ;
-; k_text[11][2]                           ; Merged with k_text[11][1] ;
-; k_text[11][3]                           ; Merged with k_text[11][1] ;
-; k_text[11][4]                           ; Merged with k_text[11][1] ;
-; k_text[11][5]                           ; Merged with k_text[11][1] ;
-; k_text[11][7]                           ; Merged with k_text[11][1] ;
-; k_x[11][2]                              ; Merged with k_text[11][1] ;
-; k_x[11][7]                              ; Merged with k_text[11][1] ;
-; k_x[11][8]                              ; Merged with k_text[11][1] ;
-; k_text[12][2]                           ; Merged with k_text[12][1] ;
-; k_text[12][3]                           ; Merged with k_text[12][1] ;
-; k_text[12][4]                           ; Merged with k_text[12][1] ;
-; k_text[12][5]                           ; Merged with k_text[12][1] ;
-; k_text[12][7]                           ; Merged with k_text[12][1] ;
-; k_x[12][2]                              ; Merged with k_text[12][1] ;
-; k_x[12][7]                              ; Merged with k_text[12][1] ;
-; k_x[12][8]                              ; Merged with k_text[12][1] ;
-; k_text[13][2]                           ; Merged with k_text[13][1] ;
-; k_text[13][3]                           ; Merged with k_text[13][1] ;
-; k_text[13][4]                           ; Merged with k_text[13][1] ;
-; k_text[13][5]                           ; Merged with k_text[13][1] ;
-; k_text[13][7]                           ; Merged with k_text[13][1] ;
-; k_x[13][2]                              ; Merged with k_text[13][1] ;
-; k_x[13][7]                              ; Merged with k_text[13][1] ;
-; k_x[13][8]                              ; Merged with k_text[13][1] ;
-; k_text[14][2]                           ; Merged with k_text[14][1] ;
-; k_text[14][3]                           ; Merged with k_text[14][1] ;
-; k_text[14][4]                           ; Merged with k_text[14][1] ;
-; k_text[14][5]                           ; Merged with k_text[14][1] ;
-; k_text[14][7]                           ; Merged with k_text[14][1] ;
-; k_x[14][2]                              ; Merged with k_text[14][1] ;
-; k_x[14][7]                              ; Merged with k_text[14][1] ;
-; k_x[14][8]                              ; Merged with k_text[14][1] ;
-; k_text[15][2]                           ; Merged with k_text[15][1] ;
-; k_text[15][3]                           ; Merged with k_text[15][1] ;
-; k_text[15][4]                           ; Merged with k_text[15][1] ;
-; k_text[15][5]                           ; Merged with k_text[15][1] ;
-; k_text[15][7]                           ; Merged with k_text[15][1] ;
-; k_x[15][2]                              ; Merged with k_text[15][1] ;
-; k_x[15][7]                              ; Merged with k_text[15][1] ;
-; k_x[15][8]                              ; Merged with k_text[15][1] ;
-; k_text[32][2]                           ; Merged with k_text[32][1] ;
-; k_text[32][3]                           ; Merged with k_text[32][1] ;
-; k_text[32][4]                           ; Merged with k_text[32][1] ;
-; k_text[32][5]                           ; Merged with k_text[32][1] ;
-; k_text[32][7]                           ; Merged with k_text[32][1] ;
-; k_x[32][2]                              ; Merged with k_text[32][1] ;
-; k_x[32][7]                              ; Merged with k_text[32][1] ;
-; k_x[32][8]                              ; Merged with k_text[32][1] ;
-; k_text[33][2]                           ; Merged with k_text[33][1] ;
-; k_text[33][3]                           ; Merged with k_text[33][1] ;
-; k_text[33][4]                           ; Merged with k_text[33][1] ;
-; k_text[33][5]                           ; Merged with k_text[33][1] ;
-; k_text[33][7]                           ; Merged with k_text[33][1] ;
-; k_x[33][2]                              ; Merged with k_text[33][1] ;
-; k_x[33][7]                              ; Merged with k_text[33][1] ;
-; k_x[33][8]                              ; Merged with k_text[33][1] ;
-; k_text[34][2]                           ; Merged with k_text[34][1] ;
-; k_text[34][3]                           ; Merged with k_text[34][1] ;
-; k_text[34][4]                           ; Merged with k_text[34][1] ;
-; k_text[34][5]                           ; Merged with k_text[34][1] ;
-; k_text[34][7]                           ; Merged with k_text[34][1] ;
-; k_x[34][2]                              ; Merged with k_text[34][1] ;
-; k_x[34][7]                              ; Merged with k_text[34][1] ;
-; k_x[34][8]                              ; Merged with k_text[34][1] ;
-; k_text[35][2]                           ; Merged with k_text[35][1] ;
-; k_text[35][3]                           ; Merged with k_text[35][1] ;
-; k_text[35][4]                           ; Merged with k_text[35][1] ;
-; k_text[35][5]                           ; Merged with k_text[35][1] ;
-; k_text[35][7]                           ; Merged with k_text[35][1] ;
-; k_x[35][2]                              ; Merged with k_text[35][1] ;
-; k_x[35][7]                              ; Merged with k_text[35][1] ;
-; k_x[35][8]                              ; Merged with k_text[35][1] ;
-; k_text[36][2]                           ; Merged with k_text[36][1] ;
-; k_text[36][3]                           ; Merged with k_text[36][1] ;
-; k_text[36][4]                           ; Merged with k_text[36][1] ;
-; k_text[36][5]                           ; Merged with k_text[36][1] ;
-; k_text[36][7]                           ; Merged with k_text[36][1] ;
-; k_x[36][2]                              ; Merged with k_text[36][1] ;
-; k_x[36][7]                              ; Merged with k_text[36][1] ;
-; k_x[36][8]                              ; Merged with k_text[36][1] ;
-; k_text[37][2]                           ; Merged with k_text[37][1] ;
-; k_text[37][3]                           ; Merged with k_text[37][1] ;
-; k_text[37][4]                           ; Merged with k_text[37][1] ;
-; k_text[37][5]                           ; Merged with k_text[37][1] ;
-; k_text[37][7]                           ; Merged with k_text[37][1] ;
-; k_x[37][2]                              ; Merged with k_text[37][1] ;
-; k_x[37][7]                              ; Merged with k_text[37][1] ;
-; k_x[37][8]                              ; Merged with k_text[37][1] ;
-; k_text[38][2]                           ; Merged with k_text[38][1] ;
-; k_text[38][3]                           ; Merged with k_text[38][1] ;
-; k_text[38][4]                           ; Merged with k_text[38][1] ;
-; k_text[38][5]                           ; Merged with k_text[38][1] ;
-; k_text[38][7]                           ; Merged with k_text[38][1] ;
-; k_x[38][2]                              ; Merged with k_text[38][1] ;
-; k_x[38][7]                              ; Merged with k_text[38][1] ;
-; k_x[38][8]                              ; Merged with k_text[38][1] ;
-; k_text[39][2]                           ; Merged with k_text[39][1] ;
-; k_text[39][3]                           ; Merged with k_text[39][1] ;
-; k_text[39][4]                           ; Merged with k_text[39][1] ;
-; k_text[39][5]                           ; Merged with k_text[39][1] ;
-; k_text[39][7]                           ; Merged with k_text[39][1] ;
-; k_x[39][2]                              ; Merged with k_text[39][1] ;
-; k_x[39][7]                              ; Merged with k_text[39][1] ;
-; k_x[39][8]                              ; Merged with k_text[39][1] ;
-; k_text[40][2]                           ; Merged with k_text[40][1] ;
-; k_text[40][3]                           ; Merged with k_text[40][1] ;
-; k_text[40][4]                           ; Merged with k_text[40][1] ;
-; k_text[40][5]                           ; Merged with k_text[40][1] ;
-; k_text[40][7]                           ; Merged with k_text[40][1] ;
-; k_x[40][2]                              ; Merged with k_text[40][1] ;
-; k_x[40][7]                              ; Merged with k_text[40][1] ;
-; k_x[40][8]                              ; Merged with k_text[40][1] ;
-; k_text[41][2]                           ; Merged with k_text[41][1] ;
-; k_text[41][3]                           ; Merged with k_text[41][1] ;
-; k_text[41][4]                           ; Merged with k_text[41][1] ;
-; k_text[41][5]                           ; Merged with k_text[41][1] ;
-; k_text[41][7]                           ; Merged with k_text[41][1] ;
-; k_x[41][2]                              ; Merged with k_text[41][1] ;
-; k_x[41][7]                              ; Merged with k_text[41][1] ;
-; k_x[41][8]                              ; Merged with k_text[41][1] ;
-; k_text[42][2]                           ; Merged with k_text[42][1] ;
-; k_text[42][3]                           ; Merged with k_text[42][1] ;
-; k_text[42][4]                           ; Merged with k_text[42][1] ;
-; k_text[42][5]                           ; Merged with k_text[42][1] ;
-; k_text[42][7]                           ; Merged with k_text[42][1] ;
-; k_x[42][2]                              ; Merged with k_text[42][1] ;
-; k_x[42][7]                              ; Merged with k_text[42][1] ;
-; k_x[42][8]                              ; Merged with k_text[42][1] ;
-; k_text[43][2]                           ; Merged with k_text[43][1] ;
-; k_text[43][3]                           ; Merged with k_text[43][1] ;
-; k_text[43][4]                           ; Merged with k_text[43][1] ;
-; k_text[43][5]                           ; Merged with k_text[43][1] ;
-; k_text[43][7]                           ; Merged with k_text[43][1] ;
-; k_x[43][2]                              ; Merged with k_text[43][1] ;
-; k_x[43][7]                              ; Merged with k_text[43][1] ;
-; k_x[43][8]                              ; Merged with k_text[43][1] ;
-; k_text[44][2]                           ; Merged with k_text[44][1] ;
-; k_text[44][3]                           ; Merged with k_text[44][1] ;
-; k_text[44][4]                           ; Merged with k_text[44][1] ;
-; k_text[44][5]                           ; Merged with k_text[44][1] ;
-; k_text[44][7]                           ; Merged with k_text[44][1] ;
-; k_x[44][2]                              ; Merged with k_text[44][1] ;
-; k_x[44][7]                              ; Merged with k_text[44][1] ;
-; k_x[44][8]                              ; Merged with k_text[44][1] ;
-; k_text[45][2]                           ; Merged with k_text[45][1] ;
-; k_text[45][3]                           ; Merged with k_text[45][1] ;
-; k_text[45][4]                           ; Merged with k_text[45][1] ;
-; k_text[45][5]                           ; Merged with k_text[45][1] ;
-; k_text[45][7]                           ; Merged with k_text[45][1] ;
-; k_x[45][2]                              ; Merged with k_text[45][1] ;
-; k_x[45][7]                              ; Merged with k_text[45][1] ;
-; k_x[45][8]                              ; Merged with k_text[45][1] ;
-; k_text[46][2]                           ; Merged with k_text[46][1] ;
-; k_text[46][3]                           ; Merged with k_text[46][1] ;
-; k_text[46][4]                           ; Merged with k_text[46][1] ;
-; k_text[46][5]                           ; Merged with k_text[46][1] ;
-; k_text[46][7]                           ; Merged with k_text[46][1] ;
-; k_x[46][2]                              ; Merged with k_text[46][1] ;
-; k_x[46][7]                              ; Merged with k_text[46][1] ;
-; k_x[46][8]                              ; Merged with k_text[46][1] ;
-; k_text[47][2]                           ; Merged with k_text[47][1] ;
-; k_text[47][3]                           ; Merged with k_text[47][1] ;
-; k_text[47][4]                           ; Merged with k_text[47][1] ;
-; k_text[47][5]                           ; Merged with k_text[47][1] ;
-; k_text[47][7]                           ; Merged with k_text[47][1] ;
-; k_x[47][2]                              ; Merged with k_text[47][1] ;
-; k_x[47][7]                              ; Merged with k_text[47][1] ;
-; k_x[47][8]                              ; Merged with k_text[47][1] ;
-; k_text[50][2]                           ; Merged with k_text[50][1] ;
-; k_text[50][3]                           ; Merged with k_text[50][1] ;
-; k_text[50][4]                           ; Merged with k_text[50][1] ;
-; k_text[50][5]                           ; Merged with k_text[50][1] ;
-; k_text[50][7]                           ; Merged with k_text[50][1] ;
-; k_x[50][2]                              ; Merged with k_text[50][1] ;
-; k_x[50][7]                              ; Merged with k_text[50][1] ;
-; k_x[50][8]                              ; Merged with k_text[50][1] ;
-; k_text[48][2]                           ; Merged with k_text[48][1] ;
-; k_text[48][3]                           ; Merged with k_text[48][1] ;
-; k_text[48][4]                           ; Merged with k_text[48][1] ;
-; k_text[48][5]                           ; Merged with k_text[48][1] ;
-; k_text[48][7]                           ; Merged with k_text[48][1] ;
-; k_x[48][2]                              ; Merged with k_text[48][1] ;
-; k_x[48][7]                              ; Merged with k_text[48][1] ;
-; k_x[48][8]                              ; Merged with k_text[48][1] ;
-; k_text[49][2]                           ; Merged with k_text[49][1] ;
-; k_text[49][3]                           ; Merged with k_text[49][1] ;
-; k_text[49][4]                           ; Merged with k_text[49][1] ;
-; k_text[49][5]                           ; Merged with k_text[49][1] ;
-; k_text[49][7]                           ; Merged with k_text[49][1] ;
-; k_x[49][2]                              ; Merged with k_text[49][1] ;
-; k_x[49][7]                              ; Merged with k_text[49][1] ;
-; k_x[49][8]                              ; Merged with k_text[49][1] ;
-; k_text[16][2]                           ; Merged with k_text[16][1] ;
-; k_text[16][3]                           ; Merged with k_text[16][1] ;
-; k_text[16][4]                           ; Merged with k_text[16][1] ;
-; k_text[16][5]                           ; Merged with k_text[16][1] ;
-; k_text[16][7]                           ; Merged with k_text[16][1] ;
-; k_x[16][2]                              ; Merged with k_text[16][1] ;
-; k_x[16][7]                              ; Merged with k_text[16][1] ;
-; k_x[16][8]                              ; Merged with k_text[16][1] ;
-; k_text[17][2]                           ; Merged with k_text[17][1] ;
-; k_text[17][3]                           ; Merged with k_text[17][1] ;
-; k_text[17][4]                           ; Merged with k_text[17][1] ;
-; k_text[17][5]                           ; Merged with k_text[17][1] ;
-; k_text[17][7]                           ; Merged with k_text[17][1] ;
-; k_x[17][2]                              ; Merged with k_text[17][1] ;
-; k_x[17][7]                              ; Merged with k_text[17][1] ;
-; k_x[17][8]                              ; Merged with k_text[17][1] ;
-; k_text[18][2]                           ; Merged with k_text[18][1] ;
-; k_text[18][3]                           ; Merged with k_text[18][1] ;
-; k_text[18][4]                           ; Merged with k_text[18][1] ;
-; k_text[18][5]                           ; Merged with k_text[18][1] ;
-; k_text[18][7]                           ; Merged with k_text[18][1] ;
-; k_x[18][2]                              ; Merged with k_text[18][1] ;
-; k_x[18][7]                              ; Merged with k_text[18][1] ;
-; k_x[18][8]                              ; Merged with k_text[18][1] ;
-; k_text[19][2]                           ; Merged with k_text[19][1] ;
-; k_text[19][3]                           ; Merged with k_text[19][1] ;
-; k_text[19][4]                           ; Merged with k_text[19][1] ;
-; k_text[19][5]                           ; Merged with k_text[19][1] ;
-; k_text[19][7]                           ; Merged with k_text[19][1] ;
-; k_x[19][2]                              ; Merged with k_text[19][1] ;
-; k_x[19][7]                              ; Merged with k_text[19][1] ;
-; k_x[19][8]                              ; Merged with k_text[19][1] ;
-; k_text[20][2]                           ; Merged with k_text[20][1] ;
-; k_text[20][3]                           ; Merged with k_text[20][1] ;
-; k_text[20][4]                           ; Merged with k_text[20][1] ;
-; k_text[20][5]                           ; Merged with k_text[20][1] ;
-; k_text[20][7]                           ; Merged with k_text[20][1] ;
-; k_x[20][2]                              ; Merged with k_text[20][1] ;
-; k_x[20][7]                              ; Merged with k_text[20][1] ;
-; k_x[20][8]                              ; Merged with k_text[20][1] ;
-; k_text[21][2]                           ; Merged with k_text[21][1] ;
-; k_text[21][3]                           ; Merged with k_text[21][1] ;
-; k_text[21][4]                           ; Merged with k_text[21][1] ;
-; k_text[21][5]                           ; Merged with k_text[21][1] ;
-; k_text[21][7]                           ; Merged with k_text[21][1] ;
-; k_x[21][2]                              ; Merged with k_text[21][1] ;
-; k_x[21][7]                              ; Merged with k_text[21][1] ;
-; k_x[21][8]                              ; Merged with k_text[21][1] ;
-; k_text[22][2]                           ; Merged with k_text[22][1] ;
-; k_text[22][3]                           ; Merged with k_text[22][1] ;
-; k_text[22][4]                           ; Merged with k_text[22][1] ;
-; k_text[22][5]                           ; Merged with k_text[22][1] ;
-; k_text[22][7]                           ; Merged with k_text[22][1] ;
-; k_x[22][2]                              ; Merged with k_text[22][1] ;
-; k_x[22][7]                              ; Merged with k_text[22][1] ;
-; k_x[22][8]                              ; Merged with k_text[22][1] ;
-; k_text[23][2]                           ; Merged with k_text[23][1] ;
-; k_text[23][3]                           ; Merged with k_text[23][1] ;
-; k_text[23][4]                           ; Merged with k_text[23][1] ;
-; k_text[23][5]                           ; Merged with k_text[23][1] ;
-; k_text[23][7]                           ; Merged with k_text[23][1] ;
-; k_x[23][2]                              ; Merged with k_text[23][1] ;
-; k_x[23][7]                              ; Merged with k_text[23][1] ;
-; k_x[23][8]                              ; Merged with k_text[23][1] ;
-; k_text[24][2]                           ; Merged with k_text[24][1] ;
-; k_text[24][3]                           ; Merged with k_text[24][1] ;
-; k_text[24][4]                           ; Merged with k_text[24][1] ;
-; k_text[24][5]                           ; Merged with k_text[24][1] ;
-; k_text[24][7]                           ; Merged with k_text[24][1] ;
-; k_x[24][2]                              ; Merged with k_text[24][1] ;
-; k_x[24][7]                              ; Merged with k_text[24][1] ;
-; k_x[24][8]                              ; Merged with k_text[24][1] ;
-; k_text[25][2]                           ; Merged with k_text[25][1] ;
-; k_text[25][3]                           ; Merged with k_text[25][1] ;
-; k_text[25][4]                           ; Merged with k_text[25][1] ;
-; k_text[25][5]                           ; Merged with k_text[25][1] ;
-; k_text[25][7]                           ; Merged with k_text[25][1] ;
-; k_x[25][2]                              ; Merged with k_text[25][1] ;
-; k_x[25][7]                              ; Merged with k_text[25][1] ;
-; k_x[25][8]                              ; Merged with k_text[25][1] ;
-; k_text[26][2]                           ; Merged with k_text[26][1] ;
-; k_text[26][3]                           ; Merged with k_text[26][1] ;
-; k_text[26][4]                           ; Merged with k_text[26][1] ;
-; k_text[26][5]                           ; Merged with k_text[26][1] ;
-; k_text[26][7]                           ; Merged with k_text[26][1] ;
-; k_x[26][2]                              ; Merged with k_text[26][1] ;
-; k_x[26][7]                              ; Merged with k_text[26][1] ;
-; k_x[26][8]                              ; Merged with k_text[26][1] ;
-; k_text[27][2]                           ; Merged with k_text[27][1] ;
-; k_text[27][3]                           ; Merged with k_text[27][1] ;
-; k_text[27][4]                           ; Merged with k_text[27][1] ;
-; k_text[27][5]                           ; Merged with k_text[27][1] ;
-; k_text[27][7]                           ; Merged with k_text[27][1] ;
-; k_x[27][2]                              ; Merged with k_text[27][1] ;
-; k_x[27][7]                              ; Merged with k_text[27][1] ;
-; k_x[27][8]                              ; Merged with k_text[27][1] ;
-; k_text[28][2]                           ; Merged with k_text[28][1] ;
-; k_text[28][3]                           ; Merged with k_text[28][1] ;
-; k_text[28][4]                           ; Merged with k_text[28][1] ;
-; k_text[28][5]                           ; Merged with k_text[28][1] ;
-; k_text[28][7]                           ; Merged with k_text[28][1] ;
-; k_x[28][2]                              ; Merged with k_text[28][1] ;
-; k_x[28][7]                              ; Merged with k_text[28][1] ;
-; k_x[28][8]                              ; Merged with k_text[28][1] ;
-; k_text[29][2]                           ; Merged with k_text[29][1] ;
-; k_text[29][3]                           ; Merged with k_text[29][1] ;
-; k_text[29][4]                           ; Merged with k_text[29][1] ;
-; k_text[29][5]                           ; Merged with k_text[29][1] ;
-; k_text[29][7]                           ; Merged with k_text[29][1] ;
-; k_x[29][2]                              ; Merged with k_text[29][1] ;
-; k_x[29][7]                              ; Merged with k_text[29][1] ;
-; k_x[29][8]                              ; Merged with k_text[29][1] ;
-; k_text[30][2]                           ; Merged with k_text[30][1] ;
-; k_text[30][3]                           ; Merged with k_text[30][1] ;
-; k_text[30][4]                           ; Merged with k_text[30][1] ;
-; k_text[30][5]                           ; Merged with k_text[30][1] ;
-; k_text[30][7]                           ; Merged with k_text[30][1] ;
-; k_x[30][2]                              ; Merged with k_text[30][1] ;
-; k_x[30][7]                              ; Merged with k_text[30][1] ;
-; k_x[30][8]                              ; Merged with k_text[30][1] ;
-; k_text[31][2]                           ; Merged with k_text[31][1] ;
-; k_text[31][3]                           ; Merged with k_text[31][1] ;
-; k_text[31][4]                           ; Merged with k_text[31][1] ;
-; k_text[31][5]                           ; Merged with k_text[31][1] ;
-; k_text[31][7]                           ; Merged with k_text[31][1] ;
-; k_x[31][2]                              ; Merged with k_text[31][1] ;
-; k_x[31][7]                              ; Merged with k_text[31][1] ;
-; k_x[31][8]                              ; Merged with k_text[31][1] ;
-; k_text[0][6]                            ; Merged with k_text[0][0]  ;
-; k_x[0][0]                               ; Merged with k_text[0][0]  ;
-; k_x[0][1]                               ; Merged with k_text[0][0]  ;
-; k_x[0][3]                               ; Merged with k_text[0][0]  ;
-; k_x[0][4]                               ; Merged with k_text[0][0]  ;
-; k_x[0][5]                               ; Merged with k_text[0][0]  ;
-; k_x[0][6]                               ; Merged with k_text[0][0]  ;
-; k_text[1][6]                            ; Merged with k_text[1][0]  ;
-; k_x[1][0]                               ; Merged with k_text[1][0]  ;
-; k_x[1][1]                               ; Merged with k_text[1][0]  ;
-; k_x[1][3]                               ; Merged with k_text[1][0]  ;
-; k_x[1][4]                               ; Merged with k_text[1][0]  ;
-; k_x[1][5]                               ; Merged with k_text[1][0]  ;
-; k_x[1][6]                               ; Merged with k_text[1][0]  ;
-; k_text[2][6]                            ; Merged with k_text[2][0]  ;
-; k_x[2][0]                               ; Merged with k_text[2][0]  ;
-; k_x[2][1]                               ; Merged with k_text[2][0]  ;
-; k_x[2][3]                               ; Merged with k_text[2][0]  ;
-; k_x[2][4]                               ; Merged with k_text[2][0]  ;
-; k_x[2][5]                               ; Merged with k_text[2][0]  ;
-; k_x[2][6]                               ; Merged with k_text[2][0]  ;
-; k_text[3][6]                            ; Merged with k_text[3][0]  ;
-; k_x[3][0]                               ; Merged with k_text[3][0]  ;
-; k_x[3][1]                               ; Merged with k_text[3][0]  ;
-; k_x[3][3]                               ; Merged with k_text[3][0]  ;
-; k_x[3][4]                               ; Merged with k_text[3][0]  ;
-; k_x[3][5]                               ; Merged with k_text[3][0]  ;
-; k_x[3][6]                               ; Merged with k_text[3][0]  ;
-; k_text[4][6]                            ; Merged with k_text[4][0]  ;
-; k_x[4][0]                               ; Merged with k_text[4][0]  ;
-; k_x[4][1]                               ; Merged with k_text[4][0]  ;
-; k_x[4][3]                               ; Merged with k_text[4][0]  ;
-; k_x[4][4]                               ; Merged with k_text[4][0]  ;
-; k_x[4][5]                               ; Merged with k_text[4][0]  ;
-; k_x[4][6]                               ; Merged with k_text[4][0]  ;
-; k_text[5][6]                            ; Merged with k_text[5][0]  ;
-; k_x[5][0]                               ; Merged with k_text[5][0]  ;
-; k_x[5][1]                               ; Merged with k_text[5][0]  ;
-; k_x[5][3]                               ; Merged with k_text[5][0]  ;
-; k_x[5][4]                               ; Merged with k_text[5][0]  ;
-; k_x[5][5]                               ; Merged with k_text[5][0]  ;
-; k_x[5][6]                               ; Merged with k_text[5][0]  ;
-; k_text[6][6]                            ; Merged with k_text[6][0]  ;
-; k_x[6][0]                               ; Merged with k_text[6][0]  ;
-; k_x[6][1]                               ; Merged with k_text[6][0]  ;
-; k_x[6][3]                               ; Merged with k_text[6][0]  ;
-; k_x[6][4]                               ; Merged with k_text[6][0]  ;
-; k_x[6][5]                               ; Merged with k_text[6][0]  ;
-; k_x[6][6]                               ; Merged with k_text[6][0]  ;
-; k_text[8][6]                            ; Merged with k_text[8][0]  ;
-; k_x[8][0]                               ; Merged with k_text[8][0]  ;
-; k_x[8][1]                               ; Merged with k_text[8][0]  ;
-; k_x[8][3]                               ; Merged with k_text[8][0]  ;
-; k_x[8][4]                               ; Merged with k_text[8][0]  ;
-; k_x[8][5]                               ; Merged with k_text[8][0]  ;
-; k_x[8][6]                               ; Merged with k_text[8][0]  ;
-; k_text[9][6]                            ; Merged with k_text[9][0]  ;
-; k_x[9][0]                               ; Merged with k_text[9][0]  ;
-; k_x[9][1]                               ; Merged with k_text[9][0]  ;
-; k_x[9][3]                               ; Merged with k_text[9][0]  ;
-; k_x[9][4]                               ; Merged with k_text[9][0]  ;
-; k_x[9][5]                               ; Merged with k_text[9][0]  ;
-; k_x[9][6]                               ; Merged with k_text[9][0]  ;
-; k_text[10][6]                           ; Merged with k_text[10][0] ;
-; k_x[10][0]                              ; Merged with k_text[10][0] ;
-; k_x[10][1]                              ; Merged with k_text[10][0] ;
-; k_x[10][3]                              ; Merged with k_text[10][0] ;
-; k_x[10][4]                              ; Merged with k_text[10][0] ;
-; k_x[10][5]                              ; Merged with k_text[10][0] ;
-; k_x[10][6]                              ; Merged with k_text[10][0] ;
-; k_text[11][6]                           ; Merged with k_text[11][0] ;
-; k_x[11][0]                              ; Merged with k_text[11][0] ;
-; k_x[11][1]                              ; Merged with k_text[11][0] ;
-; k_x[11][3]                              ; Merged with k_text[11][0] ;
-; k_x[11][4]                              ; Merged with k_text[11][0] ;
-; k_x[11][5]                              ; Merged with k_text[11][0] ;
-; k_x[11][6]                              ; Merged with k_text[11][0] ;
-; k_text[12][6]                           ; Merged with k_text[12][0] ;
-; k_x[12][0]                              ; Merged with k_text[12][0] ;
-; k_x[12][1]                              ; Merged with k_text[12][0] ;
-; k_x[12][3]                              ; Merged with k_text[12][0] ;
-; k_x[12][4]                              ; Merged with k_text[12][0] ;
-; k_x[12][5]                              ; Merged with k_text[12][0] ;
-; k_x[12][6]                              ; Merged with k_text[12][0] ;
-; k_text[13][6]                           ; Merged with k_text[13][0] ;
-; k_x[13][0]                              ; Merged with k_text[13][0] ;
-; k_x[13][1]                              ; Merged with k_text[13][0] ;
-; k_x[13][3]                              ; Merged with k_text[13][0] ;
-; k_x[13][4]                              ; Merged with k_text[13][0] ;
-; k_x[13][5]                              ; Merged with k_text[13][0] ;
-; k_x[13][6]                              ; Merged with k_text[13][0] ;
-; k_text[14][6]                           ; Merged with k_text[14][0] ;
-; k_x[14][0]                              ; Merged with k_text[14][0] ;
-; k_x[14][1]                              ; Merged with k_text[14][0] ;
-; k_x[14][3]                              ; Merged with k_text[14][0] ;
-; k_x[14][4]                              ; Merged with k_text[14][0] ;
-; k_x[14][5]                              ; Merged with k_text[14][0] ;
-; k_x[14][6]                              ; Merged with k_text[14][0] ;
-; k_text[15][6]                           ; Merged with k_text[15][0] ;
-; k_x[15][0]                              ; Merged with k_text[15][0] ;
-; k_x[15][1]                              ; Merged with k_text[15][0] ;
-; k_x[15][3]                              ; Merged with k_text[15][0] ;
-; k_x[15][4]                              ; Merged with k_text[15][0] ;
-; k_x[15][5]                              ; Merged with k_text[15][0] ;
-; k_x[15][6]                              ; Merged with k_text[15][0] ;
-; k_text[32][6]                           ; Merged with k_text[32][0] ;
-; k_x[32][0]                              ; Merged with k_text[32][0] ;
-; k_x[32][1]                              ; Merged with k_text[32][0] ;
-; k_x[32][3]                              ; Merged with k_text[32][0] ;
-; k_x[32][4]                              ; Merged with k_text[32][0] ;
-; k_x[32][5]                              ; Merged with k_text[32][0] ;
-; k_x[32][6]                              ; Merged with k_text[32][0] ;
-; k_text[33][6]                           ; Merged with k_text[33][0] ;
-; k_x[33][0]                              ; Merged with k_text[33][0] ;
-; k_x[33][1]                              ; Merged with k_text[33][0] ;
-; k_x[33][3]                              ; Merged with k_text[33][0] ;
-; k_x[33][4]                              ; Merged with k_text[33][0] ;
-; k_x[33][5]                              ; Merged with k_text[33][0] ;
-; k_x[33][6]                              ; Merged with k_text[33][0] ;
-; k_text[34][6]                           ; Merged with k_text[34][0] ;
-; k_x[34][0]                              ; Merged with k_text[34][0] ;
-; k_x[34][1]                              ; Merged with k_text[34][0] ;
-; k_x[34][3]                              ; Merged with k_text[34][0] ;
-; k_x[34][4]                              ; Merged with k_text[34][0] ;
-; k_x[34][5]                              ; Merged with k_text[34][0] ;
-; k_x[34][6]                              ; Merged with k_text[34][0] ;
-; k_text[35][6]                           ; Merged with k_text[35][0] ;
-; k_x[35][0]                              ; Merged with k_text[35][0] ;
-; k_x[35][1]                              ; Merged with k_text[35][0] ;
-; k_x[35][3]                              ; Merged with k_text[35][0] ;
-; k_x[35][4]                              ; Merged with k_text[35][0] ;
-; k_x[35][5]                              ; Merged with k_text[35][0] ;
-; k_x[35][6]                              ; Merged with k_text[35][0] ;
-; k_text[36][6]                           ; Merged with k_text[36][0] ;
-; k_x[36][0]                              ; Merged with k_text[36][0] ;
-; k_x[36][1]                              ; Merged with k_text[36][0] ;
-; k_x[36][3]                              ; Merged with k_text[36][0] ;
-; k_x[36][4]                              ; Merged with k_text[36][0] ;
-; k_x[36][5]                              ; Merged with k_text[36][0] ;
-; k_x[36][6]                              ; Merged with k_text[36][0] ;
-; k_text[37][6]                           ; Merged with k_text[37][0] ;
-; k_x[37][0]                              ; Merged with k_text[37][0] ;
-; k_x[37][1]                              ; Merged with k_text[37][0] ;
-; k_x[37][3]                              ; Merged with k_text[37][0] ;
-; k_x[37][4]                              ; Merged with k_text[37][0] ;
-; k_x[37][5]                              ; Merged with k_text[37][0] ;
-; k_x[37][6]                              ; Merged with k_text[37][0] ;
-; k_text[38][6]                           ; Merged with k_text[38][0] ;
-; k_x[38][0]                              ; Merged with k_text[38][0] ;
-; k_x[38][1]                              ; Merged with k_text[38][0] ;
-; k_x[38][3]                              ; Merged with k_text[38][0] ;
-; k_x[38][4]                              ; Merged with k_text[38][0] ;
-; k_x[38][5]                              ; Merged with k_text[38][0] ;
-; k_x[38][6]                              ; Merged with k_text[38][0] ;
-; k_text[39][6]                           ; Merged with k_text[39][0] ;
-; k_x[39][0]                              ; Merged with k_text[39][0] ;
-; k_x[39][1]                              ; Merged with k_text[39][0] ;
-; k_x[39][3]                              ; Merged with k_text[39][0] ;
-; k_x[39][4]                              ; Merged with k_text[39][0] ;
-; k_x[39][5]                              ; Merged with k_text[39][0] ;
-; k_x[39][6]                              ; Merged with k_text[39][0] ;
-; k_text[40][6]                           ; Merged with k_text[40][0] ;
-; k_x[40][0]                              ; Merged with k_text[40][0] ;
-; k_x[40][1]                              ; Merged with k_text[40][0] ;
-; k_x[40][3]                              ; Merged with k_text[40][0] ;
-; k_x[40][4]                              ; Merged with k_text[40][0] ;
-; k_x[40][5]                              ; Merged with k_text[40][0] ;
-; k_x[40][6]                              ; Merged with k_text[40][0] ;
-; k_text[41][6]                           ; Merged with k_text[41][0] ;
-; k_x[41][0]                              ; Merged with k_text[41][0] ;
-; k_x[41][1]                              ; Merged with k_text[41][0] ;
-; k_x[41][3]                              ; Merged with k_text[41][0] ;
-; k_x[41][4]                              ; Merged with k_text[41][0] ;
-; k_x[41][5]                              ; Merged with k_text[41][0] ;
-; k_x[41][6]                              ; Merged with k_text[41][0] ;
-; k_text[42][6]                           ; Merged with k_text[42][0] ;
-; k_x[42][0]                              ; Merged with k_text[42][0] ;
-; k_x[42][1]                              ; Merged with k_text[42][0] ;
-; k_x[42][3]                              ; Merged with k_text[42][0] ;
-; k_x[42][4]                              ; Merged with k_text[42][0] ;
-; k_x[42][5]                              ; Merged with k_text[42][0] ;
-; k_x[42][6]                              ; Merged with k_text[42][0] ;
-; k_text[43][6]                           ; Merged with k_text[43][0] ;
-; k_x[43][0]                              ; Merged with k_text[43][0] ;
-; k_x[43][1]                              ; Merged with k_text[43][0] ;
-; k_x[43][3]                              ; Merged with k_text[43][0] ;
-; k_x[43][4]                              ; Merged with k_text[43][0] ;
-; k_x[43][5]                              ; Merged with k_text[43][0] ;
-; k_x[43][6]                              ; Merged with k_text[43][0] ;
-; k_text[44][6]                           ; Merged with k_text[44][0] ;
-; k_x[44][0]                              ; Merged with k_text[44][0] ;
-; k_x[44][1]                              ; Merged with k_text[44][0] ;
-; k_x[44][3]                              ; Merged with k_text[44][0] ;
-; k_x[44][4]                              ; Merged with k_text[44][0] ;
-; k_x[44][5]                              ; Merged with k_text[44][0] ;
-; k_x[44][6]                              ; Merged with k_text[44][0] ;
-; k_text[45][6]                           ; Merged with k_text[45][0] ;
-; k_x[45][0]                              ; Merged with k_text[45][0] ;
-; k_x[45][1]                              ; Merged with k_text[45][0] ;
-; k_x[45][3]                              ; Merged with k_text[45][0] ;
-; k_x[45][4]                              ; Merged with k_text[45][0] ;
-; k_x[45][5]                              ; Merged with k_text[45][0] ;
-; k_x[45][6]                              ; Merged with k_text[45][0] ;
-; k_text[46][6]                           ; Merged with k_text[46][0] ;
-; k_x[46][0]                              ; Merged with k_text[46][0] ;
-; k_x[46][1]                              ; Merged with k_text[46][0] ;
-; k_x[46][3]                              ; Merged with k_text[46][0] ;
-; k_x[46][4]                              ; Merged with k_text[46][0] ;
-; k_x[46][5]                              ; Merged with k_text[46][0] ;
-; k_x[46][6]                              ; Merged with k_text[46][0] ;
-; k_text[47][6]                           ; Merged with k_text[47][0] ;
-; k_x[47][0]                              ; Merged with k_text[47][0] ;
-; k_x[47][1]                              ; Merged with k_text[47][0] ;
-; k_x[47][3]                              ; Merged with k_text[47][0] ;
-; k_x[47][4]                              ; Merged with k_text[47][0] ;
-; k_x[47][5]                              ; Merged with k_text[47][0] ;
-; k_x[47][6]                              ; Merged with k_text[47][0] ;
-; k_text[50][6]                           ; Merged with k_text[50][0] ;
-; k_x[50][0]                              ; Merged with k_text[50][0] ;
-; k_x[50][1]                              ; Merged with k_text[50][0] ;
-; k_x[50][3]                              ; Merged with k_text[50][0] ;
-; k_x[50][4]                              ; Merged with k_text[50][0] ;
-; k_x[50][5]                              ; Merged with k_text[50][0] ;
-; k_x[50][6]                              ; Merged with k_text[50][0] ;
-; k_text[48][6]                           ; Merged with k_text[48][0] ;
-; k_x[48][0]                              ; Merged with k_text[48][0] ;
-; k_x[48][1]                              ; Merged with k_text[48][0] ;
-; k_x[48][3]                              ; Merged with k_text[48][0] ;
-; k_x[48][4]                              ; Merged with k_text[48][0] ;
-; k_x[48][5]                              ; Merged with k_text[48][0] ;
-; k_x[48][6]                              ; Merged with k_text[48][0] ;
-; k_text[49][6]                           ; Merged with k_text[49][0] ;
-; k_x[49][0]                              ; Merged with k_text[49][0] ;
-; k_x[49][1]                              ; Merged with k_text[49][0] ;
-; k_x[49][3]                              ; Merged with k_text[49][0] ;
-; k_x[49][4]                              ; Merged with k_text[49][0] ;
-; k_x[49][5]                              ; Merged with k_text[49][0] ;
-; k_x[49][6]                              ; Merged with k_text[49][0] ;
-; k_text[16][6]                           ; Merged with k_text[16][0] ;
-; k_x[16][0]                              ; Merged with k_text[16][0] ;
-; k_x[16][1]                              ; Merged with k_text[16][0] ;
-; k_x[16][3]                              ; Merged with k_text[16][0] ;
-; k_x[16][4]                              ; Merged with k_text[16][0] ;
-; k_x[16][5]                              ; Merged with k_text[16][0] ;
-; k_x[16][6]                              ; Merged with k_text[16][0] ;
-; k_text[17][6]                           ; Merged with k_text[17][0] ;
-; k_x[17][0]                              ; Merged with k_text[17][0] ;
-; k_x[17][1]                              ; Merged with k_text[17][0] ;
-; k_x[17][3]                              ; Merged with k_text[17][0] ;
-; k_x[17][4]                              ; Merged with k_text[17][0] ;
-; k_x[17][5]                              ; Merged with k_text[17][0] ;
-; k_x[17][6]                              ; Merged with k_text[17][0] ;
-; k_text[18][6]                           ; Merged with k_text[18][0] ;
-; k_x[18][0]                              ; Merged with k_text[18][0] ;
-; k_x[18][1]                              ; Merged with k_text[18][0] ;
-; k_x[18][3]                              ; Merged with k_text[18][0] ;
-; k_x[18][4]                              ; Merged with k_text[18][0] ;
-; k_x[18][5]                              ; Merged with k_text[18][0] ;
-; k_x[18][6]                              ; Merged with k_text[18][0] ;
-; k_text[19][6]                           ; Merged with k_text[19][0] ;
-; k_x[19][0]                              ; Merged with k_text[19][0] ;
-; k_x[19][1]                              ; Merged with k_text[19][0] ;
-; k_x[19][3]                              ; Merged with k_text[19][0] ;
-; k_x[19][4]                              ; Merged with k_text[19][0] ;
-; k_x[19][5]                              ; Merged with k_text[19][0] ;
-; k_x[19][6]                              ; Merged with k_text[19][0] ;
-; k_text[20][6]                           ; Merged with k_text[20][0] ;
-; k_x[20][0]                              ; Merged with k_text[20][0] ;
-; k_x[20][1]                              ; Merged with k_text[20][0] ;
-; k_x[20][3]                              ; Merged with k_text[20][0] ;
-; k_x[20][4]                              ; Merged with k_text[20][0] ;
-; k_x[20][5]                              ; Merged with k_text[20][0] ;
-; k_x[20][6]                              ; Merged with k_text[20][0] ;
-; k_text[21][6]                           ; Merged with k_text[21][0] ;
-; k_x[21][0]                              ; Merged with k_text[21][0] ;
-; k_x[21][1]                              ; Merged with k_text[21][0] ;
-; k_x[21][3]                              ; Merged with k_text[21][0] ;
-; k_x[21][4]                              ; Merged with k_text[21][0] ;
-; k_x[21][5]                              ; Merged with k_text[21][0] ;
-; k_x[21][6]                              ; Merged with k_text[21][0] ;
-; k_text[22][6]                           ; Merged with k_text[22][0] ;
-; k_x[22][0]                              ; Merged with k_text[22][0] ;
-; k_x[22][1]                              ; Merged with k_text[22][0] ;
-; k_x[22][3]                              ; Merged with k_text[22][0] ;
-; k_x[22][4]                              ; Merged with k_text[22][0] ;
-; k_x[22][5]                              ; Merged with k_text[22][0] ;
-; k_x[22][6]                              ; Merged with k_text[22][0] ;
-; k_text[23][6]                           ; Merged with k_text[23][0] ;
-; k_x[23][0]                              ; Merged with k_text[23][0] ;
-; k_x[23][1]                              ; Merged with k_text[23][0] ;
-; k_x[23][3]                              ; Merged with k_text[23][0] ;
-; k_x[23][4]                              ; Merged with k_text[23][0] ;
-; k_x[23][5]                              ; Merged with k_text[23][0] ;
-; k_x[23][6]                              ; Merged with k_text[23][0] ;
-; k_text[24][6]                           ; Merged with k_text[24][0] ;
-; k_x[24][0]                              ; Merged with k_text[24][0] ;
-; k_x[24][1]                              ; Merged with k_text[24][0] ;
-; k_x[24][3]                              ; Merged with k_text[24][0] ;
-; k_x[24][4]                              ; Merged with k_text[24][0] ;
-; k_x[24][5]                              ; Merged with k_text[24][0] ;
-; k_x[24][6]                              ; Merged with k_text[24][0] ;
-; k_text[25][6]                           ; Merged with k_text[25][0] ;
-; k_x[25][0]                              ; Merged with k_text[25][0] ;
-; k_x[25][1]                              ; Merged with k_text[25][0] ;
-; k_x[25][3]                              ; Merged with k_text[25][0] ;
-; k_x[25][4]                              ; Merged with k_text[25][0] ;
-; k_x[25][5]                              ; Merged with k_text[25][0] ;
-; k_x[25][6]                              ; Merged with k_text[25][0] ;
-; k_text[26][6]                           ; Merged with k_text[26][0] ;
-; k_x[26][0]                              ; Merged with k_text[26][0] ;
-; k_x[26][1]                              ; Merged with k_text[26][0] ;
-; k_x[26][3]                              ; Merged with k_text[26][0] ;
-; k_x[26][4]                              ; Merged with k_text[26][0] ;
-; k_x[26][5]                              ; Merged with k_text[26][0] ;
-; k_x[26][6]                              ; Merged with k_text[26][0] ;
-; k_text[27][6]                           ; Merged with k_text[27][0] ;
-; k_x[27][0]                              ; Merged with k_text[27][0] ;
-; k_x[27][1]                              ; Merged with k_text[27][0] ;
-; k_x[27][3]                              ; Merged with k_text[27][0] ;
-; k_x[27][4]                              ; Merged with k_text[27][0] ;
-; k_x[27][5]                              ; Merged with k_text[27][0] ;
-; k_x[27][6]                              ; Merged with k_text[27][0] ;
-; k_text[28][6]                           ; Merged with k_text[28][0] ;
-; k_x[28][0]                              ; Merged with k_text[28][0] ;
-; k_x[28][1]                              ; Merged with k_text[28][0] ;
-; k_x[28][3]                              ; Merged with k_text[28][0] ;
-; k_x[28][4]                              ; Merged with k_text[28][0] ;
-; k_x[28][5]                              ; Merged with k_text[28][0] ;
-; k_x[28][6]                              ; Merged with k_text[28][0] ;
-; k_text[29][6]                           ; Merged with k_text[29][0] ;
-; k_x[29][0]                              ; Merged with k_text[29][0] ;
-; k_x[29][1]                              ; Merged with k_text[29][0] ;
-; k_x[29][3]                              ; Merged with k_text[29][0] ;
-; k_x[29][4]                              ; Merged with k_text[29][0] ;
-; k_x[29][5]                              ; Merged with k_text[29][0] ;
-; k_x[29][6]                              ; Merged with k_text[29][0] ;
-; k_text[30][6]                           ; Merged with k_text[30][0] ;
-; k_x[30][0]                              ; Merged with k_text[30][0] ;
-; k_x[30][1]                              ; Merged with k_text[30][0] ;
-; k_x[30][3]                              ; Merged with k_text[30][0] ;
-; k_x[30][4]                              ; Merged with k_text[30][0] ;
-; k_x[30][5]                              ; Merged with k_text[30][0] ;
-; k_x[30][6]                              ; Merged with k_text[30][0] ;
-; k_text[31][6]                           ; Merged with k_text[31][0] ;
-; k_x[31][0]                              ; Merged with k_text[31][0] ;
-; k_x[31][1]                              ; Merged with k_text[31][0] ;
-; k_x[31][3]                              ; Merged with k_text[31][0] ;
-; k_x[31][4]                              ; Merged with k_text[31][0] ;
-; k_x[31][5]                              ; Merged with k_text[31][0] ;
-; k_x[31][6]                              ; Merged with k_text[31][0] ;
-; char_pos[9]                             ; Merged with char_pos[3]   ;
-; char_pos[5..8]                          ; Merged with char_pos[4]   ;
-; dnum[10..31]                            ; Lost fanout               ;
-; Total Number of Removed Registers = 792 ;                           ;
-+-----------------------------------------+---------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                              ;
-+---------------+--------------------+-----------------------------------------------------------------------------------------------------+
-; Register name ; Reason for Removal ; Registers Removed due to This Register                                                              ;
-+---------------+--------------------+-----------------------------------------------------------------------------------------------------+
-; dnum[31]      ; Lost Fanouts       ; dnum[30], dnum[29], dnum[28], dnum[27], dnum[26], dnum[25], dnum[24], dnum[23], dnum[22], dnum[21], ;
-;               ;                    ; dnum[20], dnum[19], dnum[18], dnum[17], dnum[16], dnum[15], dnum[14], dnum[13], dnum[12], dnum[11], ;
-;               ;                    ; dnum[10]                                                                                            ;
-+---------------+--------------------+-----------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; ramdomx:getx|q[8]                     ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -1103,12 +350,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1053  ;
-; Number of registers using Synchronous Clear  ; 321   ;
-; Number of registers using Synchronous Load   ; 1     ;
-; Number of registers using Asynchronous Clear ; 51    ;
+; Total registers                              ; 1861  ;
+; Number of registers using Synchronous Clear  ; 375   ;
+; Number of registers using Synchronous Load   ; 817   ;
+; Number of registers using Asynchronous Clear ; 12    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 830   ;
+; Number of registers using Clock Enable       ; 1571  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -1118,11 +365,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; endlink[0]                             ; 28      ;
-; endlink[2]                             ; 19      ;
+; endlink[0]                             ; 33      ;
+; endlink[2]                             ; 53      ;
 ; vga_ctrl:vga_ctrlor|x_cnt[0]           ; 6       ;
+; flag1                                  ; 2       ;
 ; keyboard:keyboard1|status[1]           ; 4       ;
-; Total number of inverted registers = 4 ;         ;
+; Total number of inverted registers = 5 ;         ;
 +----------------------------------------+---------+
 
 
@@ -1154,137 +402,136 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |typing_game|endlink[7]                                          ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |typing_game|clkgen:clk25|clkcount[12]                           ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |typing_game|endlink[9]                                          ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |typing_game|dnum[4]                                             ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |typing_game|clkgen:clk25|clkcount[10]                           ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |typing_game|keyboard:keyboard1|ps2_keyboard:keyboard_1|w_ptr[1] ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |typing_game|key_event_cnt[17]                                   ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |typing_game|dnum[0]                                             ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[0][1]                                           ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_text[1][6]                                        ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_text[2][5]                                        ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[3][6]                                           ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_text[4][6]                                        ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[5][3]                                           ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_text[6][1]                                        ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_text[7][6]                                        ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[8][6]                                           ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_text[9][6]                                        ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_text[10][0]                                       ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[11][2]                                          ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[12][0]                                          ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[13][3]                                          ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[14][5]                                          ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_text[15][3]                                       ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_text[16][7]                                       ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[17][1]                                          ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[18][4]                                          ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_text[19][3]                                       ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_text[20][7]                                       ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[21][1]                                          ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[22][1]                                          ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[23][1]                                          ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[24][7]                                          ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[25][6]                                          ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_text[26][1]                                       ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[27][4]                                          ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[28][4]                                          ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[29][1]                                          ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[30][1]                                          ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[31][1]                                          ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[32][1]                                          ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[33][1]                                          ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[34][1]                                          ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[35][1]                                          ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[36][0]                                          ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[37][1]                                          ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[38][4]                                          ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[39][8]                                          ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[40][3]                                          ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[41][5]                                          ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[42][2]                                          ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_text[43][4]                                       ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[44][8]                                          ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[45][6]                                          ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_text[46][1]                                       ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_text[47][2]                                       ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_text[48][2]                                       ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_text[49][7]                                       ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |typing_game|k_x[50][8]                                          ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |typing_game|key_event_cnt[30]                                   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |typing_game|cnt_newchar[22]                                     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_x[0][7]                                           ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_x[1][5]                                           ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_text[2][2]                                        ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_text[3][0]                                        ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_text[4][3]                                        ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_text[5][4]                                        ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_text[6][4]                                        ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_x[7][2]                                           ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_text[8][4]                                        ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_text[9][3]                                        ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_x[10][6]                                          ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_x[11][1]                                          ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_text[12][2]                                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_text[13][5]                                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_x[14][1]                                          ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_x[15][3]                                          ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_text[16][6]                                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_text[17][4]                                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_text[18][0]                                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_text[19][3]                                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_x[20][6]                                          ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_x[21][6]                                          ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_x[22][8]                                          ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_text[23][3]                                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_x[24][7]                                          ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_x[25][0]                                          ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_x[26][0]                                          ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_x[27][7]                                          ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_x[28][8]                                          ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_x[29][0]                                          ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_x[30][0]                                          ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_x[31][0]                                          ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_x[32][0]                                          ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_text[33][3]                                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_x[34][4]                                          ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_x[35][6]                                          ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_text[36][0]                                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_text[37][2]                                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_text[38][6]                                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_text[39][2]                                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_text[40][6]                                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_x[41][3]                                          ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_x[42][1]                                          ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_text[43][3]                                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_text[44][0]                                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_text[45][3]                                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_text[46][1]                                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_text[47][3]                                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_text[48][3]                                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_x[49][1]                                          ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|k_text[50][5]                                       ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |typing_game|x_fst[0]                                            ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |typing_game|draw_fst_cnt[22]                                    ;
-; 3:1                ; 40 bits   ; 80 LEs        ; 0 LEs                ; 80 LEs                 ; Yes        ; |typing_game|chg_mem_cnt[5]                                      ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |typing_game|mem_x[4]                                            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |typing_game|draw_fst_cnt[30]                                    ;
+; 3:1                ; 40 bits   ; 80 LEs        ; 0 LEs                ; 80 LEs                 ; Yes        ; |typing_game|chg_mem_cnt[20]                                     ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |typing_game|mem_x[7]                                            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |typing_game|draw_sec_cnt[22]                                    ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |typing_game|keyboard:keyboard1|ps2_keyboard:keyboard_1|count[3] ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |typing_game|vga_ctrl:vga_ctrlor|y_cnt[8]                        ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[0][6]                                           ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[1][5]                                           ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[2][1]                                           ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |typing_game|vga_ctrl:vga_ctrlor|y_cnt[7]                        ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[0][1]                                           ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[1][7]                                           ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[2][0]                                           ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[3][5]                                           ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[4][5]                                           ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[5][0]                                           ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[6][6]                                           ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[4][3]                                           ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[5][2]                                           ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[6][7]                                           ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[7][1]                                           ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[8][4]                                           ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[8][7]                                           ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[9][2]                                           ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[10][1]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[11][6]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[12][4]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[13][5]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[14][5]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[15][3]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[16][6]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[17][2]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[18][3]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[19][6]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[20][4]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[21][3]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[22][4]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[23][1]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[24][3]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[25][2]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[26][7]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[10][5]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[11][4]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[12][3]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[13][3]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[14][7]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[15][7]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[16][7]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[17][6]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[18][2]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[19][3]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[20][7]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[21][6]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[22][3]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[23][6]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[24][0]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[25][3]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[26][6]                                          ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[27][3]                                          ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[28][1]                                          ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[29][7]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[30][0]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[31][0]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[32][0]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[33][0]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[34][0]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[35][0]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[36][0]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[37][0]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[38][0]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[39][0]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[40][0]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[41][7]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[30][3]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[31][3]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[32][3]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[33][1]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[34][4]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[35][5]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[36][6]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[37][3]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[38][1]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[39][1]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[40][5]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[41][0]                                          ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[42][5]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[43][3]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[43][6]                                          ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[44][7]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[45][6]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[46][6]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[47][7]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[48][6]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[49][1]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[50][3]                                          ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |typing_game|y_fst[2]                                            ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |typing_game|draw_sec_cnt[21]                                    ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|keyboard:keyboard1|data[0]                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |typing_game|canvas_y[5]                                         ;
-; 5:1                ; 9 bits    ; 27 LEs        ; 9 LEs                ; 18 LEs                 ; Yes        ; |typing_game|canvas_x[5]                                         ;
-; 51:1               ; 7 bits    ; 238 LEs       ; 238 LEs              ; 0 LEs                  ; Yes        ; |typing_game|char_pos[9]                                         ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |typing_game|cnt_newchar[28]                                     ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |typing_game|endlink[0]                                          ;
-; 24:1               ; 4 bits    ; 64 LEs        ; 24 LEs               ; 40 LEs                 ; Yes        ; |typing_game|old_status[0]                                       ;
-; 27:1               ; 4 bits    ; 72 LEs        ; 32 LEs               ; 40 LEs                 ; Yes        ; |typing_game|status[3]                                           ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |typing_game|mem_rpos[0]                                         ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[45][5]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[46][0]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[47][0]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[48][1]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[49][6]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |typing_game|k_y[50][0]                                          ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |typing_game|y_fst[0]                                            ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |typing_game|keyboard:keyboard1|data[3]                          ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |typing_game|canvas_y[5]                                         ;
+; 6:1                ; 9 bits    ; 36 LEs        ; 9 LEs                ; 27 LEs                 ; Yes        ; |typing_game|canvas_x[7]                                         ;
+; 52:1               ; 7 bits    ; 238 LEs       ; 238 LEs              ; 0 LEs                  ; Yes        ; |typing_game|char_pos[4]                                         ;
+; 25:1               ; 4 bits    ; 64 LEs        ; 28 LEs               ; 36 LEs                 ; Yes        ; |typing_game|old_status[2]                                       ;
+; 28:1               ; 2 bits    ; 36 LEs        ; 12 LEs               ; 24 LEs                 ; Yes        ; |typing_game|status[1]                                           ;
+; 28:1               ; 2 bits    ; 36 LEs        ; 12 LEs               ; 24 LEs                 ; Yes        ; |typing_game|status[0]                                           ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |typing_game|endlink[2]                                          ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |typing_game|mem_rpos[3]                                         ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |typing_game|keyboard:keyboard1|ps2_keyboard:keyboard_1|r_ptr    ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |typing_game|status                                              ;
-; 3:1                ; 36 bits   ; 72 LEs        ; 72 LEs               ; 0 LEs                  ; No         ; |typing_game|cnt_newchar                                         ;
-; 51:1               ; 8 bits    ; 272 LEs       ; 272 LEs              ; 0 LEs                  ; No         ; |typing_game|Mux20                                               ;
-; 51:1               ; 26 bits   ; 884 LEs       ; 884 LEs              ; 0 LEs                  ; No         ; |typing_game|Mux46                                               ;
-; 51:1               ; 9 bits    ; 306 LEs       ; 306 LEs              ; 0 LEs                  ; No         ; |typing_game|Mux13                                               ;
-; 51:1               ; 17 bits   ; 578 LEs       ; 578 LEs              ; 0 LEs                  ; No         ; |typing_game|Mux55                                               ;
+; 51:1               ; 26 bits   ; 884 LEs       ; 884 LEs              ; 0 LEs                  ; No         ; |typing_game|Mux42                                               ;
+; 51:1               ; 9 bits    ; 306 LEs       ; 306 LEs              ; 0 LEs                  ; No         ; |typing_game|Mux8                                                ;
+; 51:1               ; 17 bits   ; 578 LEs       ; 578 LEs              ; 0 LEs                  ; No         ; |typing_game|Mux58                                               ;
+; 51:1               ; 8 bits    ; 272 LEs       ; 272 LEs              ; 0 LEs                  ; No         ; |typing_game|Mux74                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
 
 
@@ -1617,6 +864,52 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 9              ; Untyped                ;
+; LPM_WIDTHD             ; 5              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_a2m ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 9              ; Untyped                ;
+; LPM_WIDTHD             ; 9              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_e2m ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +--------------------------------------------------------------------------------------------------------------+
 ; altsyncram Parameter Settings by Entity Instance                                                             ;
 +-------------------------------------------+------------------------------------------------------------------+
@@ -1689,6 +982,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------+
+; Port Connectivity Checks: "seg_h:seg3" ;
++------+-------+----------+--------------+
+; Port ; Type  ; Severity ; Details      ;
++------+-------+----------+--------------+
+; en   ; Input ; Info     ; Stuck at VCC ;
++------+-------+----------+--------------+
+
+
++----------------------------------------+
 ; Port Connectivity Checks: "seg_h:seg2" ;
 +------+-------+----------+--------------+
 ; Port ; Type  ; Severity ; Details      ;
@@ -1715,44 +1017,56 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+------------------+
 
 
++----------------------------------------+
+; Port Connectivity Checks: "mem:mem1"   ;
++------+-------+----------+--------------+
+; Port ; Type  ; Severity ; Details      ;
++------+-------+----------+--------------+
+; wren ; Input ; Info     ; Stuck at VCC ;
++------+-------+----------+--------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 1053                        ;
-;     CLR               ; 36                          ;
+; arriav_ff             ; 1861                        ;
+;     CLR               ; 3                           ;
 ;     CLR SCLR          ; 9                           ;
-;     ENA               ; 545                         ;
-;     ENA CLR           ; 6                           ;
-;     ENA SCLR          ; 279                         ;
-;     SCLR              ; 33                          ;
+;     ENA               ; 454                         ;
+;     ENA SCLR          ; 301                         ;
+;     ENA SLD           ; 816                         ;
+;     SCLR              ; 65                          ;
 ;     SLD               ; 1                           ;
-;     plain             ; 144                         ;
+;     plain             ; 212                         ;
 ; arriav_io_obuf        ; 24                          ;
-; arriav_lcell_comb     ; 2611                        ;
-;     arith             ; 407                         ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 372                         ;
-;         3 data inputs ; 27                          ;
-;         4 data inputs ; 6                           ;
-;     extend            ; 14                          ;
-;         7 data inputs ; 14                          ;
-;     normal            ; 2180                        ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 12                          ;
-;         2 data inputs ; 243                         ;
-;         3 data inputs ; 164                         ;
-;         4 data inputs ; 676                         ;
-;         5 data inputs ; 173                         ;
-;         6 data inputs ; 911                         ;
-;     shared            ; 10                          ;
+; arriav_lcell_comb     ; 3101                        ;
+;     arith             ; 470                         ;
+;         0 data inputs ; 11                          ;
+;         1 data inputs ; 398                         ;
 ;         2 data inputs ; 10                          ;
+;         3 data inputs ; 39                          ;
+;         4 data inputs ; 12                          ;
+;     extend            ; 11                          ;
+;         7 data inputs ; 11                          ;
+;     normal            ; 2562                        ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 13                          ;
+;         2 data inputs ; 118                         ;
+;         3 data inputs ; 205                         ;
+;         4 data inputs ; 586                         ;
+;         5 data inputs ; 270                         ;
+;         6 data inputs ; 1369                        ;
+;     shared            ; 58                          ;
+;         0 data inputs ; 3                           ;
+;         1 data inputs ; 13                          ;
+;         2 data inputs ; 42                          ;
 ; boundary_port         ; 168                         ;
 ; stratixv_ram_block    ; 48                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 8.00                        ;
-; Average LUT depth     ; 5.41                        ;
+; Max LUT depth         ; 11.80                       ;
+; Average LUT depth     ; 5.67                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1761,7 +1075,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:38     ;
+; Top            ; 00:00:27     ;
 +----------------+--------------+
 
 
@@ -1771,8 +1085,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Dec 23 11:48:32 2018
+    Info: Processing started: Sun Dec 23 16:21:51 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off typing_game -c typing_game
+Warning (125092): Tcl Script File ram26.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE ram26.qip
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file typing_game.v
@@ -1795,39 +1111,43 @@ Info (12021): Found 1 design units, including 1 entities, in source file char.v
     Info (12023): Found entity 1: char File: D:/my_design/final_verilog/char.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file seg_h.v
     Info (12023): Found entity 1: seg_h File: D:/my_design/final_verilog/seg_h.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ramdomnum.v
+    Info (12023): Found entity 1: ramdomnum File: D:/my_design/final_verilog/ramdomnum.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ramdomx.v
+    Info (12023): Found entity 1: ramdomx File: D:/my_design/final_verilog/ramdomx.v Line: 1
 Info (12127): Elaborating entity "typing_game" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at typing_game.v(160): object "canvas_enw" assigned a value but never read File: D:/my_design/final_verilog/typing_game.v Line: 160
-Warning (10230): Verilog HDL assignment warning at typing_game.v(137): truncated value with size 32 to match size of target (9) File: D:/my_design/final_verilog/typing_game.v Line: 137
-Warning (10230): Verilog HDL assignment warning at typing_game.v(139): truncated value with size 32 to match size of target (8) File: D:/my_design/final_verilog/typing_game.v Line: 139
-Warning (10855): Verilog HDL warning at typing_game.v(194): initial value for variable k_x should be constant File: D:/my_design/final_verilog/typing_game.v Line: 194
-Warning (10855): Verilog HDL warning at typing_game.v(194): initial value for variable k_y should be constant File: D:/my_design/final_verilog/typing_game.v Line: 194
-Warning (10855): Verilog HDL warning at typing_game.v(194): initial value for variable k_v should be constant File: D:/my_design/final_verilog/typing_game.v Line: 194
-Warning (10855): Verilog HDL warning at typing_game.v(194): initial value for variable k_text should be constant File: D:/my_design/final_verilog/typing_game.v Line: 194
-Warning (10230): Verilog HDL assignment warning at typing_game.v(207): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 207
-Warning (10230): Verilog HDL assignment warning at typing_game.v(208): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 208
-Warning (10230): Verilog HDL assignment warning at typing_game.v(210): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 210
-Warning (10230): Verilog HDL assignment warning at typing_game.v(215): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 215
-Warning (10230): Verilog HDL assignment warning at typing_game.v(219): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 219
-Warning (10230): Verilog HDL assignment warning at typing_game.v(220): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 220
-Warning (10230): Verilog HDL assignment warning at typing_game.v(221): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 221
-Warning (10230): Verilog HDL assignment warning at typing_game.v(222): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 222
-Warning (10230): Verilog HDL assignment warning at typing_game.v(223): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 223
-Warning (10230): Verilog HDL assignment warning at typing_game.v(224): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 224
-Warning (10230): Verilog HDL assignment warning at typing_game.v(225): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 225
-Warning (10230): Verilog HDL assignment warning at typing_game.v(228): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 228
-Warning (10230): Verilog HDL assignment warning at typing_game.v(261): truncated value with size 32 to match size of target (10) File: D:/my_design/final_verilog/typing_game.v Line: 261
-Warning (10230): Verilog HDL assignment warning at typing_game.v(280): truncated value with size 32 to match size of target (8) File: D:/my_design/final_verilog/typing_game.v Line: 280
-Warning (10230): Verilog HDL assignment warning at typing_game.v(282): truncated value with size 32 to match size of target (8) File: D:/my_design/final_verilog/typing_game.v Line: 282
-Warning (10230): Verilog HDL assignment warning at typing_game.v(290): truncated value with size 32 to match size of target (10) File: D:/my_design/final_verilog/typing_game.v Line: 290
-Warning (10230): Verilog HDL assignment warning at typing_game.v(322): truncated value with size 32 to match size of target (3) File: D:/my_design/final_verilog/typing_game.v Line: 322
-Warning (10230): Verilog HDL assignment warning at typing_game.v(325): truncated value with size 32 to match size of target (3) File: D:/my_design/final_verilog/typing_game.v Line: 325
-Warning (10230): Verilog HDL assignment warning at typing_game.v(329): truncated value with size 11 to match size of target (10) File: D:/my_design/final_verilog/typing_game.v Line: 329
-Warning (10230): Verilog HDL assignment warning at typing_game.v(362): truncated value with size 32 to match size of target (8) File: D:/my_design/final_verilog/typing_game.v Line: 362
-Warning (10230): Verilog HDL assignment warning at typing_game.v(363): truncated value with size 32 to match size of target (9) File: D:/my_design/final_verilog/typing_game.v Line: 363
-Warning (10230): Verilog HDL assignment warning at typing_game.v(377): truncated value with size 32 to match size of target (8) File: D:/my_design/final_verilog/typing_game.v Line: 377
-Warning (10230): Verilog HDL assignment warning at typing_game.v(378): truncated value with size 32 to match size of target (9) File: D:/my_design/final_verilog/typing_game.v Line: 378
+Warning (10036): Verilog HDL or VHDL warning at typing_game.v(172): object "mem_enw" assigned a value but never read File: D:/my_design/final_verilog/typing_game.v Line: 172
+Warning (10036): Verilog HDL or VHDL warning at typing_game.v(181): object "canvas_enw" assigned a value but never read File: D:/my_design/final_verilog/typing_game.v Line: 181
+Warning (10230): Verilog HDL assignment warning at typing_game.v(137): truncated value with size 32 to match size of target (10) File: D:/my_design/final_verilog/typing_game.v Line: 137
+Warning (10230): Verilog HDL assignment warning at typing_game.v(139): truncated value with size 32 to match size of target (10) File: D:/my_design/final_verilog/typing_game.v Line: 139
+Warning (10855): Verilog HDL warning at typing_game.v(145): initial value for variable k_x should be constant File: D:/my_design/final_verilog/typing_game.v Line: 145
+Warning (10855): Verilog HDL warning at typing_game.v(145): initial value for variable k_y should be constant File: D:/my_design/final_verilog/typing_game.v Line: 145
+Warning (10855): Verilog HDL warning at typing_game.v(145): initial value for variable k_v should be constant File: D:/my_design/final_verilog/typing_game.v Line: 145
+Warning (10855): Verilog HDL warning at typing_game.v(145): initial value for variable k_text should be constant File: D:/my_design/final_verilog/typing_game.v Line: 145
+Warning (10230): Verilog HDL assignment warning at typing_game.v(160): truncated value with size 32 to match size of target (8) File: D:/my_design/final_verilog/typing_game.v Line: 160
+Warning (10230): Verilog HDL assignment warning at typing_game.v(231): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 231
+Warning (10230): Verilog HDL assignment warning at typing_game.v(232): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 232
+Warning (10230): Verilog HDL assignment warning at typing_game.v(233): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 233
+Warning (10230): Verilog HDL assignment warning at typing_game.v(236): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 236
+Warning (10230): Verilog HDL assignment warning at typing_game.v(237): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 237
+Warning (10230): Verilog HDL assignment warning at typing_game.v(238): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 238
+Warning (10230): Verilog HDL assignment warning at typing_game.v(239): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 239
+Warning (10230): Verilog HDL assignment warning at typing_game.v(240): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 240
+Warning (10230): Verilog HDL assignment warning at typing_game.v(241): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 241
+Warning (10230): Verilog HDL assignment warning at typing_game.v(242): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 242
+Warning (10230): Verilog HDL assignment warning at typing_game.v(245): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 245
+Warning (10230): Verilog HDL assignment warning at typing_game.v(280): truncated value with size 32 to match size of target (10) File: D:/my_design/final_verilog/typing_game.v Line: 280
+Warning (10230): Verilog HDL assignment warning at typing_game.v(299): truncated value with size 32 to match size of target (8) File: D:/my_design/final_verilog/typing_game.v Line: 299
+Warning (10230): Verilog HDL assignment warning at typing_game.v(301): truncated value with size 32 to match size of target (8) File: D:/my_design/final_verilog/typing_game.v Line: 301
+Warning (10230): Verilog HDL assignment warning at typing_game.v(309): truncated value with size 32 to match size of target (10) File: D:/my_design/final_verilog/typing_game.v Line: 309
+Warning (10230): Verilog HDL assignment warning at typing_game.v(345): truncated value with size 32 to match size of target (3) File: D:/my_design/final_verilog/typing_game.v Line: 345
+Warning (10230): Verilog HDL assignment warning at typing_game.v(348): truncated value with size 32 to match size of target (3) File: D:/my_design/final_verilog/typing_game.v Line: 348
+Warning (10230): Verilog HDL assignment warning at typing_game.v(352): truncated value with size 11 to match size of target (10) File: D:/my_design/final_verilog/typing_game.v Line: 352
+Warning (10230): Verilog HDL assignment warning at typing_game.v(367): truncated value with size 32 to match size of target (8) File: D:/my_design/final_verilog/typing_game.v Line: 367
+Warning (10230): Verilog HDL assignment warning at typing_game.v(368): truncated value with size 32 to match size of target (9) File: D:/my_design/final_verilog/typing_game.v Line: 368
+Warning (10230): Verilog HDL assignment warning at typing_game.v(382): truncated value with size 32 to match size of target (8) File: D:/my_design/final_verilog/typing_game.v Line: 382
+Warning (10230): Verilog HDL assignment warning at typing_game.v(383): truncated value with size 32 to match size of target (9) File: D:/my_design/final_verilog/typing_game.v Line: 383
 Warning (10034): Output port "LEDR" at typing_game.v(21) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 21
-Warning (10034): Output port "HEX2" at typing_game.v(26) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 26
 Warning (10034): Output port "HEX3" at typing_game.v(27) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 27
 Warning (10034): Output port "HEX4" at typing_game.v(28) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 28
 Warning (10034): Output port "HEX5" at typing_game.v(29) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 29
@@ -1850,7 +1170,9 @@ Warning (10034): Output port "ADC_DIN" at typing_game.v(77) has no driver File: 
 Warning (10034): Output port "ADC_SCLK" at typing_game.v(79) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 79
 Warning (10034): Output port "FPGA_I2C_SCLK" at typing_game.v(82) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 82
 Warning (10034): Output port "IRDA_TXD" at typing_game.v(88) has no driver File: D:/my_design/final_verilog/typing_game.v Line: 88
-Info (12128): Elaborating entity "mem" for hierarchy "mem:mem1" File: D:/my_design/final_verilog/typing_game.v Line: 150
+Info (12128): Elaborating entity "ramdomnum" for hierarchy "ramdomnum:getramdomnum" File: D:/my_design/final_verilog/typing_game.v Line: 165
+Info (12128): Elaborating entity "ramdomx" for hierarchy "ramdomx:getx" File: D:/my_design/final_verilog/typing_game.v Line: 170
+Info (12128): Elaborating entity "mem" for hierarchy "mem:mem1" File: D:/my_design/final_verilog/typing_game.v Line: 171
 Info (12128): Elaborating entity "altsyncram" for hierarchy "mem:mem1|altsyncram:altsyncram_component" File: D:/my_design/final_verilog/mem.v Line: 88
 Info (12130): Elaborated megafunction instantiation "mem:mem1|altsyncram:altsyncram_component" File: D:/my_design/final_verilog/mem.v Line: 88
 Info (12133): Instantiated megafunction "mem:mem1|altsyncram:altsyncram_component" with the following parameter: File: D:/my_design/final_verilog/mem.v Line: 88
@@ -1882,8 +1204,8 @@ Info (12128): Elaborating entity "decode_tma" for hierarchy "mem:mem1|altsyncram
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_6hb.tdf
     Info (12023): Found entity 1: mux_6hb File: D:/my_design/final_verilog/db/mux_6hb.tdf Line: 22
 Info (12128): Elaborating entity "mux_6hb" for hierarchy "mem:mem1|altsyncram:altsyncram_component|altsyncram_but1:auto_generated|mux_6hb:mux3" File: D:/my_design/final_verilog/db/altsyncram_but1.tdf Line: 44
-Info (12128): Elaborating entity "canvas" for hierarchy "canvas:canvas1" File: D:/my_design/final_verilog/typing_game.v Line: 159
-Info (12128): Elaborating entity "char" for hierarchy "char:char1" File: D:/my_design/final_verilog/typing_game.v Line: 169
+Info (12128): Elaborating entity "canvas" for hierarchy "canvas:canvas1" File: D:/my_design/final_verilog/typing_game.v Line: 180
+Info (12128): Elaborating entity "char" for hierarchy "char:char1" File: D:/my_design/final_verilog/typing_game.v Line: 190
 Info (12128): Elaborating entity "altsyncram" for hierarchy "char:char1|altsyncram:altsyncram_component" File: D:/my_design/final_verilog/char.v Line: 81
 Info (12130): Elaborated megafunction instantiation "char:char1|altsyncram:altsyncram_component" File: D:/my_design/final_verilog/char.v Line: 81
 Info (12133): Instantiated megafunction "char:char1|altsyncram:altsyncram_component" with the following parameter: File: D:/my_design/final_verilog/char.v Line: 81
@@ -1904,12 +1226,12 @@ Info (12133): Instantiated megafunction "char:char1|altsyncram:altsyncram_compon
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ibf1.tdf
     Info (12023): Found entity 1: altsyncram_ibf1 File: D:/my_design/final_verilog/db/altsyncram_ibf1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_ibf1" for hierarchy "char:char1|altsyncram:altsyncram_component|altsyncram_ibf1:auto_generated" File: d:/software/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "seg_h" for hierarchy "seg_h:seg1" File: D:/my_design/final_verilog/typing_game.v Line: 173
-Info (12128): Elaborating entity "keyboard" for hierarchy "keyboard:keyboard1" File: D:/my_design/final_verilog/typing_game.v Line: 176
+Info (12128): Elaborating entity "seg_h" for hierarchy "seg_h:seg1" File: D:/my_design/final_verilog/typing_game.v Line: 194
+Info (12128): Elaborating entity "keyboard" for hierarchy "keyboard:keyboard1" File: D:/my_design/final_verilog/typing_game.v Line: 197
 Info (12128): Elaborating entity "ps2_keyboard" for hierarchy "keyboard:keyboard1|ps2_keyboard:keyboard_1" File: D:/my_design/final_verilog/keyboard.v Line: 32
 Info (12128): Elaborating entity "ascii" for hierarchy "keyboard:keyboard1|ascii:kcode2_asc" File: D:/my_design/final_verilog/keyboard.v Line: 64
-Info (12128): Elaborating entity "clkgen" for hierarchy "clkgen:clk25" File: D:/my_design/final_verilog/typing_game.v Line: 178
-Info (12128): Elaborating entity "vga_ctrl" for hierarchy "vga_ctrl:vga_ctrlor" File: D:/my_design/final_verilog/typing_game.v Line: 192
+Info (12128): Elaborating entity "clkgen" for hierarchy "clkgen:clk25" File: D:/my_design/final_verilog/typing_game.v Line: 199
+Info (12128): Elaborating entity "vga_ctrl" for hierarchy "vga_ctrl:vga_ctrlor" File: D:/my_design/final_verilog/typing_game.v Line: 213
 Warning (276020): Inferred RAM node "keyboard:keyboard1|ps2_keyboard:keyboard_1|fifo_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "keyboard:keyboard1|ps2_keyboard:keyboard_1|fifo_rtl_0" 
@@ -1927,6 +1249,9 @@ Info (19000): Inferred 1 megafunctions from design logic
         Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: D:/my_design/final_verilog/typing_game.v Line: 160
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1" File: D:/my_design/final_verilog/typing_game.v Line: 276
 Info (12130): Elaborated megafunction instantiation "keyboard:keyboard1|ps2_keyboard:keyboard_1|altsyncram:fifo_rtl_0"
 Info (12133): Instantiated megafunction "keyboard:keyboard1|ps2_keyboard:keyboard_1|altsyncram:fifo_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -1945,6 +1270,30 @@ Info (12133): Instantiated megafunction "keyboard:keyboard1|ps2_keyboard:keyboar
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_edi1.tdf
     Info (12023): Found entity 1: altsyncram_edi1 File: D:/my_design/final_verilog/db/altsyncram_edi1.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: D:/my_design/final_verilog/typing_game.v Line: 160
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: D:/my_design/final_verilog/typing_game.v Line: 160
+    Info (12134): Parameter "LPM_WIDTHN" = "9"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_a2m.tdf
+    Info (12023): Found entity 1: lpm_divide_a2m File: D:/my_design/final_verilog/db/lpm_divide_a2m.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_dkh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_dkh File: D:/my_design/final_verilog/db/sign_div_unsign_dkh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_0te.tdf
+    Info (12023): Found entity 1: alt_u_div_0te File: D:/my_design/final_verilog/db/alt_u_div_0te.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod1" File: D:/my_design/final_verilog/typing_game.v Line: 276
+Info (12133): Instantiated megafunction "lpm_divide:Mod1" with the following parameter: File: D:/my_design/final_verilog/typing_game.v Line: 276
+    Info (12134): Parameter "LPM_WIDTHN" = "9"
+    Info (12134): Parameter "LPM_WIDTHD" = "9"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_e2m.tdf
+    Info (12023): Found entity 1: lpm_divide_e2m File: D:/my_design/final_verilog/db/lpm_divide_e2m.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_hkh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_hkh File: D:/my_design/final_verilog/db/sign_div_unsign_hkh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_8te.tdf
+    Info (12023): Found entity 1: alt_u_div_8te File: D:/my_design/final_verilog/db/alt_u_div_8te.tdf Line: 22
 Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "PS2_CLK" has no driver File: D:/my_design/final_verilog/typing_game.v Line: 70
     Warning (13040): bidirectional pin "PS2_DAT" has no driver File: D:/my_design/final_verilog/typing_game.v Line: 72
@@ -1970,48 +1319,10 @@ Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "PS2_CLK2" has no driver File: D:/my_design/final_verilog/typing_game.v Line: 71
     Warning (13040): bidirectional pin "PS2_DAT2" has no driver File: D:/my_design/final_verilog/typing_game.v Line: 73
     Warning (13040): bidirectional pin "FPGA_I2C_SDAT" has no driver File: D:/my_design/final_verilog/typing_game.v Line: 83
+Info (13000): Registers with preset signals will power-up high File: D:/my_design/final_verilog/typing_game.v Line: 143
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "status[0]" is converted into an equivalent circuit using register "status[0]~_emulated" and latch "status[0]~1" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "status[1]" is converted into an equivalent circuit using register "status[1]~_emulated" and latch "status[1]~5" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "status[2]" is converted into an equivalent circuit using register "status[2]~_emulated" and latch "status[2]~9" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "status[3]" is converted into an equivalent circuit using register "status[3]~_emulated" and latch "status[3]~13" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[31]" is converted into an equivalent circuit using register "cnt_newchar[31]~_emulated" and latch "cnt_newchar[31]~1" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[30]" is converted into an equivalent circuit using register "cnt_newchar[30]~_emulated" and latch "cnt_newchar[30]~5" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[29]" is converted into an equivalent circuit using register "cnt_newchar[29]~_emulated" and latch "cnt_newchar[29]~9" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[28]" is converted into an equivalent circuit using register "cnt_newchar[28]~_emulated" and latch "cnt_newchar[28]~13" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[27]" is converted into an equivalent circuit using register "cnt_newchar[27]~_emulated" and latch "cnt_newchar[27]~17" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[26]" is converted into an equivalent circuit using register "cnt_newchar[26]~_emulated" and latch "cnt_newchar[26]~21" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[25]" is converted into an equivalent circuit using register "cnt_newchar[25]~_emulated" and latch "cnt_newchar[25]~25" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[24]" is converted into an equivalent circuit using register "cnt_newchar[24]~_emulated" and latch "cnt_newchar[24]~29" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[23]" is converted into an equivalent circuit using register "cnt_newchar[23]~_emulated" and latch "cnt_newchar[23]~33" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[22]" is converted into an equivalent circuit using register "cnt_newchar[22]~_emulated" and latch "cnt_newchar[22]~37" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[21]" is converted into an equivalent circuit using register "cnt_newchar[21]~_emulated" and latch "cnt_newchar[21]~41" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[20]" is converted into an equivalent circuit using register "cnt_newchar[20]~_emulated" and latch "cnt_newchar[20]~45" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[19]" is converted into an equivalent circuit using register "cnt_newchar[19]~_emulated" and latch "cnt_newchar[19]~49" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[18]" is converted into an equivalent circuit using register "cnt_newchar[18]~_emulated" and latch "cnt_newchar[18]~53" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[17]" is converted into an equivalent circuit using register "cnt_newchar[17]~_emulated" and latch "cnt_newchar[17]~57" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[16]" is converted into an equivalent circuit using register "cnt_newchar[16]~_emulated" and latch "cnt_newchar[16]~61" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[15]" is converted into an equivalent circuit using register "cnt_newchar[15]~_emulated" and latch "cnt_newchar[15]~65" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[14]" is converted into an equivalent circuit using register "cnt_newchar[14]~_emulated" and latch "cnt_newchar[14]~69" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[13]" is converted into an equivalent circuit using register "cnt_newchar[13]~_emulated" and latch "cnt_newchar[13]~73" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[12]" is converted into an equivalent circuit using register "cnt_newchar[12]~_emulated" and latch "cnt_newchar[12]~77" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[11]" is converted into an equivalent circuit using register "cnt_newchar[11]~_emulated" and latch "cnt_newchar[11]~81" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[10]" is converted into an equivalent circuit using register "cnt_newchar[10]~_emulated" and latch "cnt_newchar[10]~85" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[9]" is converted into an equivalent circuit using register "cnt_newchar[9]~_emulated" and latch "cnt_newchar[9]~89" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[8]" is converted into an equivalent circuit using register "cnt_newchar[8]~_emulated" and latch "cnt_newchar[8]~93" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[7]" is converted into an equivalent circuit using register "cnt_newchar[7]~_emulated" and latch "cnt_newchar[7]~97" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[6]" is converted into an equivalent circuit using register "cnt_newchar[6]~_emulated" and latch "cnt_newchar[6]~101" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[5]" is converted into an equivalent circuit using register "cnt_newchar[5]~_emulated" and latch "cnt_newchar[5]~105" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[4]" is converted into an equivalent circuit using register "cnt_newchar[4]~_emulated" and latch "cnt_newchar[4]~109" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[3]" is converted into an equivalent circuit using register "cnt_newchar[3]~_emulated" and latch "cnt_newchar[3]~113" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[2]" is converted into an equivalent circuit using register "cnt_newchar[2]~_emulated" and latch "cnt_newchar[2]~117" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[1]" is converted into an equivalent circuit using register "cnt_newchar[1]~_emulated" and latch "cnt_newchar[1]~121" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "cnt_newchar[0]" is converted into an equivalent circuit using register "cnt_newchar[0]~_emulated" and latch "cnt_newchar[0]~125" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "old_status[0]" is converted into an equivalent circuit using register "old_status[0]~_emulated" and latch "old_status[0]~1" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "flag" is converted into an equivalent circuit using register "flag~_emulated" and latch "flag~1" File: D:/my_design/final_verilog/typing_game.v Line: 143
-    Warning (13310): Register "old_status[1]" is converted into an equivalent circuit using register "old_status[1]~_emulated" and latch "old_status[1]~5" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "old_status[2]" is converted into an equivalent circuit using register "old_status[2]~_emulated" and latch "old_status[2]~9" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "old_status[3]" is converted into an equivalent circuit using register "old_status[3]~_emulated" and latch "old_status[3]~13" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "flag2" is converted into an equivalent circuit using register "flag2~_emulated" and latch "flag2~1" File: D:/my_design/final_verilog/typing_game.v Line: 144
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[0]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 21
     Warning (13410): Pin "LEDR[1]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 21
@@ -2023,13 +1334,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[7]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 21
     Warning (13410): Pin "LEDR[8]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 21
     Warning (13410): Pin "LEDR[9]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 21
-    Warning (13410): Pin "HEX2[0]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 26
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 26
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 26
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 26
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 26
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 26
-    Warning (13410): Pin "HEX2[6]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 26
     Warning (13410): Pin "HEX3[0]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 27
     Warning (13410): Pin "HEX3[1]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 27
     Warning (13410): Pin "HEX3[2]" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 27
@@ -2084,7 +1388,8 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "FPGA_I2C_SCLK" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 82
     Warning (13410): Pin "IRDA_TXD" is stuck at GND File: D:/my_design/final_verilog/typing_game.v Line: 88
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 22 registers lost all their fanouts during netlist optimizations.
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register flag1 will power up to High File: D:/my_design/final_verilog/typing_game.v Line: 143
 Info (144001): Generated suppressed messages file D:/my_design/final_verilog/typing_game.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -2119,17 +1424,17 @@ Warning (21074): Design contains 30 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "AUD_ADCDAT" File: D:/my_design/final_verilog/typing_game.v Line: 62
     Warning (15610): No output dependent on input pin "ADC_DOUT" File: D:/my_design/final_verilog/typing_game.v Line: 78
     Warning (15610): No output dependent on input pin "IRDA_RXD" File: D:/my_design/final_verilog/typing_game.v Line: 86
-Info (21057): Implemented 2926 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4237 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 32 input pins
     Info (21059): Implemented 112 output pins
     Info (21060): Implemented 24 bidirectional pins
-    Info (21061): Implemented 2710 logic cells
+    Info (21061): Implemented 4021 logic cells
     Info (21064): Implemented 48 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 225 warnings
-    Info: Peak virtual memory: 4905 megabytes
-    Info: Processing ended: Sun Dec 23 11:49:48 2018
-    Info: Elapsed time: 00:01:16
-    Info: Total CPU time (on all processors): 00:01:49
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 181 warnings
+    Info: Peak virtual memory: 4914 megabytes
+    Info: Processing ended: Sun Dec 23 16:22:57 2018
+    Info: Elapsed time: 00:01:06
+    Info: Total CPU time (on all processors): 00:01:36
 
 
 +------------------------------------------+

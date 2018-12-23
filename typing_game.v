@@ -108,11 +108,11 @@ assign reset=SW[0];
 wire new_in;
 wire [7:0]code_in;
 
-reg [9:0]endlink=0;	//最多40*24=960
+reg [9:0]endlink=5;	//最多40*24=960
 
-reg	[8:0] k_x [MAX_CHAR:0];
-reg [7:0] k_y [MAX_CHAR:0];
-reg [7:0] k_text [MAX_CHAR:0];
+reg	[8:0]k_x[MAX_CHAR:0];
+reg [7:0]k_y[MAX_CHAR:0];
+reg [7:0]k_text[MAX_CHAR:0];
 reg [MAX_CHAR:0]k_v;
 
 reg [2:0] x_fst=0;
@@ -122,7 +122,7 @@ reg [31:0]cnt_newchar=0;
 
 integer upt_pos_cnt=0;
 integer delete_cnt=0;
-integer dnum=0;
+reg [31:0] dnum=0;
 integer draw_fst_cnt=0;
 integer chg_mem_cnt=0;
 integer draw_sec_cnt=0;
@@ -133,28 +133,49 @@ reg [31:0]miss=0;
 
 wire [9:0] h_addr;
 wire [9:0] v_addr;
-wire [8:0]x_addr;
+wire [9:0]x_addr;
 	assign x_addr=(h_addr>=160 && h_addr<480)? h_addr-160:0;
-wire [7:0]y_addr;
+wire [9:0]y_addr;
 	assign y_addr=(v_addr>=140&&v_addr<=340)?v_addr-140:0;
 
 reg [23:0]vga_data;
 
-reg flag=0;
+reg flag1=0;
+reg flag2=0;
+	initial begin
+		endlink=10'd5;
+		k_x[0]=80;k_y[0]=9;k_v[0]=0;k_text[0]=8'd66;
+		k_x[1]=90;k_y[1]=9;k_v[1]=0;k_text[1]=8'd65;
+		k_x[2]=100;k_y[2]=9;k_v[2]=0;k_text[2]=8'd65;
+		k_x[3]=110;k_y[3]=9;k_v[3]=0;k_text[3]=8'd65;
+		k_x[4]=120;k_y[4]=9;k_v[4]=0;k_text[4]=8'd65;
+	end
+
 //=======================================================
 //  Structural coding
 //=======================================================
+wire [7:0] ramdomchar;
+wire [7:0] ramdomnum;
+wire [8:0] ramdomx;
+assign  ramdomchar=(ramdomnum+endlink[7:0])%26;
 
+ramdomnum getramdomnum(
+	.clk(CLOCK_50),
+	.q(ramdomnum)
+);
 
-
-mem mem1(.clock(CLOCK_50),.data(mem_din),.rdaddress(mem_rpos),.wraddress(mem_wpos),.wren(mem_enw),.q(mem_dout));
+ramdomx getx(
+	.clk(CLOCK_50),
+	.q(ramdomx)
+);
+mem mem1(.clock(CLOCK_50),.data(mem_din),.rdaddress(mem_rpos),.wraddress(mem_wpos),.wren(1'b1),.q(mem_dout));
 	reg mem_enw=0;
 	wire mem_din,mem_dout;
 	wire [16:0]mem_rpos,mem_wpos;
 	reg [8:0]mem_x=0;
 	reg [7:0]mem_y=0;
 	assign mem_wpos={mem_y,mem_x};
-	assign mem_rpos={y_addr,x_addr};
+	assign mem_rpos={y_addr[7:0],x_addr[8:0]};
 
 canvas canvas1(.clock(CLOCK_50),.data(can_din),.rdaddress(can_rpos),.wraddress(can_wpos),.wren(1'b1),.q(mem_din));
 	reg canvas_enw=0;
@@ -172,7 +193,7 @@ char char1(.address(char_pos), .clock(CLOCK_50), .q(char_row));
 
 seg_h seg1(.data_d(status),.out_q(HEX0),.en(1));
 seg_h seg2(.data_d(endlink[3:0]),.out_q(HEX1),.en(1));
-
+seg_h seg3(.data_d(dnum[3:0]),.out_q(HEX2),.en(1));
 keyboard keyboard1(.clk(CLOCK_50),.clrn(reset),.ps2_clk(PS2_CLK),.ps2_data(PS2_DAT),.asc(code_in),.en(new_in));
 
 clkgen #(25000000) clk25(.clkin(CLOCK_50),.rst(reset),.clken(1'b1),.clkout(VGA_CLK));
@@ -191,55 +212,53 @@ vga_ctrl vga_ctrlor(
 	.vga_b(VGA_B)
 );
 
-initial begin
-	endlink=5;
-	k_x[0]=80;k_y[0]=9;k_v[0]=0;k_text[0]=8'd70;
-	k_x[1]=90;k_y[1]=9;k_v[1]=0;k_text[1]=8'd66;
-	k_x[2]=100;k_y[2]=9;k_v[2]=0;k_text[2]=8'd67;
-	k_x[3]=110;k_y[3]=9;k_v[3]=0;k_text[3]=8'd68;
-	k_x[4]=120;k_y[4]=9;k_v[4]=0;k_text[4]=8'd69;
-end
 //newin
+always @(posedge CLOCK_50 or posedge new_in)begin
+	if(new_in)begin
+		if(flag1==0)begin
+			flag1<=1;
+			flag2<=1;
+		end	else flag2<=0;
+	end else begin
+		flag1<=0;
+		flag2<=0;
+ 	end
+end
 
 //status
-always @(posedge CLOCK_50 or posedge new_in)begin
-	 if(new_in)begin
-		 if(reset)begin status<=RESET; old_status<=none;cnt_newchar<=0;end
-		 else if(flag==0) begin  cnt_newchar<=cnt_newchar+1; status<=key_event; old_status<=status;flag<=1; end
-	 end else begin
-		 	if(reset)begin status<=RESET; old_status<=none;cnt_newchar<=0; end
-			else begin
-				flag<=0;
-				cnt_newchar<=cnt_newchar+1;
-				if(cnt_newchar==TIME_NEW_CHAR)begin
-					status<=create_new;
-					cnt_newchar<=0;
-				end else begin
-					case (status)
-						none 		: if(f_none) 		begin old_status<=status; status<=upt_pos;		end
-						upt_pos		: if(f_upt_pos)		begin old_status<=status; status<=delete;		end //update pos
-						delete 		: if(f_delete) 		begin old_status<=status; status<=draw_fst;		end
-						draw_fst 	: if(f_draw_fst)	begin old_status<=status; status<=chg_mem;		end //first draw
-						chg_mem  	: if(f_chg_mem) 	begin old_status<=status; status<=draw_sec;		end //change memory
-						draw_sec 	: if(f_draw_sec)	begin old_status<=status; status<=none;			end //second draw
-						RESET   	: if(!reset)		begin status<=none;								end
-						key_event 	: if(f_key_event)	begin status<=old_status;						end //keyboard input
-						create_new	: if(f_create_new)	begin status<=old_status;						end
-						9,10,11,12,13,14,15 :           begin status<=none;	old_status<=none;			end
-					endcase
-				end
-			end
-	 end
+always @(posedge CLOCK_50 )begin
+	cnt_newchar<=cnt_newchar+1;
+	if(reset)begin status<=RESET; old_status<=none;cnt_newchar<=0;end
+	else if(flag2)begin old_status<=status; status<=key_event; end
+	else if(cnt_newchar==TIME_NEW_CHAR)	begin old_status<=status; status<=create_new;cnt_newchar<=0;end
+	else begin
+		case (status)
+			none 		: if(f_none) 		begin status<=upt_pos;	old_status<=status;	 	end
+			upt_pos		: if(f_upt_pos)		begin status<=delete;	old_status<=status;		end
+			delete 		: if(f_delete) 		begin status<=draw_sec;	old_status<=status;		end
+			draw_fst 	: if(f_draw_fst)	begin status<=chg_mem;	old_status<=status;		end
+			chg_mem  	: if(f_chg_mem) 	begin status<=none;	old_status<=status;		end
+			draw_sec 	: if(f_draw_sec)	begin status<=draw_fst;		old_status<=status;		end
+			RESET   	: if(!reset)		begin status<=none;		old_status<=none;		end
+		key_event 	: if(f_key_event)	begin status<=none;						end
+		create_new	: if(f_create_new)	begin status<=old_status;						end
+		9,10,11,12,13,14,15 :           begin status<=none;		old_status<=none;		end
+		endcase
+	end
 end
 
-//for our needed square, let it be what it should be, else let it be purple
+
+//color
 always @(posedge CLOCK_50)begin
-		if(h_addr<160 || h_addr>=480 || v_addr<140 ||v_addr>=340)begin
-			vga_data<=24'h2a0a29;
-		end else begin
-			vga_data<=mem_dout==1?24'hffffff:24'h0;
-		end
+	if(h_addr<160 || h_addr>=480 || v_addr<140 ||v_addr>=340)begin
+		vga_data<=24'h2a0a29;
+	end else begin
+		vga_data<={	mem_dout,mem_dout,mem_dout,mem_dout,mem_dout,mem_dout,
+					mem_dout,mem_dout,mem_dout,mem_dout,mem_dout,mem_dout,
+					mem_dout,mem_dout,mem_dout,mem_dout,mem_dout,mem_dout,
+					mem_dout,mem_dout,mem_dout,mem_dout,mem_dout,mem_dout};
 	end
+end
 
 //enw
 always@(posedge CLOCK_50)begin
@@ -253,16 +272,16 @@ end
 
 //all case
 always @(posedge CLOCK_50)begin
-	if(status==create_new)begin
-		k_x[endlink]<=9'd123;
-		k_y[endlink]<=8'd9;
-		k_text[endlink]<=8'd65;
+	if(status==create_new && f_create_new==0)begin
+		k_x[endlink]<=(ramdomx%9'd312);
+		k_y[endlink]<=8'd4;
+		k_text[endlink]<=8'd65+ramdomchar;
 		k_v[endlink]<=1'd0;
 		endlink<=endlink+1;
 		f_create_new<=1;
 	end else begin f_create_new<=0; end
 
-	if(status==none)begin
+	if(status==none && f_none==0)begin
 		cnt<=cnt+1;
 		if(cnt>=TIME)begin
 			cnt<=0;
@@ -270,7 +289,7 @@ always @(posedge CLOCK_50)begin
 		end
 	end else begin f_none <=0;end
 
-	if(status==upt_pos)begin
+	if(status==upt_pos && f_upt_pos==0)begin
 		if(upt_pos_cnt>=endlink)begin
 			f_upt_pos<=1;
 			upt_pos_cnt<=0;
@@ -283,35 +302,39 @@ always @(posedge CLOCK_50)begin
 		end
 	end else begin f_upt_pos<=0; end
 
-	if(status==delete)begin
+	if(status==delete && f_delete==0) begin
 		if(delete_cnt>=endlink)begin
 			f_delete<=1;
 			delete_cnt<=0;
-			endlink<=delete_cnt-dnum;
+			endlink<=endlink-dnum;
 			dnum<=0;
 		end else begin
 			delete_cnt<=delete_cnt+1;
-			if(k_y[delete_cnt]<8)begin
+			if(k_y[delete_cnt]<4)begin
 				dnum<=dnum+1;
 				hit<=hit+1;
 			end else if(k_y[delete_cnt]>=193)begin
 				dnum<=dnum+1;
 				miss<=miss+1;
 			end else begin
-				k_x[delete_cnt]<=k_x[delete_cnt-dnum];
-				k_y[delete_cnt]<=k_y[delete_cnt-dnum];
-				k_text[delete_cnt]<=k_text[delete_cnt-dnum];
-				k_v[delete_cnt]<=k_v[delete_cnt-dnum];
+					k_x[delete_cnt-dnum]<=k_x[delete_cnt];
+					k_y[delete_cnt-dnum]<=k_y[delete_cnt];
+				 k_text[delete_cnt-dnum]<=k_text[delete_cnt];
+					k_v[delete_cnt-dnum]<=k_v[delete_cnt];
 			end
 		end
 	end else begin f_delete<=0; end
 
-	if(status==draw_fst)begin
+	if(status==draw_fst && f_draw_fst==0) begin
 		if(draw_fst_cnt>=endlink)begin
 			f_draw_fst<=1;
 			draw_fst_cnt<=0;
 			x_fst<=0;
 			y_fst<=0;
+			canvas_y<=0;
+			canvas_x<=0;
+			char_pos<=0;
+			can_din<=0;
 		end	else begin
 			if(x_fst>=7)begin
 				x_fst<=0;
@@ -327,29 +350,11 @@ always @(posedge CLOCK_50)begin
 			canvas_y<=k_y[draw_fst_cnt]+y_fst;
 			canvas_x<=k_x[draw_fst_cnt]+x_fst;
 			char_pos<={k_text[draw_fst_cnt],y_fst};
-			can_din<=char_row[7-x_fst];
+			can_din<=char_row[x_fst];
 		end
 	end else begin f_draw_fst<=0; end
 
-/*	if(status==draw_fst)begin
-		if(x_fst>=7)begin
-			x_fst<=0;
-			if(y_fst>=7)begin
-				f_draw_fst<=1;
-				y_fst<=0;
-			end else begin
-				y_fst<=y_fst+1;
-			end
-		end else begin
-			x_fst<=x_fst+1;
-		end
-		canvas_y<=y_fst;
-		canvas_x<=x_fst;
-		char_pos<={8'd65,y_fst};
-		can_din<=char_row[x_fst];
-	end
-*/
-	if(status==chg_mem)begin
+	if(status==chg_mem && f_chg_mem==0)begin
 		if(chg_mem_cnt>=200)begin
 			f_chg_mem<=1;
 			chg_mem_cnt<=0;
@@ -364,7 +369,7 @@ always @(posedge CLOCK_50)begin
 		end
 	end else begin f_chg_mem<=0; end
 
-	if(status==draw_sec)begin
+	if(status==draw_sec && f_draw_sec==0)begin
 		if(draw_sec_cnt>=200)begin
 			f_draw_sec<=1;
 			draw_sec_cnt<=0;
@@ -375,12 +380,12 @@ always @(posedge CLOCK_50)begin
 				draw_sec_cnt<=draw_sec_cnt+1;
 				canvas_x<=0;
 				canvas_y<=canvas_y+1;
-		end else begin canvas_x<=canvas_x+1; end
+			end else begin canvas_x<=canvas_x+1; end
 		end
 		can_din<=1'b0;
-	end else begin draw_sec_cnt<=0; end
+	end else begin f_draw_sec<=0; end
 
-	if(status==key_event) begin
+	if(status==key_event && f_key_event==0) begin
 		if(f_key_event==0)begin
 			if(key_event_cnt>=endlink)begin
 				f_key_event<=1;
@@ -388,7 +393,7 @@ always @(posedge CLOCK_50)begin
 			end else begin
 				key_event_cnt<=key_event_cnt+1;
 
-				if(k_text[key_event]==code_in)begin
+				if(k_text[key_event_cnt]==code_in)begin
 					k_v[key_event_cnt]<=1;
 					f_key_event<=1;
 					key_event_cnt<=0;

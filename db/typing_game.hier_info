@@ -2,7 +2,7 @@
 CLOCK2_50 => ~NO_FANOUT~
 CLOCK3_50 => ~NO_FANOUT~
 CLOCK4_50 => ~NO_FANOUT~
-CLOCK_50 => CLOCK_50.IN2
+CLOCK_50 => CLOCK_50.IN5
 KEY[0] => ~NO_FANOUT~
 KEY[1] => ~NO_FANOUT~
 KEY[2] => ~NO_FANOUT~
@@ -41,13 +41,13 @@ HEX1[3] <= seg_h:seg2.out_q[3]
 HEX1[4] <= seg_h:seg2.out_q[4]
 HEX1[5] <= seg_h:seg2.out_q[5]
 HEX1[6] <= seg_h:seg2.out_q[6]
-HEX2[0] <= <GND>
-HEX2[1] <= <GND>
-HEX2[2] <= <GND>
-HEX2[3] <= <GND>
-HEX2[4] <= <GND>
-HEX2[5] <= <GND>
-HEX2[6] <= <GND>
+HEX2[0] <= seg_h:seg3.out_q[0]
+HEX2[1] <= seg_h:seg3.out_q[1]
+HEX2[2] <= seg_h:seg3.out_q[2]
+HEX2[3] <= seg_h:seg3.out_q[3]
+HEX2[4] <= seg_h:seg3.out_q[4]
+HEX2[5] <= seg_h:seg3.out_q[5]
+HEX2[6] <= seg_h:seg3.out_q[6]
 HEX3[0] <= <GND>
 HEX3[1] <= <GND>
 HEX3[2] <= <GND>
@@ -167,6 +167,46 @@ FPGA_I2C_SCLK <= <GND>
 FPGA_I2C_SDAT <> <UNC>
 IRDA_RXD => ~NO_FANOUT~
 IRDA_TXD <= <GND>
+
+
+|typing_game|ramdomnum:getramdomnum
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+clk => q[4]~reg0.CLK
+clk => q[5]~reg0.CLK
+clk => q[6]~reg0.CLK
+clk => q[7]~reg0.CLK
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|typing_game|ramdomx:getx
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+clk => q[4]~reg0.CLK
+clk => q[5]~reg0.CLK
+clk => q[6]~reg0.CLK
+clk => q[7]~reg0.CLK
+clk => q[8]~reg0.CLK
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |typing_game|mem:mem1
@@ -1745,6 +1785,27 @@ en => out_q.OUTPUTSELECT
 
 
 |typing_game|seg_h:seg2
+data_d[0] => Decoder0.IN3
+data_d[1] => Decoder0.IN2
+data_d[2] => Decoder0.IN1
+data_d[3] => Decoder0.IN0
+out_q[0] <= out_q.DB_MAX_OUTPUT_PORT_TYPE
+out_q[1] <= out_q.DB_MAX_OUTPUT_PORT_TYPE
+out_q[2] <= out_q.DB_MAX_OUTPUT_PORT_TYPE
+out_q[3] <= out_q.DB_MAX_OUTPUT_PORT_TYPE
+out_q[4] <= out_q.DB_MAX_OUTPUT_PORT_TYPE
+out_q[5] <= out_q.DB_MAX_OUTPUT_PORT_TYPE
+out_q[6] <= out_q.DB_MAX_OUTPUT_PORT_TYPE
+en => out_q.OUTPUTSELECT
+en => out_q.OUTPUTSELECT
+en => out_q.OUTPUTSELECT
+en => out_q.OUTPUTSELECT
+en => out_q.OUTPUTSELECT
+en => out_q.OUTPUTSELECT
+en => out_q.OUTPUTSELECT
+
+
+|typing_game|seg_h:seg3
 data_d[0] => Decoder0.IN3
 data_d[1] => Decoder0.IN2
 data_d[2] => Decoder0.IN1
