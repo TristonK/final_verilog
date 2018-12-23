@@ -3,7 +3,7 @@ module ascii(clk,key_code,out);
     input [7:0]key_code;
     output reg[7:0]out;
 
-    always @(negedge clk)
+    always @(posedge clk)
         begin
             case (key_code)
 
