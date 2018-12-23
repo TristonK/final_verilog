@@ -10,75 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87edef4a-2652-4d25-a642-6b81f416c8b4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/db/.cmp.kpt" beforeDir="false" afterPath="$PROJECT_DIR$/db/.cmp.kpt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/prev_cmp_typing_game.qmsg" beforeDir="false" afterPath="$PROJECT_DIR$/db/prev_cmp_typing_game.qmsg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.(0).cnf.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.(0).cnf.cdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.(0).cnf.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.(0).cnf.hdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.asm.qmsg" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.asm.qmsg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.asm.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.asm.rdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.cmp.bpm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.cmp.cdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.cmp.hdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.cmp.idb" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.cmp.idb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.cmp.logdb" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.cmp.logdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/typing_game.cmp.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.cmp.rdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.db_info" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.db_info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.fit.qmsg" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.fit.qmsg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.hif" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.hif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.map.bpm" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.map.bpm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.map.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.map.cdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.map.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.map.hdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.map.kpt" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.map.kpt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.map.qmsg" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.map.qmsg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.map.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.map.rdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.map_bb.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.map_bb.cdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.map_bb.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.map_bb.hdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.pre_map.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.pre_map.hdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.root_partition.map.reg_db.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.root_partition.map.reg_db.cdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.routing.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.routing.rdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.rtlv.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.rtlv.hdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.rtlv_sg.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.rtlv_sg.cdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.rtlv_sg_swap.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.rtlv_sg_swap.cdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.smart_action.txt" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.smart_action.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/typing_game.cyclonev_io_sim_cache.ff_0c_fast.hsd" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.cyclonev_io_sim_cache.ff_0c_fast.hsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/typing_game.cyclonev_io_sim_cache.tt_0c_slow.hsd" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.cyclonev_io_sim_cache.tt_0c_slow.hsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/typing_game.cyclonev_io_sim_cache.tt_85c_slow.hsd" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.cyclonev_io_sim_cache.tt_85c_slow.hsd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/typing_game.sta.qmsg" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.sta.qmsg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/typing_game.sta.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.sta.rdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.sta_cmp.6_H6_slow_1100mv_85c.tdb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db/typing_game.tis_db_list.ddb" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.tis_db_list.ddb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.tiscmp.fast_1100mv_0c.ddb" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.tiscmp.fast_1100mv_0c.ddb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.tiscmp.fast_1100mv_85c.ddb" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.tiscmp.fast_1100mv_85c.ddb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.tiscmp.slow_1100mv_0c.ddb" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.tiscmp.slow_1100mv_0c.ddb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.tiscmp.slow_1100mv_85c.ddb" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.tiscmp.slow_1100mv_85c.ddb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.tmw_info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/typing_game.vpr.ammdb" beforeDir="false" afterPath="$PROJECT_DIR$/db/typing_game.vpr.ammdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incremental_db/compiled_partitions/typing_game.root_partition.cmp.ammdb" beforeDir="false" afterPath="$PROJECT_DIR$/incremental_db/compiled_partitions/typing_game.root_partition.cmp.ammdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incremental_db/compiled_partitions/typing_game.root_partition.cmp.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/incremental_db/compiled_partitions/typing_game.root_partition.cmp.cdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incremental_db/compiled_partitions/typing_game.root_partition.cmp.hbdb.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/incremental_db/compiled_partitions/typing_game.root_partition.cmp.hbdb.cdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incremental_db/compiled_partitions/typing_game.root_partition.cmp.hbdb.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/incremental_db/compiled_partitions/typing_game.root_partition.cmp.hbdb.hdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incremental_db/compiled_partitions/typing_game.root_partition.cmp.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/incremental_db/compiled_partitions/typing_game.root_partition.cmp.hdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incremental_db/compiled_partitions/typing_game.root_partition.cmp.rcfdb" beforeDir="false" afterPath="$PROJECT_DIR$/incremental_db/compiled_partitions/typing_game.root_partition.cmp.rcfdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incremental_db/compiled_partitions/typing_game.root_partition.map.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/incremental_db/compiled_partitions/typing_game.root_partition.map.cdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incremental_db/compiled_partitions/typing_game.root_partition.map.dpi" beforeDir="false" afterPath="$PROJECT_DIR$/incremental_db/compiled_partitions/typing_game.root_partition.map.dpi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incremental_db/compiled_partitions/typing_game.root_partition.map.hbdb.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/incremental_db/compiled_partitions/typing_game.root_partition.map.hbdb.cdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incremental_db/compiled_partitions/typing_game.root_partition.map.hbdb.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/incremental_db/compiled_partitions/typing_game.root_partition.map.hbdb.hdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incremental_db/compiled_partitions/typing_game.root_partition.map.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/incremental_db/compiled_partitions/typing_game.root_partition.map.hdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incremental_db/compiled_partitions/typing_game.root_partition.map.kpt" beforeDir="false" afterPath="$PROJECT_DIR$/incremental_db/compiled_partitions/typing_game.root_partition.map.kpt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incremental_db/compiled_partitions/typing_game.rrp.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/incremental_db/compiled_partitions/typing_game.rrp.hdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incremental_db/compiled_partitions/typing_game.rrs.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/incremental_db/compiled_partitions/typing_game.rrs.cdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typing_game.asm.rpt" beforeDir="false" afterPath="$PROJECT_DIR$/typing_game.asm.rpt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typing_game.cdf" beforeDir="false" afterPath="$PROJECT_DIR$/typing_game.cdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/typing_game.done" beforeDir="false" afterPath="$PROJECT_DIR$/typing_game.done" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typing_game.fit.rpt" beforeDir="false" afterPath="$PROJECT_DIR$/typing_game.fit.rpt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typing_game.fit.summary" beforeDir="false" afterPath="$PROJECT_DIR$/typing_game.fit.summary" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/typing_game.flow.rpt" beforeDir="false" afterPath="$PROJECT_DIR$/typing_game.flow.rpt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typing_game.jdi" beforeDir="false" afterPath="$PROJECT_DIR$/typing_game.jdi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typing_game.map.rpt" beforeDir="false" afterPath="$PROJECT_DIR$/typing_game.map.rpt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typing_game.map.smsg" beforeDir="false" afterPath="$PROJECT_DIR$/typing_game.map.smsg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typing_game.map.summary" beforeDir="false" afterPath="$PROJECT_DIR$/typing_game.map.summary" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typing_game.qws" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/typing_game.sof" beforeDir="false" afterPath="$PROJECT_DIR$/typing_game.sof" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/typing_game.sta.rpt" beforeDir="false" afterPath="$PROJECT_DIR$/typing_game.sta.rpt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/typing_game.sta.summary" beforeDir="false" afterPath="$PROJECT_DIR$/typing_game.sta.summary" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typing_game.v" beforeDir="false" afterPath="$PROJECT_DIR$/typing_game.v" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -123,8 +65,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/typing_game.v">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="214" column="22" selection-start-line="214" selection-start-column="22" selection-end-line="214" selection-end-column="22" />
+            <state relative-caret-position="286">
+              <caret line="326" column="46" lean-forward="true" selection-start-line="326" selection-start-column="46" selection-end-line="326" selection-end-column="46" />
               <folding>
                 <element signature="e#7376#7521#1" />
                 <element signature="e#7572#7648#1" />
@@ -223,12 +165,12 @@
       <option name="presentableId" value="Default" />
       <updated>1545527822186</updated>
       <workItem from="1545527829937" duration="71000" />
-      <workItem from="1545527943930" duration="5569000" />
+      <workItem from="1545527943930" duration="5861000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5640000" />
+    <option name="totallyTimeSpent" value="5932000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="-7" width="1488" height="878" extended-state="6" />
@@ -263,8 +205,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/typing_game.v">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="214" column="22" selection-start-line="214" selection-start-column="22" selection-end-line="214" selection-end-column="22" />
+        <state relative-caret-position="286">
+          <caret line="326" column="46" lean-forward="true" selection-start-line="326" selection-start-column="46" selection-end-line="326" selection-end-column="46" />
           <folding>
             <element signature="e#7376#7521#1" />
             <element signature="e#7572#7648#1" />

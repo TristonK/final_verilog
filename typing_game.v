@@ -401,11 +401,4 @@ always @(posedge CLOCK_50)begin
 
 end
 
-always@(endlink)
-begin
-	seg_h seg2()
-end
-
-
-
 endmodule
