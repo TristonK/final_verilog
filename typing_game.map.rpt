@@ -1,5 +1,5 @@
 Analysis & Synthesis report for typing_game
-Sun Dec 23 11:00:02 2018
+Sun Dec 23 11:49:48 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -37,10 +37,11 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
  29. Port Connectivity Checks: "keyboard:keyboard1|ps2_keyboard:keyboard_1"
  30. Port Connectivity Checks: "seg_h:seg2"
  31. Port Connectivity Checks: "seg_h:seg1"
- 32. Post-Synthesis Netlist Statistics for Top Partition
- 33. Elapsed Time Per Partition
- 34. Analysis & Synthesis Messages
- 35. Analysis & Synthesis Suppressed Messages
+ 32. Port Connectivity Checks: "canvas:canvas1"
+ 33. Post-Synthesis Netlist Statistics for Top Partition
+ 34. Elapsed Time Per Partition
+ 35. Analysis & Synthesis Messages
+ 36. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -66,13 +67,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Dec 23 11:00:02 2018       ;
+; Analysis & Synthesis Status     ; Successful - Sun Dec 23 11:49:47 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; typing_game                                 ;
 ; Top-level Entity Name           ; typing_game                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 1054                                        ;
+; Total registers                 ; 1053                                        ;
 ; Total pins                      ; 168                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 270,400                                     ;
@@ -230,16 +231,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 1776           ;
+; Estimate of Logic utilization (ALMs needed) ; 1770           ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 2620           ;
-;     -- 7 input functions                    ; 12             ;
-;     -- 6 input functions                    ; 913            ;
-;     -- 5 input functions                    ; 196            ;
-;     -- 4 input functions                    ; 671            ;
-;     -- <=3 input functions                  ; 828            ;
+; Combinational ALUT usage for logic          ; 2607           ;
+;     -- 7 input functions                    ; 14             ;
+;     -- 6 input functions                    ; 911            ;
+;     -- 5 input functions                    ; 173            ;
+;     -- 4 input functions                    ; 682            ;
+;     -- <=3 input functions                  ; 827            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 1054           ;
+; Dedicated logic registers                   ; 1053           ;
 ;                                             ;                ;
 ; I/O pins                                    ; 168            ;
 ; Total MLAB memory bits                      ; 0              ;
@@ -248,8 +249,8 @@ refer to the applicable agreement for further details.
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 1082           ;
-; Total fan-out                               ; 15671          ;
+; Maximum fan-out                             ; 1081           ;
+; Total fan-out                               ; 15602          ;
 ; Average fan-out                             ; 3.84           ;
 +---------------------------------------------+----------------+
 
@@ -259,7 +260,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                           ; Entity Name     ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |typing_game                                 ; 2620 (2365)         ; 1054 (926)                ; 270400            ; 0          ; 168  ; 0            ; |typing_game                                                                                                  ; typing_game     ; work         ;
+; |typing_game                                 ; 2607 (2357)         ; 1053 (925)                ; 270400            ; 0          ; 168  ; 0            ; |typing_game                                                                                                  ; typing_game     ; work         ;
 ;    |canvas:canvas1|                          ; 21 (0)              ; 8 (0)                     ; 131072            ; 0          ; 0    ; 0            ; |typing_game|canvas:canvas1                                                                                   ; canvas          ; work         ;
 ;       |altsyncram:altsyncram_component|      ; 21 (0)              ; 8 (0)                     ; 131072            ; 0          ; 0    ; 0            ; |typing_game|canvas:canvas1|altsyncram:altsyncram_component                                                   ; altsyncram      ; work         ;
 ;          |altsyncram_but1:auto_generated|    ; 21 (0)              ; 8 (8)                     ; 131072            ; 0          ; 0    ; 0            ; |typing_game|canvas:canvas1|altsyncram:altsyncram_component|altsyncram_but1:auto_generated                    ; altsyncram_but1 ; work         ;
@@ -269,9 +270,9 @@ refer to the applicable agreement for further details.
 ;       |altsyncram:altsyncram_component|      ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |typing_game|char:char1|altsyncram:altsyncram_component                                                       ; altsyncram      ; work         ;
 ;          |altsyncram_ibf1:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |typing_game|char:char1|altsyncram:altsyncram_component|altsyncram_ibf1:auto_generated                        ; altsyncram_ibf1 ; work         ;
 ;    |clkgen:clk25|                            ; 40 (40)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |typing_game|clkgen:clk25                                                                                     ; clkgen          ; work         ;
-;    |keyboard:keyboard1|                      ; 102 (7)             ; 59 (12)                   ; 64                ; 0          ; 0    ; 0            ; |typing_game|keyboard:keyboard1                                                                               ; keyboard        ; work         ;
+;    |keyboard:keyboard1|                      ; 97 (7)              ; 59 (12)                   ; 64                ; 0          ; 0    ; 0            ; |typing_game|keyboard:keyboard1                                                                               ; keyboard        ; work         ;
 ;       |ascii:kcode2_asc|                     ; 47 (47)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |typing_game|keyboard:keyboard1|ascii:kcode2_asc                                                              ; ascii           ; work         ;
-;       |ps2_keyboard:keyboard_1|              ; 48 (48)             ; 39 (39)                   ; 64                ; 0          ; 0    ; 0            ; |typing_game|keyboard:keyboard1|ps2_keyboard:keyboard_1                                                       ; ps2_keyboard    ; work         ;
+;       |ps2_keyboard:keyboard_1|              ; 43 (43)             ; 39 (39)                   ; 64                ; 0          ; 0    ; 0            ; |typing_game|keyboard:keyboard1|ps2_keyboard:keyboard_1                                                       ; ps2_keyboard    ; work         ;
 ;          |altsyncram:fifo_rtl_0|             ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |typing_game|keyboard:keyboard1|ps2_keyboard:keyboard_1|altsyncram:fifo_rtl_0                                 ; altsyncram      ; work         ;
 ;             |altsyncram_edi1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |typing_game|keyboard:keyboard1|ps2_keyboard:keyboard_1|altsyncram:fifo_rtl_0|altsyncram_edi1:auto_generated  ; altsyncram_edi1 ; work         ;
 ;    |mem:mem1|                                ; 21 (0)              ; 8 (0)                     ; 131072            ; 0          ; 0    ; 0            ; |typing_game|mem:mem1                                                                                         ; mem             ; work         ;
@@ -1102,12 +1103,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1054  ;
+; Total registers                              ; 1053  ;
 ; Number of registers using Synchronous Clear  ; 321   ;
 ; Number of registers using Synchronous Load   ; 1     ;
 ; Number of registers using Asynchronous Clear ; 51    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 828   ;
+; Number of registers using Clock Enable       ; 830   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -1275,7 +1276,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |typing_game|cnt_newchar[28]                                     ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |typing_game|endlink[0]                                          ;
 ; 24:1               ; 4 bits    ; 64 LEs        ; 24 LEs               ; 40 LEs                 ; Yes        ; |typing_game|old_status[0]                                       ;
-; 27:1               ; 4 bits    ; 72 LEs        ; 28 LEs               ; 44 LEs                 ; Yes        ; |typing_game|status[3]                                           ;
+; 27:1               ; 4 bits    ; 72 LEs        ; 32 LEs               ; 40 LEs                 ; Yes        ; |typing_game|status[3]                                           ;
 ; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |typing_game|mem_rpos[0]                                         ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |typing_game|keyboard:keyboard1|ps2_keyboard:keyboard_1|r_ptr    ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |typing_game|status                                              ;
@@ -1705,44 +1706,53 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+--------------+
 
 
++--------------------------------------------+
+; Port Connectivity Checks: "canvas:canvas1" ;
++------+-------+----------+------------------+
+; Port ; Type  ; Severity ; Details          ;
++------+-------+----------+------------------+
+; wren ; Input ; Info     ; Stuck at VCC     ;
++------+-------+----------+------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 1054                        ;
-;     CLR               ; 38                          ;
+; arriav_ff             ; 1053                        ;
+;     CLR               ; 36                          ;
 ;     CLR SCLR          ; 9                           ;
 ;     ENA               ; 545                         ;
-;     ENA CLR           ; 4                           ;
+;     ENA CLR           ; 6                           ;
 ;     ENA SCLR          ; 279                         ;
 ;     SCLR              ; 33                          ;
 ;     SLD               ; 1                           ;
-;     plain             ; 145                         ;
+;     plain             ; 144                         ;
 ; arriav_io_obuf        ; 24                          ;
-; arriav_lcell_comb     ; 2624                        ;
+; arriav_lcell_comb     ; 2611                        ;
 ;     arith             ; 407                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 372                         ;
 ;         3 data inputs ; 27                          ;
 ;         4 data inputs ; 6                           ;
-;     extend            ; 12                          ;
-;         7 data inputs ; 12                          ;
-;     normal            ; 2195                        ;
+;     extend            ; 14                          ;
+;         7 data inputs ; 14                          ;
+;     normal            ; 2180                        ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 12                          ;
-;         2 data inputs ; 246                         ;
-;         3 data inputs ; 162                         ;
-;         4 data inputs ; 665                         ;
-;         5 data inputs ; 196                         ;
-;         6 data inputs ; 913                         ;
+;         2 data inputs ; 243                         ;
+;         3 data inputs ; 164                         ;
+;         4 data inputs ; 676                         ;
+;         5 data inputs ; 173                         ;
+;         6 data inputs ; 911                         ;
 ;     shared            ; 10                          ;
 ;         2 data inputs ; 10                          ;
 ; boundary_port         ; 168                         ;
 ; stratixv_ram_block    ; 48                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 8.00                        ;
-; Average LUT depth     ; 5.40                        ;
+; Average LUT depth     ; 5.41                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1751,7 +1761,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:40     ;
+; Top            ; 00:00:38     ;
 +----------------+--------------+
 
 
@@ -1761,7 +1771,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Dec 23 10:58:39 2018
+    Info: Processing started: Sun Dec 23 11:48:32 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off typing_game -c typing_game
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1786,6 +1796,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file char.v
 Info (12021): Found 1 design units, including 1 entities, in source file seg_h.v
     Info (12023): Found entity 1: seg_h File: D:/my_design/final_verilog/seg_h.v Line: 1
 Info (12127): Elaborating entity "typing_game" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at typing_game.v(160): object "canvas_enw" assigned a value but never read File: D:/my_design/final_verilog/typing_game.v Line: 160
 Warning (10230): Verilog HDL assignment warning at typing_game.v(137): truncated value with size 32 to match size of target (9) File: D:/my_design/final_verilog/typing_game.v Line: 137
 Warning (10230): Verilog HDL assignment warning at typing_game.v(139): truncated value with size 32 to match size of target (8) File: D:/my_design/final_verilog/typing_game.v Line: 139
 Warning (10855): Verilog HDL warning at typing_game.v(194): initial value for variable k_x should be constant File: D:/my_design/final_verilog/typing_game.v Line: 194
@@ -1795,6 +1806,7 @@ Warning (10855): Verilog HDL warning at typing_game.v(194): initial value for va
 Warning (10230): Verilog HDL assignment warning at typing_game.v(207): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 207
 Warning (10230): Verilog HDL assignment warning at typing_game.v(208): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 208
 Warning (10230): Verilog HDL assignment warning at typing_game.v(210): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 210
+Warning (10230): Verilog HDL assignment warning at typing_game.v(215): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 215
 Warning (10230): Verilog HDL assignment warning at typing_game.v(219): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 219
 Warning (10230): Verilog HDL assignment warning at typing_game.v(220): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 220
 Warning (10230): Verilog HDL assignment warning at typing_game.v(221): truncated value with size 32 to match size of target (4) File: D:/my_design/final_verilog/typing_game.v Line: 221
@@ -1963,7 +1975,6 @@ Warning (13004): Presettable and clearable registers converted to equivalent cir
     Warning (13310): Register "status[1]" is converted into an equivalent circuit using register "status[1]~_emulated" and latch "status[1]~5" File: D:/my_design/final_verilog/typing_game.v Line: 210
     Warning (13310): Register "status[2]" is converted into an equivalent circuit using register "status[2]~_emulated" and latch "status[2]~9" File: D:/my_design/final_verilog/typing_game.v Line: 210
     Warning (13310): Register "status[3]" is converted into an equivalent circuit using register "status[3]~_emulated" and latch "status[3]~13" File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (13310): Register "old_status[0]" is converted into an equivalent circuit using register "old_status[0]~_emulated" and latch "old_status[0]~1" File: D:/my_design/final_verilog/typing_game.v Line: 210
     Warning (13310): Register "cnt_newchar[31]" is converted into an equivalent circuit using register "cnt_newchar[31]~_emulated" and latch "cnt_newchar[31]~1" File: D:/my_design/final_verilog/typing_game.v Line: 210
     Warning (13310): Register "cnt_newchar[30]" is converted into an equivalent circuit using register "cnt_newchar[30]~_emulated" and latch "cnt_newchar[30]~5" File: D:/my_design/final_verilog/typing_game.v Line: 210
     Warning (13310): Register "cnt_newchar[29]" is converted into an equivalent circuit using register "cnt_newchar[29]~_emulated" and latch "cnt_newchar[29]~9" File: D:/my_design/final_verilog/typing_game.v Line: 210
@@ -1996,6 +2007,7 @@ Warning (13004): Presettable and clearable registers converted to equivalent cir
     Warning (13310): Register "cnt_newchar[2]" is converted into an equivalent circuit using register "cnt_newchar[2]~_emulated" and latch "cnt_newchar[2]~117" File: D:/my_design/final_verilog/typing_game.v Line: 210
     Warning (13310): Register "cnt_newchar[1]" is converted into an equivalent circuit using register "cnt_newchar[1]~_emulated" and latch "cnt_newchar[1]~121" File: D:/my_design/final_verilog/typing_game.v Line: 210
     Warning (13310): Register "cnt_newchar[0]" is converted into an equivalent circuit using register "cnt_newchar[0]~_emulated" and latch "cnt_newchar[0]~125" File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (13310): Register "old_status[0]" is converted into an equivalent circuit using register "old_status[0]~_emulated" and latch "old_status[0]~1" File: D:/my_design/final_verilog/typing_game.v Line: 210
     Warning (13310): Register "flag" is converted into an equivalent circuit using register "flag~_emulated" and latch "flag~1" File: D:/my_design/final_verilog/typing_game.v Line: 143
     Warning (13310): Register "old_status[1]" is converted into an equivalent circuit using register "old_status[1]~_emulated" and latch "old_status[1]~5" File: D:/my_design/final_verilog/typing_game.v Line: 210
     Warning (13310): Register "old_status[2]" is converted into an equivalent circuit using register "old_status[2]~_emulated" and latch "old_status[2]~9" File: D:/my_design/final_verilog/typing_game.v Line: 210
@@ -2107,17 +2119,17 @@ Warning (21074): Design contains 30 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "AUD_ADCDAT" File: D:/my_design/final_verilog/typing_game.v Line: 62
     Warning (15610): No output dependent on input pin "ADC_DOUT" File: D:/my_design/final_verilog/typing_game.v Line: 78
     Warning (15610): No output dependent on input pin "IRDA_RXD" File: D:/my_design/final_verilog/typing_game.v Line: 86
-Info (21057): Implemented 2939 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2926 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 32 input pins
     Info (21059): Implemented 112 output pins
     Info (21060): Implemented 24 bidirectional pins
-    Info (21061): Implemented 2723 logic cells
+    Info (21061): Implemented 2710 logic cells
     Info (21064): Implemented 48 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 223 warnings
-    Info: Peak virtual memory: 4909 megabytes
-    Info: Processing ended: Sun Dec 23 11:00:02 2018
-    Info: Elapsed time: 00:01:23
-    Info: Total CPU time (on all processors): 00:01:53
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 225 warnings
+    Info: Peak virtual memory: 4905 megabytes
+    Info: Processing ended: Sun Dec 23 11:49:48 2018
+    Info: Elapsed time: 00:01:16
+    Info: Total CPU time (on all processors): 00:01:49
 
 
 +------------------------------------------+

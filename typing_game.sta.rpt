@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for typing_game
-Sun Dec 23 10:54:37 2018
+Sun Dec 23 11:46:22 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -102,14 +102,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.76        ;
+; Average used               ; 1.80        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  25.7%      ;
-;     Processor 3            ;  25.5%      ;
-;     Processor 4            ;  25.1%      ;
+;     Processor 2            ;  26.8%      ;
+;     Processor 3            ;  26.6%      ;
+;     Processor 4            ;  26.3%      ;
 +----------------------------+-------------+
 
 
@@ -118,7 +118,7 @@ refer to the applicable agreement for further details.
 +-----------------+--------+--------------------------+
 ; SDC File Path   ; Status ; Read at                  ;
 +-----------------+--------+--------------------------+
-; typing_game.SDC ; OK     ; Sun Dec 23 10:54:06 2018 ;
+; typing_game.SDC ; OK     ; Sun Dec 23 11:45:51 2018 ;
 +-----------------+--------+--------------------------+
 
 
@@ -139,7 +139,7 @@ refer to the applicable agreement for further details.
 +-----------+-----------------+------------+------+
 ; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
 +-----------+-----------------+------------+------+
-; 10.61 MHz ; 10.61 MHz       ; CLOCK_50   ;      ;
+; 11.24 MHz ; 11.24 MHz       ; CLOCK_50   ;      ;
 +-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -155,7 +155,7 @@ HTML report is unavailable in plain text report export.
 +----------+---------+----------------+
 ; Clock    ; Slack   ; End Point TNS  ;
 +----------+---------+----------------+
-; CLOCK_50 ; -74.270 ; -2952.382      ;
+; CLOCK_50 ; -68.959 ; -2729.700      ;
 +----------+---------+----------------+
 
 
@@ -173,7 +173,7 @@ HTML report is unavailable in plain text report export.
 +----------+--------+--------------------+
 ; Clock    ; Slack  ; End Point TNS      ;
 +----------+--------+--------------------+
-; CLOCK_50 ; 17.829 ; 0.000              ;
+; CLOCK_50 ; 17.536 ; 0.000              ;
 +----------+--------+--------------------+
 
 
@@ -182,7 +182,7 @@ HTML report is unavailable in plain text report export.
 +----------+-------+--------------------+
 ; Clock    ; Slack ; End Point TNS      ;
 +----------+-------+--------------------+
-; CLOCK_50 ; 0.738 ; 0.000              ;
+; CLOCK_50 ; 0.803 ; 0.000              ;
 +----------+-------+--------------------+
 
 
@@ -191,7 +191,7 @@ HTML report is unavailable in plain text report export.
 +----------+-------+--------------------------------+
 ; Clock    ; Slack ; End Point TNS                  ;
 +----------+-------+--------------------------------+
-; CLOCK_50 ; 8.862 ; 0.000                          ;
+; CLOCK_50 ; 8.803 ; 0.000                          ;
 +----------+-------+--------------------------------+
 
 
@@ -202,7 +202,7 @@ The design MTBF is not calculated because there are no specified synchronizers i
 Number of Synchronizer Chains Found: 8
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 17.381 ns
+Worst Case Available Settling Time: 17.139 ns
 
 
 
@@ -212,7 +212,7 @@ Worst Case Available Settling Time: 17.381 ns
 +-----------+-----------------+------------+------+
 ; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
 +-----------+-----------------+------------+------+
-; 10.81 MHz ; 10.81 MHz       ; CLOCK_50   ;      ;
+; 11.46 MHz ; 11.46 MHz       ; CLOCK_50   ;      ;
 +-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -222,7 +222,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+---------+---------------+
 ; Clock    ; Slack   ; End Point TNS ;
 +----------+---------+---------------+
-; CLOCK_50 ; -72.538 ; -2886.082     ;
+; CLOCK_50 ; -67.246 ; -2664.824     ;
 +----------+---------+---------------+
 
 
@@ -231,7 +231,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+----------------+
 ; Clock    ; Slack ; End Point TNS  ;
 +----------+-------+----------------+
-; CLOCK_50 ; 0.353 ; 0.000          ;
+; CLOCK_50 ; 0.367 ; 0.000          ;
 +----------+-------+----------------+
 
 
@@ -240,7 +240,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+--------+-------------------+
 ; Clock    ; Slack  ; End Point TNS     ;
 +----------+--------+-------------------+
-; CLOCK_50 ; 17.907 ; 0.000             ;
+; CLOCK_50 ; 17.625 ; 0.000             ;
 +----------+--------+-------------------+
 
 
@@ -249,7 +249,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+-------------------+
 ; Clock    ; Slack ; End Point TNS     ;
 +----------+-------+-------------------+
-; CLOCK_50 ; 0.702 ; 0.000             ;
+; CLOCK_50 ; 0.769 ; 0.000             ;
 +----------+-------+-------------------+
 
 
@@ -258,7 +258,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+-------------------------------+
 ; Clock    ; Slack ; End Point TNS                 ;
 +----------+-------+-------------------------------+
-; CLOCK_50 ; 8.854 ; 0.000                         ;
+; CLOCK_50 ; 8.774 ; 0.000                         ;
 +----------+-------+-------------------------------+
 
 
@@ -269,7 +269,7 @@ The design MTBF is not calculated because there are no specified synchronizers i
 Number of Synchronizer Chains Found: 8
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 17.457 ns
+Worst Case Available Settling Time: 17.238 ns
 
 
 
@@ -279,7 +279,7 @@ Worst Case Available Settling Time: 17.457 ns
 +----------+---------+----------------+
 ; Clock    ; Slack   ; End Point TNS  ;
 +----------+---------+----------------+
-; CLOCK_50 ; -34.381 ; -1367.134      ;
+; CLOCK_50 ; -31.391 ; -1240.903      ;
 +----------+---------+----------------+
 
 
@@ -297,7 +297,7 @@ Worst Case Available Settling Time: 17.457 ns
 +----------+--------+--------------------+
 ; Clock    ; Slack  ; End Point TNS      ;
 +----------+--------+--------------------+
-; CLOCK_50 ; 18.553 ; 0.000              ;
+; CLOCK_50 ; 18.361 ; 0.000              ;
 +----------+--------+--------------------+
 
 
@@ -306,7 +306,7 @@ Worst Case Available Settling Time: 17.457 ns
 +----------+-------+--------------------+
 ; Clock    ; Slack ; End Point TNS      ;
 +----------+-------+--------------------+
-; CLOCK_50 ; 0.412 ; 0.000              ;
+; CLOCK_50 ; 0.431 ; 0.000              ;
 +----------+-------+--------------------+
 
 
@@ -326,7 +326,7 @@ The design MTBF is not calculated because there are no specified synchronizers i
 Number of Synchronizer Chains Found: 8
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 18.254 ns
+Worst Case Available Settling Time: 18.073 ns
 
 
 
@@ -336,7 +336,7 @@ Worst Case Available Settling Time: 18.254 ns
 +----------+---------+---------------+
 ; Clock    ; Slack   ; End Point TNS ;
 +----------+---------+---------------+
-; CLOCK_50 ; -29.447 ; -1171.211     ;
+; CLOCK_50 ; -26.744 ; -1056.944     ;
 +----------+---------+---------------+
 
 
@@ -345,7 +345,7 @@ Worst Case Available Settling Time: 18.254 ns
 +----------+-------+----------------+
 ; Clock    ; Slack ; End Point TNS  ;
 +----------+-------+----------------+
-; CLOCK_50 ; 0.167 ; 0.000          ;
+; CLOCK_50 ; 0.169 ; 0.000          ;
 +----------+-------+----------------+
 
 
@@ -354,7 +354,7 @@ Worst Case Available Settling Time: 18.254 ns
 +----------+--------+-------------------+
 ; Clock    ; Slack  ; End Point TNS     ;
 +----------+--------+-------------------+
-; CLOCK_50 ; 18.683 ; 0.000             ;
+; CLOCK_50 ; 18.523 ; 0.000             ;
 +----------+--------+-------------------+
 
 
@@ -363,7 +363,7 @@ Worst Case Available Settling Time: 18.254 ns
 +----------+-------+-------------------+
 ; Clock    ; Slack ; End Point TNS     ;
 +----------+-------+-------------------+
-; CLOCK_50 ; 0.377 ; 0.000             ;
+; CLOCK_50 ; 0.406 ; 0.000             ;
 +----------+-------+-------------------+
 
 
@@ -383,7 +383,7 @@ The design MTBF is not calculated because there are no specified synchronizers i
 Number of Synchronizer Chains Found: 8
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 18.426 ns
+Worst Case Available Settling Time: 18.257 ns
 
 
 
@@ -393,10 +393,10 @@ Worst Case Available Settling Time: 18.426 ns
 +------------------+-----------+-------+----------+---------+---------------------+
 ; Clock            ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+-----------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -74.270   ; 0.167 ; 17.829   ; 0.377   ; 8.428               ;
-;  CLOCK_50        ; -74.270   ; 0.167 ; 17.829   ; 0.377   ; 8.428               ;
-; Design-wide TNS  ; -2952.382 ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
-;  CLOCK_50        ; -2952.382 ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
+; Worst-case Slack ; -68.959   ; 0.169 ; 17.536   ; 0.406   ; 8.428               ;
+;  CLOCK_50        ; -68.959   ; 0.169 ; 17.536   ; 0.406   ; 8.428               ;
+; Design-wide TNS  ; -2729.7   ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  CLOCK_50        ; -2729.700 ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
 +------------------+-----------+-------+----------+---------+---------------------+
 
 
@@ -1244,7 +1244,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 2     ; 2    ;
 ; Unconstrained Input Ports       ; 3     ; 3    ;
-; Unconstrained Input Port Paths  ; 1050  ; 1050 ;
+; Unconstrained Input Port Paths  ; 1048  ; 1048 ;
 ; Unconstrained Output Ports      ; 42    ; 42   ;
 ; Unconstrained Output Port Paths ; 175   ; 175  ;
 +---------------------------------+-------+------+
@@ -1392,7 +1392,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Dec 23 10:53:56 2018
+    Info: Processing started: Sun Dec 23 11:45:43 2018
 Info: Command: quartus_sta typing_game -c typing_game
 Info: qsta_default_script.tcl version: #3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1420,77 +1420,82 @@ Warning (332049): Ignored set_output_delay at typing_game.sdc(18): Argument -clo
 Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
 Warning (332125): Found combinational loop of 4 nodes File: D:/my_design/final_verilog/typing_game.v Line: 100
     Warning (332126): Node "old_status~28|combout"
-    Warning (332126): Node "old_status[3]~14|datac"
+    Warning (332126): Node "old_status[3]~14|datab"
     Warning (332126): Node "old_status[3]~14|combout"
-    Warning (332126): Node "old_status~28|dataf"
+    Warning (332126): Node "old_status~28|datad"
+Warning (332125): Found combinational loop of 4 nodes File: D:/my_design/final_verilog/typing_game.v Line: 100
+    Warning (332126): Node "old_status~25|combout"
+    Warning (332126): Node "old_status[0]~2|dataf"
+    Warning (332126): Node "old_status[0]~2|combout"
+    Warning (332126): Node "old_status~25|dataf"
 Warning (332125): Found combinational loop of 4 nodes File: D:/my_design/final_verilog/typing_game.v Line: 100
     Warning (332126): Node "old_status~27|combout"
-    Warning (332126): Node "old_status[2]~10|dataf"
+    Warning (332126): Node "old_status[2]~10|datac"
     Warning (332126): Node "old_status[2]~10|combout"
     Warning (332126): Node "old_status~27|dataf"
-Warning (332125): Found combinational loop of 4 nodes File: D:/my_design/final_verilog/typing_game.v Line: 100
-    Warning (332126): Node "old_status~26|combout"
-    Warning (332126): Node "old_status[1]~6|dataf"
+Warning (332125): Found combinational loop of 4 nodes File: D:/my_design/final_verilog/typing_game.v Line: 210
     Warning (332126): Node "old_status[1]~6|combout"
     Warning (332126): Node "old_status~26|dataf"
+    Warning (332126): Node "old_status~26|combout"
+    Warning (332126): Node "old_status[1]~6|datae"
 Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 210
     Warning (332126): Node "cnt_newchar[31]~2|combout"
-    Warning (332126): Node "cnt_newchar~212|datae"
+    Warning (332126): Node "cnt_newchar~212|datad"
     Warning (332126): Node "cnt_newchar~212|combout"
     Warning (332126): Node "cnt_newchar[31]~2|datad"
-    Warning (332126): Node "Add2~81|datad"
+    Warning (332126): Node "Add2~81|datac"
     Warning (332126): Node "Add2~81|sumout"
     Warning (332126): Node "cnt_newchar~212|dataf"
 Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 210
     Warning (332126): Node "cnt_newchar[30]~6|combout"
-    Warning (332126): Node "cnt_newchar~213|datad"
+    Warning (332126): Node "cnt_newchar~213|dataf"
     Warning (332126): Node "cnt_newchar~213|combout"
     Warning (332126): Node "cnt_newchar[30]~6|datad"
     Warning (332126): Node "Add2~85|datac"
     Warning (332126): Node "Add2~85|sumout"
-    Warning (332126): Node "cnt_newchar~213|dataf"
+    Warning (332126): Node "cnt_newchar~213|datad"
 Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 210
     Warning (332126): Node "cnt_newchar[29]~10|combout"
     Warning (332126): Node "cnt_newchar~214|dataf"
     Warning (332126): Node "cnt_newchar~214|combout"
     Warning (332126): Node "cnt_newchar[29]~10|dataf"
-    Warning (332126): Node "Add2~89|datad"
+    Warning (332126): Node "Add2~89|datac"
     Warning (332126): Node "Add2~89|sumout"
     Warning (332126): Node "cnt_newchar~214|datad"
-Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 213
-    Warning (332126): Node "Add2~93|datac"
-    Warning (332126): Node "Add2~93|sumout"
-    Warning (332126): Node "cnt_newchar~215|dataf"
-    Warning (332126): Node "cnt_newchar~215|combout"
-    Warning (332126): Node "cnt_newchar[28]~14|datad"
+Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 210
     Warning (332126): Node "cnt_newchar[28]~14|combout"
     Warning (332126): Node "cnt_newchar~215|datad"
-Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 213
-    Warning (332126): Node "Add2~97|datac"
-    Warning (332126): Node "Add2~97|sumout"
-    Warning (332126): Node "cnt_newchar~216|datad"
-    Warning (332126): Node "cnt_newchar~216|combout"
-    Warning (332126): Node "cnt_newchar[27]~18|dataf"
+    Warning (332126): Node "cnt_newchar~215|combout"
+    Warning (332126): Node "cnt_newchar[28]~14|dataf"
+    Warning (332126): Node "Add2~93|datab"
+    Warning (332126): Node "Add2~93|sumout"
+    Warning (332126): Node "cnt_newchar~215|dataf"
+Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 210
     Warning (332126): Node "cnt_newchar[27]~18|combout"
     Warning (332126): Node "cnt_newchar~216|dataf"
+    Warning (332126): Node "cnt_newchar~216|combout"
+    Warning (332126): Node "cnt_newchar[27]~18|dataf"
+    Warning (332126): Node "Add2~97|dataa"
+    Warning (332126): Node "Add2~97|sumout"
+    Warning (332126): Node "cnt_newchar~216|datad"
 Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 210
     Warning (332126): Node "cnt_newchar[26]~22|combout"
-    Warning (332126): Node "cnt_newchar~217|datad"
+    Warning (332126): Node "cnt_newchar~217|datac"
     Warning (332126): Node "cnt_newchar~217|combout"
     Warning (332126): Node "cnt_newchar[26]~22|dataf"
     Warning (332126): Node "Add2~101|datac"
     Warning (332126): Node "Add2~101|sumout"
     Warning (332126): Node "cnt_newchar~217|dataf"
 Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 213
-    Warning (332126): Node "Add2~105|datad"
+    Warning (332126): Node "Add2~105|datac"
     Warning (332126): Node "Add2~105|sumout"
-    Warning (332126): Node "cnt_newchar~218|datad"
-    Warning (332126): Node "cnt_newchar~218|combout"
-    Warning (332126): Node "cnt_newchar[25]~26|datad"
-    Warning (332126): Node "cnt_newchar[25]~26|combout"
     Warning (332126): Node "cnt_newchar~218|dataf"
+    Warning (332126): Node "cnt_newchar~218|combout"
+    Warning (332126): Node "cnt_newchar[25]~26|dataf"
+    Warning (332126): Node "cnt_newchar[25]~26|combout"
+    Warning (332126): Node "cnt_newchar~218|datad"
 Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 213
-    Warning (332126): Node "Add2~109|datac"
+    Warning (332126): Node "Add2~109|datad"
     Warning (332126): Node "Add2~109|sumout"
     Warning (332126): Node "cnt_newchar~219|dataf"
     Warning (332126): Node "cnt_newchar~219|combout"
@@ -1498,19 +1503,19 @@ Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_v
     Warning (332126): Node "cnt_newchar[24]~30|combout"
     Warning (332126): Node "cnt_newchar~219|datad"
 Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 213
-    Warning (332126): Node "Add2~113|datac"
+    Warning (332126): Node "Add2~113|datad"
     Warning (332126): Node "Add2~113|sumout"
-    Warning (332126): Node "cnt_newchar~220|dataf"
-    Warning (332126): Node "cnt_newchar~220|combout"
-    Warning (332126): Node "cnt_newchar[23]~34|datad"
-    Warning (332126): Node "cnt_newchar[23]~34|combout"
     Warning (332126): Node "cnt_newchar~220|datad"
+    Warning (332126): Node "cnt_newchar~220|combout"
+    Warning (332126): Node "cnt_newchar[23]~34|dataf"
+    Warning (332126): Node "cnt_newchar[23]~34|combout"
+    Warning (332126): Node "cnt_newchar~220|dataf"
 Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 213
-    Warning (332126): Node "Add2~117|datab"
+    Warning (332126): Node "Add2~117|datad"
     Warning (332126): Node "Add2~117|sumout"
     Warning (332126): Node "cnt_newchar~221|datad"
     Warning (332126): Node "cnt_newchar~221|combout"
-    Warning (332126): Node "cnt_newchar[22]~38|dataf"
+    Warning (332126): Node "cnt_newchar[22]~38|datae"
     Warning (332126): Node "cnt_newchar[22]~38|combout"
     Warning (332126): Node "cnt_newchar~221|dataf"
 Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 213
@@ -1524,139 +1529,139 @@ Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_v
 Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 213
     Warning (332126): Node "Add2~125|datac"
     Warning (332126): Node "Add2~125|sumout"
-    Warning (332126): Node "cnt_newchar~223|dataf"
-    Warning (332126): Node "cnt_newchar~223|combout"
-    Warning (332126): Node "cnt_newchar[20]~46|datad"
-    Warning (332126): Node "cnt_newchar[20]~46|combout"
     Warning (332126): Node "cnt_newchar~223|datad"
+    Warning (332126): Node "cnt_newchar~223|combout"
+    Warning (332126): Node "cnt_newchar[20]~46|dataf"
+    Warning (332126): Node "cnt_newchar[20]~46|combout"
+    Warning (332126): Node "cnt_newchar~223|dataf"
 Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 210
     Warning (332126): Node "cnt_newchar[19]~50|combout"
     Warning (332126): Node "cnt_newchar~206|dataf"
     Warning (332126): Node "cnt_newchar~206|combout"
     Warning (332126): Node "cnt_newchar[19]~50|dataf"
-    Warning (332126): Node "Add2~57|dataa"
+    Warning (332126): Node "Add2~57|datac"
     Warning (332126): Node "Add2~57|sumout"
     Warning (332126): Node "cnt_newchar~206|datad"
-Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 213
-    Warning (332126): Node "Add2~61|datad"
-    Warning (332126): Node "Add2~61|sumout"
-    Warning (332126): Node "cnt_newchar~207|datad"
-    Warning (332126): Node "cnt_newchar~207|combout"
-    Warning (332126): Node "cnt_newchar[18]~54|dataf"
+Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 210
     Warning (332126): Node "cnt_newchar[18]~54|combout"
     Warning (332126): Node "cnt_newchar~207|dataf"
+    Warning (332126): Node "cnt_newchar~207|combout"
+    Warning (332126): Node "cnt_newchar[18]~54|dataf"
+    Warning (332126): Node "Add2~61|datac"
+    Warning (332126): Node "Add2~61|sumout"
+    Warning (332126): Node "cnt_newchar~207|datad"
 Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 213
-    Warning (332126): Node "Add2~65|datad"
+    Warning (332126): Node "Add2~65|datac"
     Warning (332126): Node "Add2~65|sumout"
-    Warning (332126): Node "cnt_newchar~208|dataf"
-    Warning (332126): Node "cnt_newchar~208|combout"
-    Warning (332126): Node "cnt_newchar[17]~58|datad"
-    Warning (332126): Node "cnt_newchar[17]~58|combout"
     Warning (332126): Node "cnt_newchar~208|datad"
-Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (332126): Node "cnt_newchar[16]~62|combout"
-    Warning (332126): Node "cnt_newchar~209|datad"
-    Warning (332126): Node "cnt_newchar~209|combout"
-    Warning (332126): Node "cnt_newchar[16]~62|dataf"
+    Warning (332126): Node "cnt_newchar~208|combout"
+    Warning (332126): Node "cnt_newchar[17]~58|dataf"
+    Warning (332126): Node "cnt_newchar[17]~58|combout"
+    Warning (332126): Node "cnt_newchar~208|dataf"
+Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 213
     Warning (332126): Node "Add2~69|datac"
     Warning (332126): Node "Add2~69|sumout"
+    Warning (332126): Node "cnt_newchar~209|datad"
+    Warning (332126): Node "cnt_newchar~209|combout"
+    Warning (332126): Node "cnt_newchar[16]~62|datad"
+    Warning (332126): Node "cnt_newchar[16]~62|combout"
     Warning (332126): Node "cnt_newchar~209|dataf"
-Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (332126): Node "cnt_newchar[15]~66|combout"
-    Warning (332126): Node "cnt_newchar~210|dataf"
-    Warning (332126): Node "cnt_newchar~210|combout"
-    Warning (332126): Node "cnt_newchar[15]~66|dataf"
+Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 213
     Warning (332126): Node "Add2~73|datac"
     Warning (332126): Node "Add2~73|sumout"
-    Warning (332126): Node "cnt_newchar~210|datad"
+    Warning (332126): Node "cnt_newchar~210|datac"
+    Warning (332126): Node "cnt_newchar~210|combout"
+    Warning (332126): Node "cnt_newchar[15]~66|dataf"
+    Warning (332126): Node "cnt_newchar[15]~66|combout"
+    Warning (332126): Node "cnt_newchar~210|dataf"
 Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 213
-    Warning (332126): Node "Add2~77|datac"
+    Warning (332126): Node "Add2~77|datab"
     Warning (332126): Node "Add2~77|sumout"
-    Warning (332126): Node "cnt_newchar~211|dataf"
-    Warning (332126): Node "cnt_newchar~211|combout"
-    Warning (332126): Node "cnt_newchar[14]~70|dataf"
-    Warning (332126): Node "cnt_newchar[14]~70|combout"
     Warning (332126): Node "cnt_newchar~211|datad"
-Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (332126): Node "cnt_newchar[13]~74|combout"
-    Warning (332126): Node "cnt_newchar~200|dataf"
-    Warning (332126): Node "cnt_newchar~200|combout"
-    Warning (332126): Node "cnt_newchar[13]~74|dataf"
+    Warning (332126): Node "cnt_newchar~211|combout"
+    Warning (332126): Node "cnt_newchar[14]~70|datad"
+    Warning (332126): Node "cnt_newchar[14]~70|combout"
+    Warning (332126): Node "cnt_newchar~211|dataf"
+Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 213
     Warning (332126): Node "Add2~33|datac"
     Warning (332126): Node "Add2~33|sumout"
-    Warning (332126): Node "cnt_newchar~200|datad"
+    Warning (332126): Node "cnt_newchar~200|dataf"
+    Warning (332126): Node "cnt_newchar~200|combout"
+    Warning (332126): Node "cnt_newchar[13]~74|datac"
+    Warning (332126): Node "cnt_newchar[13]~74|combout"
+    Warning (332126): Node "cnt_newchar~200|dataa"
 Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 213
     Warning (332126): Node "Add2~37|datad"
     Warning (332126): Node "Add2~37|sumout"
     Warning (332126): Node "cnt_newchar~201|dataf"
     Warning (332126): Node "cnt_newchar~201|combout"
-    Warning (332126): Node "cnt_newchar[12]~78|datad"
+    Warning (332126): Node "cnt_newchar[12]~78|dataf"
     Warning (332126): Node "cnt_newchar[12]~78|combout"
-    Warning (332126): Node "cnt_newchar~201|datac"
+    Warning (332126): Node "cnt_newchar~201|datad"
 Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 213
-    Warning (332126): Node "Add2~41|dataa"
+    Warning (332126): Node "Add2~41|datac"
     Warning (332126): Node "Add2~41|sumout"
     Warning (332126): Node "cnt_newchar~202|dataf"
     Warning (332126): Node "cnt_newchar~202|combout"
     Warning (332126): Node "cnt_newchar[11]~82|dataf"
     Warning (332126): Node "cnt_newchar[11]~82|combout"
     Warning (332126): Node "cnt_newchar~202|datad"
-Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (332126): Node "cnt_newchar[10]~86|combout"
+Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 213
+    Warning (332126): Node "Add2~45|datac"
+    Warning (332126): Node "Add2~45|sumout"
     Warning (332126): Node "cnt_newchar~203|dataf"
     Warning (332126): Node "cnt_newchar~203|combout"
-    Warning (332126): Node "cnt_newchar[10]~86|datae"
-    Warning (332126): Node "Add2~45|datad"
-    Warning (332126): Node "Add2~45|sumout"
-    Warning (332126): Node "cnt_newchar~203|datad"
-Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (332126): Node "cnt_newchar[9]~90|combout"
+    Warning (332126): Node "cnt_newchar[10]~86|dataf"
+    Warning (332126): Node "cnt_newchar[10]~86|combout"
+    Warning (332126): Node "cnt_newchar~203|datae"
+Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 213
+    Warning (332126): Node "Add2~49|datad"
+    Warning (332126): Node "Add2~49|sumout"
     Warning (332126): Node "cnt_newchar~204|datad"
     Warning (332126): Node "cnt_newchar~204|combout"
     Warning (332126): Node "cnt_newchar[9]~90|datad"
-    Warning (332126): Node "Add2~49|datad"
-    Warning (332126): Node "Add2~49|sumout"
-    Warning (332126): Node "cnt_newchar~204|datac"
+    Warning (332126): Node "cnt_newchar[9]~90|combout"
+    Warning (332126): Node "cnt_newchar~204|dataf"
 Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 213
-    Warning (332126): Node "Add2~53|datac"
+    Warning (332126): Node "Add2~53|datad"
     Warning (332126): Node "Add2~53|sumout"
-    Warning (332126): Node "cnt_newchar~205|dataf"
+    Warning (332126): Node "cnt_newchar~205|datad"
     Warning (332126): Node "cnt_newchar~205|combout"
     Warning (332126): Node "cnt_newchar[8]~94|dataf"
     Warning (332126): Node "cnt_newchar[8]~94|combout"
-    Warning (332126): Node "cnt_newchar~205|datad"
+    Warning (332126): Node "cnt_newchar~205|dataf"
 Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 213
-    Warning (332126): Node "Add2~9|datad"
+    Warning (332126): Node "Add2~9|datac"
     Warning (332126): Node "Add2~9|sumout"
     Warning (332126): Node "cnt_newchar~194|datad"
     Warning (332126): Node "cnt_newchar~194|combout"
-    Warning (332126): Node "cnt_newchar[7]~98|datad"
+    Warning (332126): Node "cnt_newchar[7]~98|dataf"
     Warning (332126): Node "cnt_newchar[7]~98|combout"
-    Warning (332126): Node "cnt_newchar~194|dataf"
+    Warning (332126): Node "cnt_newchar~194|datac"
 Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 213
-    Warning (332126): Node "Add2~13|datac"
+    Warning (332126): Node "Add2~13|datad"
     Warning (332126): Node "Add2~13|sumout"
-    Warning (332126): Node "cnt_newchar~195|dataf"
-    Warning (332126): Node "cnt_newchar~195|combout"
-    Warning (332126): Node "cnt_newchar[6]~102|datad"
-    Warning (332126): Node "cnt_newchar[6]~102|combout"
     Warning (332126): Node "cnt_newchar~195|datad"
+    Warning (332126): Node "cnt_newchar~195|combout"
+    Warning (332126): Node "cnt_newchar[6]~102|datac"
+    Warning (332126): Node "cnt_newchar[6]~102|combout"
+    Warning (332126): Node "cnt_newchar~195|dataf"
 Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 213
-    Warning (332126): Node "Add2~17|datac"
+    Warning (332126): Node "Add2~17|datad"
     Warning (332126): Node "Add2~17|sumout"
     Warning (332126): Node "cnt_newchar~196|dataf"
     Warning (332126): Node "cnt_newchar~196|combout"
-    Warning (332126): Node "cnt_newchar[5]~106|dataa"
+    Warning (332126): Node "cnt_newchar[5]~106|dataf"
     Warning (332126): Node "cnt_newchar[5]~106|combout"
     Warning (332126): Node "cnt_newchar~196|datad"
 Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 213
-    Warning (332126): Node "Add2~21|datac"
+    Warning (332126): Node "Add2~21|datad"
     Warning (332126): Node "Add2~21|sumout"
     Warning (332126): Node "cnt_newchar~197|dataf"
     Warning (332126): Node "cnt_newchar~197|combout"
-    Warning (332126): Node "cnt_newchar[4]~110|datad"
+    Warning (332126): Node "cnt_newchar[4]~110|dataf"
     Warning (332126): Node "cnt_newchar[4]~110|combout"
-    Warning (332126): Node "cnt_newchar~197|dataa"
+    Warning (332126): Node "cnt_newchar~197|datad"
 Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 213
     Warning (332126): Node "Add2~25|datac"
     Warning (332126): Node "Add2~25|sumout"
@@ -1666,23 +1671,23 @@ Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_v
     Warning (332126): Node "cnt_newchar[3]~114|combout"
     Warning (332126): Node "cnt_newchar~198|datac"
 Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 213
-    Warning (332126): Node "Add2~29|datac"
+    Warning (332126): Node "Add2~29|datad"
     Warning (332126): Node "Add2~29|sumout"
     Warning (332126): Node "cnt_newchar~199|datad"
     Warning (332126): Node "cnt_newchar~199|combout"
-    Warning (332126): Node "cnt_newchar[2]~118|datac"
+    Warning (332126): Node "cnt_newchar[2]~118|dataf"
     Warning (332126): Node "cnt_newchar[2]~118|combout"
-    Warning (332126): Node "cnt_newchar~199|datab"
+    Warning (332126): Node "cnt_newchar~199|datac"
 Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 213
-    Warning (332126): Node "Add2~1|dataa"
+    Warning (332126): Node "Add2~1|datad"
     Warning (332126): Node "Add2~1|sumout"
-    Warning (332126): Node "cnt_newchar~192|datad"
-    Warning (332126): Node "cnt_newchar~192|combout"
-    Warning (332126): Node "cnt_newchar[1]~122|datac"
-    Warning (332126): Node "cnt_newchar[1]~122|combout"
     Warning (332126): Node "cnt_newchar~192|datac"
+    Warning (332126): Node "cnt_newchar~192|combout"
+    Warning (332126): Node "cnt_newchar[1]~122|datad"
+    Warning (332126): Node "cnt_newchar[1]~122|combout"
+    Warning (332126): Node "cnt_newchar~192|datab"
 Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_verilog/typing_game.v Line: 213
-    Warning (332126): Node "Add2~5|datab"
+    Warning (332126): Node "Add2~5|datac"
     Warning (332126): Node "Add2~5|sumout"
     Warning (332126): Node "cnt_newchar~193|datad"
     Warning (332126): Node "cnt_newchar~193|combout"
@@ -1690,30 +1695,25 @@ Warning (332125): Found combinational loop of 7 nodes File: D:/my_design/final_v
     Warning (332126): Node "cnt_newchar[0]~126|combout"
     Warning (332126): Node "cnt_newchar~193|datac"
 Warning (332125): Found combinational loop of 4 nodes File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (332126): Node "old_status[0]~2|combout"
-    Warning (332126): Node "old_status~25|dataf"
-    Warning (332126): Node "old_status~25|combout"
-    Warning (332126): Node "old_status[0]~2|dataf"
-Warning (332125): Found combinational loop of 4 nodes File: D:/my_design/final_verilog/typing_game.v Line: 210
-    Warning (332126): Node "status[0]~2|combout"
-    Warning (332126): Node "status~28|dataf"
-    Warning (332126): Node "status~28|combout"
-    Warning (332126): Node "status[0]~2|datab"
-Warning (332125): Found combinational loop of 4 nodes File: D:/my_design/final_verilog/typing_game.v Line: 210
     Warning (332126): Node "status[1]~6|combout"
     Warning (332126): Node "status~29|dataf"
     Warning (332126): Node "status~29|combout"
-    Warning (332126): Node "status[1]~6|datae"
+    Warning (332126): Node "status[1]~6|datad"
 Warning (332125): Found combinational loop of 4 nodes File: D:/my_design/final_verilog/typing_game.v Line: 210
     Warning (332126): Node "status[3]~14|combout"
     Warning (332126): Node "status~31|dataf"
     Warning (332126): Node "status~31|combout"
-    Warning (332126): Node "status[3]~14|dataa"
+    Warning (332126): Node "status[3]~14|datab"
+Warning (332125): Found combinational loop of 4 nodes File: D:/my_design/final_verilog/typing_game.v Line: 210
+    Warning (332126): Node "status[0]~2|combout"
+    Warning (332126): Node "status~28|dataf"
+    Warning (332126): Node "status~28|combout"
+    Warning (332126): Node "status[0]~2|dataf"
 Warning (332125): Found combinational loop of 4 nodes File: D:/my_design/final_verilog/typing_game.v Line: 210
     Warning (332126): Node "status[2]~10|combout"
     Warning (332126): Node "status~30|dataf"
     Warning (332126): Node "status~30|combout"
-    Warning (332126): Node "status[2]~10|datad"
+    Warning (332126): Node "status[2]~10|dataf"
 Warning (332125): Found combinational loop of 4 nodes File: D:/my_design/final_verilog/typing_game.v Line: 143
     Warning (332126): Node "flag~2|combout"
     Warning (332126): Node "flag~7|dataf"
@@ -1722,38 +1722,38 @@ Warning (332125): Found combinational loop of 4 nodes File: D:/my_design/final_v
 Warning (332060): Node: clkgen:clk25|clkout was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Register vga_ctrl:vga_ctrlor|y_cnt[9] is being clocked by clkgen:clk25|clkout
 Warning (332060): Node: keyboard:keyboard1|en was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Latch cnt_newchar[29]~9 is being clocked by keyboard:keyboard1|en
+    Info (13166): Latch cnt_newchar[30]~5 is being clocked by keyboard:keyboard1|en
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -74.270
+Info (332146): Worst-case setup slack is -68.959
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -74.270           -2952.382 CLOCK_50 
+    Info (332119):   -68.959           -2729.700 CLOCK_50 
 Info (332146): Worst-case hold slack is 0.361
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     0.361               0.000 CLOCK_50 
-Info (332146): Worst-case recovery slack is 17.829
+Info (332146): Worst-case recovery slack is 17.536
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    17.829               0.000 CLOCK_50 
-Info (332146): Worst-case removal slack is 0.738
+    Info (332119):    17.536               0.000 CLOCK_50 
+Info (332146): Worst-case removal slack is 0.803
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.738               0.000 CLOCK_50 
-Info (332146): Worst-case minimum pulse width slack is 8.862
+    Info (332119):     0.803               0.000 CLOCK_50 
+Info (332146): Worst-case minimum pulse width slack is 8.803
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     8.862               0.000 CLOCK_50 
+    Info (332119):     8.803               0.000 CLOCK_50 
 Info (332114): Report Metastability: Found 8 synchronizer chains.
     Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
     Info (332114): Number of Synchronizer Chains Found: 8
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 17.381 ns
+    Info (332114): Worst Case Available Settling Time: 17.139 ns
     Info (332114): 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
@@ -1761,36 +1761,36 @@ Info (334004): Delay annotation completed successfully
 Warning (332060): Node: clkgen:clk25|clkout was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Register vga_ctrl:vga_ctrlor|y_cnt[9] is being clocked by clkgen:clk25|clkout
 Warning (332060): Node: keyboard:keyboard1|en was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Latch cnt_newchar[29]~9 is being clocked by keyboard:keyboard1|en
+    Info (13166): Latch cnt_newchar[30]~5 is being clocked by keyboard:keyboard1|en
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -72.538
+Info (332146): Worst-case setup slack is -67.246
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -72.538           -2886.082 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.353
+    Info (332119):   -67.246           -2664.824 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.367
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.353               0.000 CLOCK_50 
-Info (332146): Worst-case recovery slack is 17.907
+    Info (332119):     0.367               0.000 CLOCK_50 
+Info (332146): Worst-case recovery slack is 17.625
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    17.907               0.000 CLOCK_50 
-Info (332146): Worst-case removal slack is 0.702
+    Info (332119):    17.625               0.000 CLOCK_50 
+Info (332146): Worst-case removal slack is 0.769
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.702               0.000 CLOCK_50 
-Info (332146): Worst-case minimum pulse width slack is 8.854
+    Info (332119):     0.769               0.000 CLOCK_50 
+Info (332146): Worst-case minimum pulse width slack is 8.774
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     8.854               0.000 CLOCK_50 
+    Info (332119):     8.774               0.000 CLOCK_50 
 Info (332114): Report Metastability: Found 8 synchronizer chains.
     Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
     Info (332114): Number of Synchronizer Chains Found: 8
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 17.457 ns
+    Info (332114): Worst Case Available Settling Time: 17.238 ns
     Info (332114): 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
@@ -1798,26 +1798,26 @@ Info (334004): Delay annotation completed successfully
 Warning (332060): Node: clkgen:clk25|clkout was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Register vga_ctrl:vga_ctrlor|y_cnt[9] is being clocked by clkgen:clk25|clkout
 Warning (332060): Node: keyboard:keyboard1|en was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Latch cnt_newchar[29]~9 is being clocked by keyboard:keyboard1|en
+    Info (13166): Latch cnt_newchar[30]~5 is being clocked by keyboard:keyboard1|en
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -34.381
+Info (332146): Worst-case setup slack is -31.391
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -34.381           -1367.134 CLOCK_50 
+    Info (332119):   -31.391           -1240.903 CLOCK_50 
 Info (332146): Worst-case hold slack is 0.178
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     0.178               0.000 CLOCK_50 
-Info (332146): Worst-case recovery slack is 18.553
+Info (332146): Worst-case recovery slack is 18.361
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    18.553               0.000 CLOCK_50 
-Info (332146): Worst-case removal slack is 0.412
+    Info (332119):    18.361               0.000 CLOCK_50 
+Info (332146): Worst-case removal slack is 0.431
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.412               0.000 CLOCK_50 
+    Info (332119):     0.431               0.000 CLOCK_50 
 Info (332146): Worst-case minimum pulse width slack is 8.473
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -1827,32 +1827,32 @@ Info (332114): Report Metastability: Found 8 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 8
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 18.254 ns
+    Info (332114): Worst Case Available Settling Time: 18.073 ns
     Info (332114): 
 Info: Analyzing Fast 1100mV 0C Model
 Warning (332060): Node: clkgen:clk25|clkout was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Register vga_ctrl:vga_ctrlor|y_cnt[9] is being clocked by clkgen:clk25|clkout
 Warning (332060): Node: keyboard:keyboard1|en was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Latch cnt_newchar[29]~9 is being clocked by keyboard:keyboard1|en
+    Info (13166): Latch cnt_newchar[30]~5 is being clocked by keyboard:keyboard1|en
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -29.447
+Info (332146): Worst-case setup slack is -26.744
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -29.447           -1171.211 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.167
+    Info (332119):   -26.744           -1056.944 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.169
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.167               0.000 CLOCK_50 
-Info (332146): Worst-case recovery slack is 18.683
+    Info (332119):     0.169               0.000 CLOCK_50 
+Info (332146): Worst-case recovery slack is 18.523
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    18.683               0.000 CLOCK_50 
-Info (332146): Worst-case removal slack is 0.377
+    Info (332119):    18.523               0.000 CLOCK_50 
+Info (332146): Worst-case removal slack is 0.406
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.377               0.000 CLOCK_50 
+    Info (332119):     0.406               0.000 CLOCK_50 
 Info (332146): Worst-case minimum pulse width slack is 8.428
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -1862,14 +1862,14 @@ Info (332114): Report Metastability: Found 8 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 8
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 18.426 ns
+    Info (332114): Worst Case Available Settling Time: 18.257 ns
     Info (332114): 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 327 warnings
-    Info: Peak virtual memory: 5234 megabytes
-    Info: Processing ended: Sun Dec 23 10:54:37 2018
-    Info: Elapsed time: 00:00:41
-    Info: Total CPU time (on all processors): 00:01:00
+    Info: Peak virtual memory: 5235 megabytes
+    Info: Processing ended: Sun Dec 23 11:46:22 2018
+    Info: Elapsed time: 00:00:39
+    Info: Total CPU time (on all processors): 00:00:59
 
 

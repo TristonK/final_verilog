@@ -156,7 +156,7 @@ mem mem1(.clock(CLOCK_50),.data(mem_din),.rdaddress(mem_rpos),.wraddress(mem_wpo
 	assign mem_wpos={mem_y,mem_x};
 	assign mem_rpos={y_addr,x_addr};
 
-canvas canvas1(.clock(CLOCK_50),.data(can_din),.rdaddress(can_rpos),.wraddress(can_wpos),.wren(canvas_enw),.q(mem_din));
+canvas canvas1(.clock(CLOCK_50),.data(can_din),.rdaddress(can_rpos),.wraddress(can_wpos),.wren(1'b1),.q(mem_din));
 	reg canvas_enw=0;
 	reg can_din=0;
 	wire [16:0]can_wpos,can_rpos;
@@ -212,7 +212,7 @@ always @(posedge CLOCK_50 or posedge new_in)begin
 				flag<=0;
 				cnt_newchar<=cnt_newchar+1;
 				if(cnt_newchar==TIME_NEW_CHAR)begin
-					//status<=create_new;
+					status<=create_new;
 					cnt_newchar<=0;
 				end else begin
 					case (status)
@@ -375,7 +375,7 @@ always @(posedge CLOCK_50)begin
 				draw_sec_cnt<=draw_sec_cnt+1;
 				canvas_x<=0;
 				canvas_y<=canvas_y+1;
-			end else begin canvas_x<=canvas_x+1; end
+		end else begin canvas_x<=canvas_x+1; end
 		end
 		can_din<=1'b0;
 	end else begin draw_sec_cnt<=0; end
