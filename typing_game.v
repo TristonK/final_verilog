@@ -94,7 +94,7 @@ module typing_game(
 
 	parameter [31:0]TIME=10000000;//time break to update
 	parameter [31:0]TIME_NEW_CHAR=250000000;
-	parameter [31:0]MAX_CHAR=100;
+	parameter [31:0]MAX_CHAR=200;
 	parameter [31:0]FPS_POS_X=3;
 	parameter [31:0]FPS_POS_Y=3;
 	parameter [31:0]HIT_POS_X=39*8-3;
@@ -402,7 +402,9 @@ beginvga getxs(
 				end else begin
 					x_fst<=x_fst+1;
 				end
-				canvas_y<=k_y[draw_fst_cnt]+y_fst;
+				if(x_fst>=3)begin
+					canvas_y<=k_y[draw_fst_cnt]+y_fst+1;
+				end else begin canvas_y<=k_y[draw_fst_cnt]+y_fst; end
 				canvas_x<=k_x[draw_fst_cnt]+x_fst;
 				char_pos<={k_text[draw_fst_cnt],y_fst};
 				can_din<=char_row[x_fst];
@@ -475,19 +477,33 @@ beginvga getxs(
 					x_fst<=x_fst+1;
 				end
 				case (dis_fps_cnt)
-					0:begin canvas_y<=FPS_POS_Y+y_fst; 			canvas_x<=FPS_POS_X+x_fst;//F
+					0:begin 
+						if(x_fst>=3)begin
+							canvas_y<=FPS_POS_Y+y_fst+1;
+						end else begin canvas_y<=FPS_POS_Y+y_fst; end
+						canvas_x<=FPS_POS_X+x_fst;//F						
 						char_pos<={8'd70,y_fst};			can_din<=char_row[x_fst];
 					end
-					1:begin canvas_y<=FPS_POS_Y+y_fst; 			canvas_x<=FPS_POS_X+8+x_fst;//P
+					1:begin 
+						if(x_fst>=3)begin
+							canvas_y<=FPS_POS_Y+y_fst+1;
+						end else begin canvas_y<=FPS_POS_Y+y_fst; end
+							canvas_x<=FPS_POS_X+8+x_fst;//P
 						char_pos<={8'd80,y_fst};				can_din<=char_row[x_fst];
 					end
 					2:begin canvas_y<=FPS_POS_Y+y_fst; 			canvas_x<=FPS_POS_X+8*2+x_fst;//S
 						char_pos<={8'd83,y_fst};				can_din<=char_row[x_fst];
 					end
-					3:begin canvas_y<=FPS_POS_Y+y_fst; 			canvas_x<=FPS_POS_X+8*4+x_fst;//3
+					3:begin if(x_fst>=3)begin
+							canvas_y<=FPS_POS_Y+y_fst+1;
+						end else begin canvas_y<=FPS_POS_Y+y_fst; end 			canvas_x<=FPS_POS_X+8*4+x_fst;//3
 						char_pos<={8'd51,y_fst};				can_din<=char_row[x_fst];
 					end
-					4:begin canvas_y<=FPS_POS_Y+y_fst; 			canvas_x<=FPS_POS_X+8*5+x_fst;//0
+					4:begin 
+						if(x_fst>=3)begin
+							canvas_y<=FPS_POS_Y+y_fst+1;
+						end else begin canvas_y<=FPS_POS_Y+y_fst; end 		
+						canvas_x<=FPS_POS_X+8*5+x_fst;//0
 						char_pos<={8'd48,y_fst};				can_din<=char_row[x_fst];
 					end
 				endcase
@@ -515,16 +531,32 @@ beginvga getxs(
 					x_fst<=x_fst+1;
 				end
 				case (dis_hit_cnt)
-					0:begin canvas_y<=HIT_POS_Y+y_fst; 			canvas_x<=HIT_POS_X+x_fst;//F
+					0:begin 
+						if(x_fst>=3)begin
+							canvas_y<=HIT_POS_Y+y_fst+1;
+						end else begin canvas_y<=FPS_POS_Y+y_fst; end
+							canvas_x<=HIT_POS_X+x_fst;//F
 						char_pos<={hit_1+8'd48,y_fst};			can_din<=char_row[x_fst];
 					end
-					1:begin canvas_y<=HIT_POS_Y+y_fst; 			canvas_x<=HIT_POS_X-8+x_fst;//P
+					1:begin 
+						if(x_fst>=3)begin
+							canvas_y<=HIT_POS_Y+y_fst+1;
+						end else begin canvas_y<=FPS_POS_Y+y_fst; end 		
+						canvas_x<=HIT_POS_X-8+x_fst;//P
 						char_pos<={hit_10+8'd48,y_fst};				can_din<=char_row[x_fst];
 					end
-					2:begin canvas_y<=HIT_POS_Y+y_fst; 			canvas_x<=HIT_POS_X-8*2+x_fst;//S
+					2:begin 
+						if(x_fst>=3)begin
+							canvas_y<=HIT_POS_Y+y_fst+1;
+						end else begin canvas_y<=FPS_POS_Y+y_fst; end
+						canvas_x<=HIT_POS_X-8*2+x_fst;//S
 						char_pos<={hit_100+8'd48,y_fst};				can_din<=char_row[x_fst];
 					end
-					3:begin canvas_y<=HIT_POS_Y+y_fst; 			canvas_x<=HIT_POS_X-8*3+x_fst;//3
+					3:begin 
+						if(x_fst>=3)begin
+							canvas_y<=HIT_POS_Y+y_fst+1;
+						end else begin canvas_y<=FPS_POS_Y+y_fst; end
+						canvas_x<=HIT_POS_X-8*3+x_fst;//3
 						char_pos<={hit_1000+8'd48,y_fst};				can_din<=char_row[x_fst];
 					end
 				endcase
@@ -552,16 +584,32 @@ beginvga getxs(
 					x_fst<=x_fst+1;
 				end
 				case (dis_miss_cnt)
-					0:begin canvas_y<=MISS_POS_Y+y_fst; 		canvas_x<=MISS_POS_X+x_fst;//F
+					0:begin 
+						if(x_fst>=3)begin
+							canvas_y<=MISS_POS_Y+y_fst+1;
+						end else begin canvas_y<=MISS_POS_Y+y_fst; end
+						canvas_x<=MISS_POS_X+x_fst;//F
 						char_pos<={miss_1+8'd48,y_fst};			can_din<=char_row[x_fst];
 					end
-					1:begin canvas_y<=MISS_POS_Y+y_fst; 		canvas_x<=MISS_POS_X-8+x_fst;//P
+					1:begin 
+						if(x_fst>=3)begin
+							canvas_y<=MISS_POS_Y+y_fst+1;
+						end else begin canvas_y<=MISS_POS_Y+y_fst; end
+						canvas_x<=MISS_POS_X-8+x_fst;//P
 						char_pos<={miss_10+8'd48,y_fst};		can_din<=char_row[x_fst];
 					end
-					2:begin canvas_y<=MISS_POS_Y+y_fst; 			canvas_x<=MISS_POS_X-8*2+x_fst;//S
+					2:begin 
+						if(x_fst>=3)begin
+							canvas_y<=MISS_POS_Y+y_fst+1;
+						end else begin canvas_y<=MISS_POS_Y+y_fst; end	
+						canvas_x<=MISS_POS_X-8*2+x_fst;//S
 						char_pos<={miss_100+8'd48,y_fst};				can_din<=char_row[x_fst];
 					end
-					3:begin canvas_y<=MISS_POS_Y+y_fst; 			canvas_x<=MISS_POS_X-8*3+x_fst;//3
+					3:begin
+						if(x_fst>=3)begin
+							canvas_y<=MISS_POS_Y+y_fst+1;
+						end else begin canvas_y<=MISS_POS_Y+y_fst; end
+						canvas_x<=MISS_POS_X-8*3+x_fst;//3
 						char_pos<={miss_1000+8'd48,y_fst};				can_din<=char_row[x_fst];
 					end
 				endcase
