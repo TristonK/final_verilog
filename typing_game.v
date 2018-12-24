@@ -94,7 +94,7 @@ module typing_game(
 
 	parameter [31:0]TIME=10000000;//time break to update
 	parameter [31:0]TIME_NEW_CHAR=250000000;
-	parameter [31:0]MAX_CHAR=256;
+	parameter [31:0]MAX_CHAR=100;
 	parameter [31:0]FPS_POS_X=3;
 	parameter [31:0]FPS_POS_Y=3;
 	parameter [31:0]HIT_POS_X=39*8-3;
@@ -166,6 +166,7 @@ wire [7:0] ramdomchar;
 wire [7:0] ramdomnum;
 wire [8:0] ramdomx;
 wire [3:0] ramdomvec;
+wire vga_begin;
 assign  ramdomchar=(ramdomnum+endlink[7:0])%26;
 
 ramdomnum getramdomnum(
@@ -181,7 +182,14 @@ ramdomv getv(
 	.clk(CLOCK_50),
 	.q(ramdomv)
 );
-	mem mem1(.clock(CLOCK_50),.data(mem_din),.rdaddress(mem_rpos),.wraddress(mem_wpos),.wren(1'b1),.q(mem_dout));
+
+beginvga getxs(
+    .address(v_addr*640+h_addr),
+	 .clock(VGA_CLK),
+	 .q(vga_begin)
+);
+
+	mem mem1(.clock(CLOCK_50),.data(mem_din),.rdaddress(mem_rpos),.wraddress(mem_wpos),.wren(SW[5]),.q(mem_dout));
 	reg mem_enw=0;
 	reg [8:0]mem_x=0;
 	reg [7:0]mem_y=0;
@@ -192,7 +200,7 @@ ramdomv getv(
 	assign mem_wpos={mem_y,mem_x};
 	assign mem_rpos={y_addr[7:0],x_addr[8:0]};
 
-	canvas canvas1(.clock(CLOCK_50),.data(can_din),.rdaddress(can_rpos),.wraddress(can_wpos),.wren(1'b1),.q(mem_din));
+	canvas canvas1(.clock(CLOCK_50),.data(can_din),.rdaddress(can_rpos),.wraddress(can_wpos),.wren(SW[5]),.q(mem_din));
 	reg canvas_enw=0;
 	reg can_din=0;
 	wire [16:0]can_wpos,can_rpos;
@@ -243,7 +251,10 @@ ramdomv getv(
 	assign sample=~detect[2]&detect[1];
 
 //status
-	always @(posedge CLOCK_50)begin
+	always @(posedge CLOCK_50)
+	begin
+	if(SW[5])
+	begin
 		cnt_newchar<=cnt_newchar+1;
 		if(reset)begin status<=RESET; old_status<=none;cnt_newchar<=0;end
 		else if(sample)begin old_status<=none; status<=key_event; end
@@ -265,11 +276,13 @@ ramdomv getv(
 				12,13,14,15 :          			begin status<=none;		old_status<=none;		end
 			endcase
 		end
-
+     end
 	end
 
 //color
 	always @(posedge CLOCK_50)begin
+	  if(SW[5])
+	   begin
 		if(h_addr<160 || h_addr>=480 || v_addr<140 ||v_addr>=340)begin
 			vga_data<=24'hffdead;
 			/*end else begin
@@ -294,6 +307,9 @@ ramdomv getv(
 				end
 			end
 		end
+		end
+	 else
+	   vga_data<=(vga_begin==1)?24'hffffff:24'h0;
 	end
 
 //enw
@@ -308,6 +324,8 @@ ramdomv getv(
 
 //all case
 	always @(posedge CLOCK_50)begin
+	if(SW[5])
+	  begin
 		if(status==create_new && f_create_new==0)begin
 			k_x[endlink]<=ramdomx%9'd312;
 			k_y[endlink]<=8'd9;
@@ -549,7 +567,7 @@ ramdomv getv(
 				endcase
 			end
 		end	else begin f_dis_miss<=0; end
-
+    end
 	end
 
 endmodule
