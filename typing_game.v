@@ -94,7 +94,7 @@ module typing_game(
 
 	parameter [31:0]TIME=10000000;//time break to update
 	parameter [31:0]TIME_NEW_CHAR=250000000;
-	parameter [31:0]MAX_CHAR=50;
+	parameter [31:0]MAX_CHAR=256;
 	parameter [31:0]FPS_POS_X=3;
 	parameter [31:0]FPS_POS_Y=3;
 	parameter [31:0]HIT_POS_X=39*8-3;
@@ -122,8 +122,8 @@ module typing_game(
 	reg	[8:0]k_x[MAX_CHAR:0];
 	reg [7:0]k_y[MAX_CHAR:0];
 	reg [7:0]k_text[MAX_CHAR:0];
-	reg [MAX_CHAR:0]k_v;
-
+//	reg [MAX_CHAR:0]k_v;
+    reg [3:0] k_v[MAX_CHAR:0];
 	reg [2:0] x_fst=0;
 	reg [2:0] y_fst=0;
 
@@ -165,6 +165,7 @@ module typing_game(
 wire [7:0] ramdomchar;
 wire [7:0] ramdomnum;
 wire [8:0] ramdomx;
+wire [3:0] ramdomvec;
 assign  ramdomchar=(ramdomnum+endlink[7:0])%26;
 
 ramdomnum getramdomnum(
@@ -176,7 +177,10 @@ ramdomx getx(
 	.clk(CLOCK_50),
 	.q(ramdomx)
 );
-
+ramdomv getv(
+	.clk(CLOCK_50),
+	.q(ramdomv)
+);
 	mem mem1(.clock(CLOCK_50),.data(mem_din),.rdaddress(mem_rpos),.wraddress(mem_wpos),.wren(1'b1),.q(mem_dout));
 	reg mem_enw=0;
 	reg [8:0]mem_x=0;
@@ -243,7 +247,7 @@ ramdomx getx(
 		cnt_newchar<=cnt_newchar+1;
 		if(reset)begin status<=RESET; old_status<=none;cnt_newchar<=0;end
 		else if(sample)begin old_status<=none; status<=key_event; end
-		else if(cnt_newchar==TIME_NEW_CHAR)	begin old_status<=status; status<=create_new;cnt_newchar<=0;end
+		else if(cnt_newchar>=(TIME_NEW_CHAR/(SW[4]+1)))	begin old_status<=status; status<=create_new;cnt_newchar<=0;end
 		else begin
 			case (status)
 				none 		: if(f_none) 		begin status<=upt_pos;	old_status<=status;	 	end
@@ -268,12 +272,24 @@ ramdomx getx(
 	always @(posedge CLOCK_50)begin
 		if(h_addr<160 || h_addr>=480 || v_addr<140 ||v_addr>=340)begin
 			vga_data<=24'hffdead;
+			/*end else begin
+
+				vga_data<={	mem_dout,mem_dout,mem_dout,mem_dout,mem_dout,mem_dout,
+							mem_dout,mem_dout,mem_dout,mem_dout,mem_dout,mem_dout,
+							mem_dout,mem_dout,mem_dout,mem_dout,mem_dout,mem_dout,
+							mem_dout,mem_dout,mem_dout,mem_dout,mem_dout,mem_dout};
+			*/
 		end else begin
 			if(mem_dout==0)vga_data<=24'h2a0a29;
 			else begin
 				if(h_addr>=163 && h_addr<=163+8*6 && v_addr<=143+8 && v_addr>=143 )begin
 					vga_data<=24'hf3f781;
-				end else begin
+				end else if(h_addr>=448 && h_addr<=480 )begin
+					if((v_addr>=143 && v_addr<=151))
+						vga_data<=24'h00ff00;
+					else if(v_addr>=329&& v_addr<=340)
+						vga_data<=24'hfa5858;
+				end	else begin
 					vga_data<=24'hffffff;
 				end
 			end
@@ -296,7 +312,7 @@ ramdomx getx(
 			k_x[endlink]<=ramdomx%9'd312;
 			k_y[endlink]<=8'd9;
 			k_text[endlink]<=8'd65+ramdomchar;
-			k_v[endlink]<=1'd0;
+			k_v[endlink]<=(endlink%4+1)*(SW[4]+1);
 			endlink<=endlink+1;
 			f_create_new<=1;
 		end else begin f_create_new<=0; end
@@ -315,8 +331,8 @@ ramdomx getx(
 				upt_pos_cnt<=0;
 			end else begin
 				upt_pos_cnt<=upt_pos_cnt+1;
-				if(k_v[upt_pos_cnt]==0)
-					k_y[upt_pos_cnt]<=k_y[upt_pos_cnt]+1;
+				if(k_v[upt_pos_cnt]!=0)
+					k_y[upt_pos_cnt]<=k_y[upt_pos_cnt]+k_v[upt_pos_cnt];
 				else if(k_y[upt_pos_cnt]>3)
 					k_y[upt_pos_cnt]<=k_y[upt_pos_cnt]-3;
 			end
@@ -412,8 +428,8 @@ ramdomx getx(
 				key_event_cnt<=0;
 			end else begin
 				key_event_cnt<=key_event_cnt+1;
-				if(k_text[key_event_cnt]==code_in &&k_v[key_event_cnt]==0)begin
-					k_v[key_event_cnt]<=1;
+				if(k_text[key_event_cnt]==code_in &&k_v[key_event_cnt]!=0)begin
+					k_v[key_event_cnt]<=0;
 					f_key_event<=1;
 					key_event_cnt<=0;
 				end

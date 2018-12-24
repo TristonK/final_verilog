@@ -14,6 +14,7 @@ begin
 	  else
 	   begin
 		   feedback = q[8]^(~|q[7:0]);
+		   q[8]=q[7];
 	     q[7] = q[6];
 		  q[6]=q[5];
 		  q[5]=q[4];
